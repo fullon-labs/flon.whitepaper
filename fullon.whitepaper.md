@@ -102,17 +102,11 @@ Furthermore, unlike many other blockchain sharding protocols that apply sharding
 Both the design and development of the **FullOn** platform are guided by a handful of key principles.  These principles reflect the problems inherent in both the centralized and decentralized systems of today.
 
 1. **Usability:** Applications deployed to the platform should be seamless to use for end users and seamless to create for developers.  Wherever possible, the underlying technology itself should fade to the background or be hidden completely from end users.  Wherever possible, developers should use familiar languages and patterns during the development process. Basic applications should be intuitive and simple to create while more robust applications should still be secure.
-
 2. **Scalability:** The platform should scale with no upper limit as long as there is economic justification for doing so in order to support enterprise-grade, globally-used applications.
-
 3. **Affordability:** As **FullOn** is set to be an application platform instead of just being a store of value, it must make sure the cost of using the network is relatively affordable by the majority of users.
-
 4. **Simplicity:** The design of each of the system’s components should be as simple as possible in order to achieve their primary purpose. 
-
 5. **Sustainable decentralization:** The platform should encourage significant decentralization both in the short term and the long term in order to properly secure the value it hosts. The platform and community should be widely and permission-lessly inclusive and actively encourage decentralization and participation. To maintain sustainability, both technological and community governance mechanisms should allow for practical iteration while avoiding capture by any single parties in the long run.
-
 6. **Upgradability:** The protocol should be easy to upgrade once the mainnet network has been launched. It would be ideal not to change the node software in order to upgrade the system configurations or even protocol-level logic.
-
 7. **Modularity & Extensibility:** The overall system software shall be well organized by clean-cut modules, each of which can be easily swapped out and replaced with new ones for customizability and extensibility.
 
 Last but not least, it is expected that regardless of the underlying technological implementations and protocol specifications, the above design principles must be strictly adhered to unless otherwise revised within this paper.
