@@ -246,9 +246,9 @@ Below gives the table of the allocation plan with corresponding lockup schedules
 | Fundraising          | `18%`               | `180,000,000`       | `flon.dao`              | 6-month cliff, 3-year lockup     |
 | Core Contributors    | `12%`               | `120,000,000`       | `flon.coredev`          | 1-year cliff, 4-year lockup      |
 | Foundation Endowment | `10%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
+| Community Grants/Programs | `12%`          | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year lockup      | 
 | TEC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
 | DAC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
-| Community Grants/Programs | `12%`          | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year lockup      | 
 
 _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
@@ -294,6 +294,12 @@ The **FullOn** Foundation stood up the initial network nodes and spun them down 
 This endowment is split into 2 pieces. The first half, which is not locked up, will likely be deployed across multiple strategies to help ensure the network operates smoothly during its early phases. The second half is subject to a 24 month linear lockup since it is not expected to be accessed during the early days beyond delegation to support decentralization. Both tranches are meant to be deployed in ways which preserve principle wherever possible to ensure long-term availability rather than systematically sold for short-term capital.
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
 
+### Community Grants and Programs
+
+There are `12%` of the total supply, i.e. `120,000,000 FLON` tokens allocated in this category. 
+
+A large portion of tokens is devoted to grants and programs which fund community efforts, community projects and community-built technical components. This spans everything from education to events to direct deployment into venture-style funding for projects. A small provision exists for tokens that can be given away or sold in the future. Because %these efforts are decidedly long-term in nature, the tokens are released over 60 months.
+
 ### Mining Reserve for TEC and DAC
 
 There are `20%` of the total supply, i.e. `200,000,000 FLON` tokens allocated in this category. 
@@ -301,12 +307,6 @@ There are `20%` of the total supply, i.e. `200,000,000 FLON` tokens allocated in
 The **FullOn** ecosystem must ensure incentives exist for all types of miners (E.g. `TEC` miners, `DAC` miners, connectivity miners and including future unknown types of miners) to support a robust network and ecosystem. In order to ensure sufficient incentive for the layer-1 network, the execution miners are allocated in total 100,000,000 FLON tokens, to be mined within 10 years: each of the first 2 years will have `20%` of the allocation, i.e. `20 million FLON` and each of the following 6 years will have `10%` of the allocation, i.e. `10 million FLON`. The remaining `100,000,000 FLON` tokens will be allocated to `DAC` miners, connectivity miners and future introduced miners. 
 
 It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through **FullOn** improvement proposals (`FIPs`) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
-
-### Community Grants and Programs
-
-There are `12%` of the total supply, i.e. `120,000,000 FLON` tokens allocated in this category. 
-
-A large portion of tokens is devoted to grants and programs which fund community efforts, community projects and community-built technical components. This spans everything from education to events to direct deployment into venture-style funding for projects. A small provision exists for tokens that can be given away or sold in the future. Because %these efforts are decidedly long-term in nature, the tokens are released over 60 months.
 
 ## Deflation forces
 
