@@ -22,8 +22,8 @@ _NOTE: This document (`v0.1`) is under development. Please check regularly for u
 - [06. Tokenomics](#06-tokenomics)
    - [Overall allocation and supply schedule](#overall-allocation-and-supply-schedule)
    - [Deflation](#deflation)
-- [07. Governance](#06-governance)
-- [08. Disclaimer](#07-disclaimer)
+- [07. Governance](#07-governance)
+- [08. Disclaimer](#08-disclaimer)
 
 
 # 01. Abstract
