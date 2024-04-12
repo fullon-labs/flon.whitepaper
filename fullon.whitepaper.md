@@ -240,7 +240,7 @@ The maximum supply for **FullOn**’s native token `$FLON` is `1 billion`. Howev
 </p>
 
 Below gives the table of the allocation plan with corresponding lockup schedules:
-| Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
+| Allocation Category  | Allocation Ratio     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
 | Early Ecosystem      | `10%`               | `100,000,000`       | `flon.dao`              | 1-year cliff, 4-year max lockup  |
 | Community Presale    | `18%`               | `100,000,000`       | `flon.dao`              | 6-month cliff, 2-year lockup     |
