@@ -108,6 +108,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 ## Overall architecture
 
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
+
 <img src="./assets/fullon_dual_chain_arch.png" width="800">
 
 **FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
@@ -226,10 +227,9 @@ Last but not least, most mission-critical web2 applications that demand high thr
 ## Token allocation and distribution
 
 The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
-
 <img src="./assets/flon_token_allocation.png" width="800" align="center" />
 
-Below gives the table of the allocation plan with corresponding lockup schedules.
+Below gives the table of the allocation plan with corresponding lockup schedules:
 | Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
 | Early Ecosystem      | `10%`               | `100,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year max lockup  |
