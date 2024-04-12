@@ -11,7 +11,7 @@ _NOTE: This `v0.1` document is under development. Please check back regularly fo
 - [02. Introduction](#02-introduction)
 - [03. Why FullOn](#03-why-FullOn)
    - [Focus use cases](#Focus-use-cases)
-   - [Scalability innovation](#Scalability-innovation)
+   - [Core innovations](#core-innovations)
 - [04. Design Principles](#04-design-principles)
 - [05. How FullOn Works](#05-how-fullon-works)
    - [Overall architecture](#overall-architecture)
@@ -56,7 +56,9 @@ As a decentralization application platform, **FullOn** can certainly support a w
 **FullOn** has been long awaited for fulfilling the demand of **high-frequency low-latency order-book based decentralized exchange (DEX)** applications in order to compete against the centralized exchanges in terms of usability, performance and the total number of trading markets. As of today, unfortunately for the blockchain world, there exists virtually none such decentralized platform that can offer the similar if not the same user experience as witnessed with centralized crypto exchanges. 
 </div>
 
-## Scalability innovation
+## Core innovations
+
+### 1. Scalability innovation
 
 **FullOn** has come up with a grand way that answers the scalability challenge by adopting both scale-up and scale-out 2D sharding technique for the fullest parallel execution to achieve the highest possible throughput. Scale-up means adding more hardware resources to a single node computer while scale-out means adding more nodes to form a cluster for a block producer.
 
@@ -83,6 +85,10 @@ As exhibited in the above table, even without employing the clustering technolog
 There are however several limiting factors like network bandwidth, disk I/O speed and CPU core number that would collectively affect the TPS outcome of this 2D sharding technique. The plan is to optimize around these factors so as to achieve a continuous growth of scalability as the value of M & N increases. It is very much technically elegant to implement. 
 
 Furthermore, unlike many other blockchain sharding protocols that apply sharding from network, execution and state levels, **FullOn** believes in the simplicity design philosophy by applying sharding only at execution and state level to reduce the complexity of cross-shard communications. More details about 2D sharding will be provided in the section of How **FullOn** Works.
+
+### 2. Dual-chain innovation
+
+Instead of providing a single chain to handle consenus, execution, settlement and data availability etc core tasks, `FullOn` protocol chooses to segregate the duties by providing two chains: Transaction Execution Chain for consensus, execution and settlement and Data Availability Chain for data availability. On through this design can scalability and decentralization be achieved meanwhile not sacrificing security at all!
 
 # 04. Design Principles
 
