@@ -25,39 +25,32 @@ _NOTE: This document (`v0.1`) is under development. Please check regularly for u
 - [07. Governance](#07-governance)
 - [08. Disclaimer](#08-disclaimer)
 
+<div align="justify">
 
 # 01. Abstract
-
-<div align="justify">
 
 **FullOn** is a decentralized application platform that endeavors to not only attack the scalability problem but also provide the best user experience, decentralization and security such that users from around the world can safely and freely participate, collaborate and prospect together within this ever-growing ecosystem. 
 
 As a matter of fact, Bitcoin as the pioneer blockchain can only process 7 transactions per second while Ethereum can support 12 TPS. With the [EIP-4844](https://www.eip4844.com/) upgrade, the layer-2 solutions to Ethereum could support up to 1500 TPS, which is still far from optimal. While many other blockchain are claimed to have achieved about 10K TPS or even million-level TPS, they are primarily centralized or require rather powerful hardware to meet the scalability requirement. 
 
 By applying an innovative two-dimension (2D) sharding technique, **FullOn** is set to break the performance and scalability bottleneck that has been plaguing the contemporary blockchain industry for a long time. As the name suggests, **FullOn** is able to fully utilize computing resources from network validators with modern computer hardware and scale both vertically and horizontally without sacrificing decentralization and security.
-</div>
+
 
 # 02. Introduction
-
-<div align="justify">
 
 The world is now standing at the brink of the web3 era in which major economic and financial activities could entirely happen within a blockchain-powered technology environment. Apart from launching blockchain networks and issuing cryptocurrencies that can be invested or speculated by crypto fans amongst themselves, it has been rigorously sought by many industry pioneers to tokenize and issue real-world assets on-chain, which would certainly open up an infinite amount of opportunities to rejuvenate the world economy. It has been projected by some large financial firms like Citi bank that by 2035 the real-world assets to be issued on-chain would amount to `$4 trillion` in value. By contrast, the global crypto market capital has surpassed `$2.64 trillion` as of written and will certainly grow much larger and faster. Blockchain technology and cryptocurrencies have been not only embraced by many early brave individuals but also recent financial institutions from around the globe.
 
 However, in order for blockchain technology to be widely adopted, one well-known problem called blockchain trilemma has yet to be overcome, i.e. only 2 out of the 3 critical aspects of blockchain technology can be simultaneously met: security, scalability, and decentralization. As a result,  most blockchain networks are left with no choice but to prioritize security and decentralization over scalability at the cost of achieving very limited throughput in terms of transaction per second (TPS) and rather large latency for each block to be produced and finalized on-chain, not to mention paying gas fees for submitting each transaction as adopted by most blockchain in fighting against junk messages. Therefore it can be rather daunting for users coming from the web2 technology world to fully embrace blockchain. Furthermore certain applications like high-frequency trading are simply not viable with most layer-1 blockchains. Thus, people resort to layer-2 solutions that however lack the critical decentralization property and require rather lengthy duration (E.g. usually one week) for users' assets to be eventually settled back into the layer-1 network, which can be a showstopper for many applications to adopt. Other solutions try to modularize the blockchain into data, settlement and execution layers in order to tackle the trilemma problem but still cannot meet the scalability requirement due to the execution layer itself not being sufficiently optimized.
 
 Therefore, much needed and expected is for a layer-1 protocol that can break the blockchain trilemma by ensuring decentralization and security aspects as well as achieving a scalability level that can support a wide range of applications including those requiring low-latency and high-throughput.
-</div>
+
 
 # 03. Why FullOn
 
-<div align="justify">
 
 Compared with other blockchain protocols, **FullOn** has the single most important goal to achieve, which is to solve the scalability problem in order to bring the whole world into the web3 era. Secondly **FullOn** will take on the data availability problem by encouraging/incentivizing vastly distributed lightweight nodes around the globe that synchronize with the main network nodes.
-</div>
 
 ## Focus use cases
-
-<div align="justify">
 
 As a decentralization application platform, **FullOn** can certainly support a wide range of DAPPs as experienced in any other blockchains today. Most of the DAPPs are in the category of low-to-middle frequency in invocation like once a minute or so and do not have a need for second or sub-second level latency for transactions to be effective on-chain. However, there are other types of applications that require high-frequency and low-latency in execution.
 
@@ -65,8 +58,6 @@ As a decentralization application platform, **FullOn** can certainly support a w
 </div>
 
 ## Scalability innovation
-
-<div align="justify">
 
 **FullOn** has come up with a grand way that answers the scalability challenge by adopting both scale-up and scale-out 2D sharding technique for the fullest parallel execution to achieve the highest possible throughput. Scale-up means adding more hardware resources to a single node computer while scale-out means adding more nodes to form a cluster for a block producer.
 
@@ -93,11 +84,8 @@ As exhibited in the above table, even without employing the clustering technolog
 There are however several limiting factors like network bandwidth, disk I/O speed and CPU core number that would collectively affect the TPS outcome of this 2D sharding technique. The plan is to optimize around these factors so as to achieve a continuous growth of scalability as the value of M & N increases. It is very much technically elegant to implement. 
 
 Furthermore, unlike many other blockchain sharding protocols that apply sharding from network, execution and state levels, **FullOn** believes in the simplicity design philosophy by applying sharding only at execution and state level to reduce the complexity of cross-shard communications. More details about 2D sharding will be provided in the section of How **FullOn** Works.
-</div>
 
 # 04. Design Principles
-
-<div align="justify">
 
 Both the design and development of the **FullOn** platform are guided by a handful of key principles.  These principles reflect the problems inherent in both the centralized and decentralized systems of today.
 
@@ -110,7 +98,7 @@ Both the design and development of the **FullOn** platform are guided by a handf
 7. **Modularity & Extensibility:** The overall system software shall be well organized by clean-cut modules, each of which can be easily swapped out and replaced with new ones for customizability and extensibility.
 
 Last but not least, it is expected that regardless of the underlying technological implementations and protocol specifications, the above design principles must be strictly adhered to unless otherwise revised within this paper.
-</div>
+
 
 # 04. How **FullOn** Works
 ## Overall architecture
@@ -121,12 +109,13 @@ Last but not least, it is expected that regardless of the underlying technologic
 **FullOn** Transaction Execution Chain (TEC) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (DAC) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the TEC P2P network.
 
 **FullOn** TEC network has following unique set of characteristics:
-Zero gas fees: thanks to the adoption of resource staking model, users do not need to pay gas fees during each transaction submission, which greatly reduces user’s operational cost while retaining the ability to counter dusting attacks. Once the TEC network mining has been exhausted, i.e. no further new coins to mine, gas fees will be charged for each on-chain submission but the price will be pegged with USD fiat currency through DAO governance voting processes such that relatively low gas fees will be charged for further flourishment of the ecosystem. 
-Abstract account: a user’s account is no longer bound to a single set of private and public keys as usually seen in most contemporary blockchain networks. Instead, one can have a hierarchical set of permissions under each account and each permission can be bound with either another account or corresponding set of private and public keys. This new model also allows users to define their personal account names and opens doors to an infinite set of application usages.
-Sharding & clustering: this is the most critical piece of this protocol by tackling the scalability problem through sharding and clustering techniques which will be covered in great detail in following sections.
-Dual-VM: both WASM and EVM as the smart contract platforms will be supported in a single network in order to gain developers from both camps.
-DPoS consensus & mining: through the continuous on-chain election process, network validators are elected to maintain the whole TEC network and also get rewarded with newly mined tokens for their work.
-Instant finality: with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
+
+- **Zero gas fees:** thanks to the adoption of resource staking model, users do not need to pay gas fees during each transaction submission, which greatly reduces user’s operational cost while retaining the ability to counter dusting attacks. Once the TEC network mining has been exhausted, i.e. no further new coins to mine, gas fees will be charged for each on-chain submission but the price will be pegged with USD fiat currency through DAO governance voting processes such that relatively low gas fees will be charged for further flourishment of the ecosystem. 
+- **Abstract account:** a user’s account is no longer bound to a single set of private and public keys as usually seen in most contemporary blockchain networks. Instead, one can have a hierarchical set of permissions under each account and each permission can be bound with either another account or corresponding set of private and public keys. This new model also allows users to define their personal account names and opens doors to an infinite set of application usages.
+- **Sharding & clustering:** this is the most critical piece of this protocol by tackling the scalability problem through sharding and clustering techniques which will be covered in great detail in following sections.
+- **Dual-VM:** both WASM and EVM as the smart contract platforms will be supported in a single network in order to gain developers from both camps.
+- **DPoS consensus & mining:** through the continuous on-chain election process, network validators are elected to maintain the whole TEC network and also get rewarded with newly mined tokens for their work.
+- **Instant finality:** with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
 
 **FullOn** DAC network has following unique set of characteristics:
 TEC P2P forwarding: for transactions submitted onto TEC network can be sent to a DAC node first which can forward it onto the TEC P2P network. This 
@@ -370,4 +359,5 @@ After the mining reserve has been exhausted, gas fees will be charged for each t
 
 # 08. Disclaimer
 
-
+[Goto Top](#table-of-contents)
+</div>
