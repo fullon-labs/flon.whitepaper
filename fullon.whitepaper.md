@@ -20,7 +20,7 @@ _NOTE: This `v0.1` document is under development. Please check back regularly fo
    - [Key infrastructure](#key-infrastructure)
    - [Key applications](#key-applications)
 - [06. Tokenomics](#06-tokenomics)
-   - [Overall allocation and supply schedule](#overall-allocation-and-supply-schedule)
+   - [Token allocation and distribution](#token-allocation-and-distribution)
    - [Deflation](#deflation)
 - [07. Governance](#07-governance)
 - [08. Disclaimer](#08-disclaimer)
@@ -218,7 +218,7 @@ Last but not least, most mission-critical web2 applications that demand high thr
 
 # 06. Tokenomics
 
-Overall Allocation and Supply Schedule
+## Token allocation and distribution
 
 The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by TEC and DAC network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
 
