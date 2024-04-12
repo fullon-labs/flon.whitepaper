@@ -293,7 +293,7 @@ There are `20%` of the total supply, i.e. `200,000,000 FLON` tokens allocated in
 
 The **FullOn** ecosystem must ensure incentives exist for all types of miners (E.g. `TEC` miners, `DAC` miners, connectivity miners and including future unknown types of miners) to support a robust network and ecosystem. In order to ensure sufficient incentive for the layer-1 network, the execution miners are allocated in total 100,000,000 FLON tokens, to be mined within 10 years: each of the first 2 years will have `20%` of the allocation, i.e. `20 million FLON` and each of the following 6 years will have `10%` of the allocation, i.e. `10 million FLON`. The remaining `100,000,000 FLON` tokens will be allocated to `DAC` miners, connectivity miners and future introduced miners. 
 
-It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through **FullOn** improvement proposals (FIPs) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
+It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through **FullOn** improvement proposals (`FIPs`) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
 
 ## Deflation forces
 
