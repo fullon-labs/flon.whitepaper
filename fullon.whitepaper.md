@@ -158,7 +158,7 @@ Following table provides the key technological specifications of the protocol:
 
 ### Dual-chain design
 
-**FullOn** network is composed of two chains or subnetworks, one being the transaction execution chain (or `TEC` Chain) whereas the other being the data availability chain (or `DAC` Chain). The TEC chain is also responsible for arriving at consensus amongst all participants. Consensus for blockchain means ordering of transactions while execution handles the states of the underlying distributed ledgers. Data availability means the accessibility of the blockchain data such that more up-to-date copies of the same data are more robust in countering any potential attack to the entire network and ensure timely recovery and survival of the network even under certain extreme circumstances.
+**FullOn** network is composed of two chains or subnetworks, one being the transaction execution chain (or `TEC` Chain) whereas the other being the data availability chain (or `DAC` Chain). The `TEC` chain is also responsible for arriving at consensus amongst all participants. Consensus for blockchain means ordering of transactions while execution handles the states of the underlying distributed ledgers. Data availability means the accessibility of the blockchain data such that more up-to-date copies of the same data are more robust in countering any potential attack to the entire network and ensure timely recovery and survival of the network even under certain extreme circumstances.
 
 This structure is made out of a modular blockchain design such that the blockchain trilemma (scalability, security and decentralization) can be finally tackled.
 
@@ -177,9 +177,9 @@ In order to fully address this scalability issue, **FullOn** came up with an inn
  
 1. **Scale-up : sharding by cores**
 
-Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding usually is a technique as immediately adopted by protocol designers. However, the current sharding happens at network level, i.e. segmenting the entire network into many sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
+Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding is a common technique adopted by many protocol designers. However, most of the protocols choose to apply sharding at network level, i.e. segmenting the entire network into sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
 
-**FullOn** comes up with a different approach by maintaining a single chain but sharding the transactions by their pre-designated shards such that the execution will be conducted in different shards running in parallel and their states will be also maintained separately within each shard. 
+**FullOn** comes up with a different approach by maintaining a single chain while sharding the transactions by their pre-designated shards such that the execution will be conducted in different shards running in parallel and their states will be also maintained separately within each shard. That means each transaction will be tagged with a unique shard name which will be decided by the application providers. In addition, the shard names must be registered in advance with the very first shard or the base shard. All validators must execute all shards to ensure each shard is validated and executed appropriately. 
 
 Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
 <p align="center">
@@ -213,7 +213,7 @@ In order to make a blockchain ecosystem a success, applications like blockchain 
 
 Following gives a quick comparison of DEXs run on FullOn and other blockchain platforms.
 
-| DEX function   | **FullOn** powered DEXes | Other DEXes |
+| DEX function   | **FullOn**-powered DEXes | Other DEXes |
 |----------------|------------------------|-------------|
 | Order booking  | On-chain               | Off-chain   |
 | Order matching | On-chain               | Off-chain   | 
@@ -232,7 +232,7 @@ Last but not least, most mission-critical web2 applications that demand high thr
 
 ## Token allocation and distribution
 
-The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
+The maximum supply for **FullOn**’s native token `$FLON` is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
 
 <p align="center">
 <img src="./assets/flon_token_allocation.png" width="800" />
@@ -271,7 +271,7 @@ The network at scale will be fully community-driven and that requires making sur
 There are `18% `of the total supply, i.e. `180,000,000 FLON` tokens allocated in this category. **FullOn** raises from backers that can meet following conditions:
 
 1. Long-term success oriented
-1. Able to add value to both the project (E.g. via actively supporting the team) and the network (eg via validating or delegating stake).
+1. Able to add value to both the project (E.g. via actively supporting the team) and the network (E.g. via validating or delegating stake).
 1. No single player should control an undue amount of stake
 
 The backers have the 3-year lockup with a 6-month cliff after their investment.
