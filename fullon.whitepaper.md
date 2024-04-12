@@ -72,8 +72,6 @@ As a decentralization application platform, **FullOn** can certainly support a w
 
 With the 2D sharding approach, **FullOn** could achieve a virtually infinite degree of scalability with two dimensions of sharding: a) node level; b) cluster level. The total throughput would be a value of (N * M) , in which N stands for number of nodes per cluster for individual blocker producer’s environment and M for the usable number of CPU cores for blockchain transaction execution within a single node.
 
-</div>
-
 As **FullOn** supports `5000+ TPS` per shard, the following is the TPS projection table by different combinations of M & N.
 
 | N (Cluster Size) | M (No. of Shards) | Total TPS |
@@ -89,7 +87,6 @@ As **FullOn** supports `5000+ TPS` per shard, the following is the TPS projectio
 | 4                | 128               | 640 K     |
 | 4                | 400               | **2 M**   |
 
-<div align="justify">
 
 As exhibited in the above table, even without employing the clustering technology for the block producers, simply by scaling up, i.e. adding more CPU cores can achieve a very handsome size of TPS and beat most other blockchains existing today. The clustering technology to be applied is only necessary when the single-node scaling configuration is not able to meet the TPS demand. It is however up to individual block producers to decide whether or not the clustering or scaling-out approach shall be adopted.
 
@@ -99,15 +96,27 @@ Furthermore, unlike many other blockchain sharding protocols that apply sharding
 </div>
 
 # 04. Design Principles
+
+<div align="justify">
+
 Both the design and development of the **FullOn** platform are guided by a handful of key principles.  These principles reflect the problems inherent in both the centralized and decentralized systems of today.
-Usability: Applications deployed to the platform should be seamless to use for end users and seamless to create for developers.  Wherever possible, the underlying technology itself should fade to the background or be hidden completely from end users.  Wherever possible, developers should use familiar languages and patterns during the development process. Basic applications should be intuitive and simple to create while more robust applications should still be secure.
-Scalability: The platform should scale with no upper limit as long as there is economic justification for doing so in order to support enterprise-grade, globally-used applications.
-Affordability: As **FullOn** is set to be an application platform instead of just being a store of value, it must make sure the cost of using the network is relatively affordable by the majority of users.
-Simplicity: The design of each of the system’s components should be as simple as possible in order to achieve their primary purpose. 
-Sustainable decentralization: The platform should encourage significant decentralization both in the short term and the long term in order to properly secure the value it hosts. The platform and community should be widely and permission-lessly inclusive and actively encourage decentralization and participation. To maintain sustainability, both technological and community governance mechanisms should allow for practical iteration while avoiding capture by any single parties in the long run.
-Upgradability: The protocol should be easy to upgrade once the mainnet network has been launched. It would be ideal not to change the node software in order to upgrade the system configurations or even protocol-level logic.
-Modularity & Extensibility: The overall system software shall be well organized by clean-cut modules, each of which can be easily swapped out and replaced with new ones for customizability and extensibility.
+
+1. **Usability:** Applications deployed to the platform should be seamless to use for end users and seamless to create for developers.  Wherever possible, the underlying technology itself should fade to the background or be hidden completely from end users.  Wherever possible, developers should use familiar languages and patterns during the development process. Basic applications should be intuitive and simple to create while more robust applications should still be secure.
+
+2. **Scalability:** The platform should scale with no upper limit as long as there is economic justification for doing so in order to support enterprise-grade, globally-used applications.
+
+3. **Affordability:** As **FullOn** is set to be an application platform instead of just being a store of value, it must make sure the cost of using the network is relatively affordable by the majority of users.
+
+4. **Simplicity:** The design of each of the system’s components should be as simple as possible in order to achieve their primary purpose. 
+
+5. **Sustainable decentralization:** The platform should encourage significant decentralization both in the short term and the long term in order to properly secure the value it hosts. The platform and community should be widely and permission-lessly inclusive and actively encourage decentralization and participation. To maintain sustainability, both technological and community governance mechanisms should allow for practical iteration while avoiding capture by any single parties in the long run.
+
+6. **Upgradability:** The protocol should be easy to upgrade once the mainnet network has been launched. It would be ideal not to change the node software in order to upgrade the system configurations or even protocol-level logic.
+
+7. **Modularity & Extensibility:** The overall system software shall be well organized by clean-cut modules, each of which can be easily swapped out and replaced with new ones for customizability and extensibility.
+
 Last but not least, it is expected that regardless of the underlying technological implementations and protocol specifications, the above design principles must be strictly adhered to unless otherwise revised within this paper.
+</div>
 
 # 04. How **FullOn** Works
 ## Overall architecture
