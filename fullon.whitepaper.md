@@ -182,6 +182,8 @@ Modern computers are by default multi-core based and can support many worker thr
 
 Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
 
+<img src="./assets/fullon_shard_by_core.png" />
+
 More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
 
 The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
@@ -194,6 +196,7 @@ Since it is not possible to scale up infinitely, it is still possible to scale o
 
 Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
 
+<img src="./assets/fullon_shard_by_node.png" />
 
 ## Key infrastructure
 
