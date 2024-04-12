@@ -1,5 +1,5 @@
 # FullOn Protocol White Paper
-> Building a ultra-scalable 2D-Sharding modularized layer-1 blockchain
+> Building a Ultra-scalable 2D-Sharding Modularized Layer-1 Blockchain Network
 
 
 _NOTE: This document (`v0.1`) is under development. Please check regularly for updates!_
