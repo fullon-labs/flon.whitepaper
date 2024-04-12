@@ -9,11 +9,11 @@ _NOTE: This document (`v0.1`) is under development. Please check regularly for u
 
 - [01. Abstract](#01-abstract)
 - [02. Introduction](#02-introduction)
-- [03. Why **FullOn**](#03-why-**FullOn**)
+- [03. Why FullOn](#03-why-FullOn)
    - [Focus use cases](#Focus-use-cases)
    - [Scalability innovation](#Scalability-innovation)
 - [04. Design Principles](#04-design-principles)
-- [05. How **FullOn** Works](#05-how-**FullOn**-works)
+- [05. How FullOn Works](#05-how-fullon-works)
    - [Overall architecture](#overall-architecture)
    - [Implementation choice](#implementation-choice)
    - [Key specification](#key-specification)
