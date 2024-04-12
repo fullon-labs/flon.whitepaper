@@ -104,7 +104,7 @@ Both the design and development of the **FullOn** platform are guided by a handf
 Last but not least, it is expected that regardless of the underlying technological implementations and protocol specifications, the above design principles must be strictly adhered to unless otherwise revised within this paper.
 
 
-# 04. How **FullOn** Works
+# 04. How FullOn Works
 ## Overall architecture
 
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
