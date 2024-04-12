@@ -88,7 +88,7 @@ Furthermore, unlike many other blockchain sharding protocols that apply sharding
 
 ### 2. Dual-chain innovation
 
-Instead of providing a single chain to handle consenus, execution, settlement and data availability etc core tasks, `FullOn` protocol chooses to segregate the duties by providing two chains: Transaction Execution Chain for consensus, execution and settlement and Data Availability Chain for data availability. On through this design can scalability and decentralization be achieved meanwhile not sacrificing security at all!
+Instead of providing a single chain to handle consenus, execution, settlement and data availability etc. core protocol tasks, `FullOn` protocol chooses to segregate the duties by providing two chains, i.e.: `Transaction Execution Chain` for consensus, execution and settlement and `Data Availability Chain` for maximizing data availability. Only through this design can scalability and decentralization be achieved meanwhile not sacrificing security at all!
 
 # 04. Design Principles
 
