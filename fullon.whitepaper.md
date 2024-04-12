@@ -54,7 +54,6 @@ Compared with other blockchain protocols, **FullOn** has the single most importa
 As a decentralization application platform, **FullOn** can certainly support a wide range of DAPPs as experienced in any other blockchains today. Most of the DAPPs are in the category of low-to-middle frequency in invocation like once a minute or so and do not have a need for second or sub-second level latency for transactions to be effective on-chain. However, there are other types of applications that require high-frequency and low-latency in execution.
 
 **FullOn** has been long awaited for fulfilling the demand of **high-frequency low-latency order-book based decentralized exchange (DEX)** applications in order to compete against the centralized exchanges in terms of usability, performance and the total number of trading markets. As of today, unfortunately for the blockchain world, there exists virtually none such decentralized platform that can offer the similar if not the same user experience as witnessed with centralized crypto exchanges. 
-</div>
 
 ## Core innovations
 
@@ -226,7 +225,7 @@ Last but not least, most mission-critical web2 applications that demand high thr
 
 ## Token allocation and distribution
 
-The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by TEC and DAC network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
+The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
 
 <img src="./assets/flon_token_allocation.png" />
 
