@@ -259,7 +259,7 @@ Lockups for these efforts are typically 6- or 48-months, though a handful have b
 
 There are `10%` of the total supply, i.e. `100,000,000 FLON` tokens allocated in this category. 
 
-The network at scale will be fully community-driven and that requires making sure the community has the tokens they need. The Community Sale is set to occur in April 2024 in multiple rounds with incentives for the early participants and rewards for the promoters. The proceeds of the sale will be solely used for funding the core team in development of the protocol as well as listing the tokens in some top exchanges in the world. All of the tokens sold to the community will be subject to 2-year linear lockups with 6-month cliff after the mainnet launch. 
+The network at scale will be fully community-driven and that requires making sure the community has the tokens they need. The Community Pre-Sale is set to start in `May 2024` in multiple rounds with incentives for the early participants and rewards for the promoters. The proceeds of the sale will be solely used for funding the core team in development of the protocol as well as listing the tokens in some top exchanges in the world. All of the tokens sold to the community will be subject to 2-year linear lockups with 6-month cliff after the mainnet launch. 
 
 ### Fundraising
 
