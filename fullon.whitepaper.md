@@ -21,7 +21,7 @@ _NOTE: This `v0.1` document is under development. Please check back regularly fo
    - [Key applications](#key-applications)
 - [06. Tokenomics](#06-tokenomics)
    - [Token allocation and distribution](#token-allocation-and-distribution)
-   - [Deflation](#deflation)
+   - [Deflation forces](#deflation-forces)
 - [07. Governance](#07-governance)
 - [08. Disclaimer](#08-disclaimer)
 
@@ -148,7 +148,7 @@ Following table provides the key technological specifications of the protocol:
 | `DAC` Consensus         | `POS`           | Every transactions recorded on the TEC network will be also kept in DAC network |
 | Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
 | Native token            | `FLON`          |  Maximum supply: 1 billion                                    |
-| Account abstraction     | Native support  | Accounts binding with key or account permissions              |
+| Account abstraction     | Native support  | Accounts binding with key or account-based permissions        |
 | Gas fee                 | zero before FLON gets fully mined | Resource model based, to avoid front-running trading & MEV issues |
 | Anti-sybil attack       | CPU/Net/RAM resource usage control | Staking native token to get system resources required for on-chain activities |
 
@@ -283,9 +283,9 @@ The **FullOn** ecosystem must ensure incentives exist for all types of miners (E
 
 It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through **FullOn** improvement proposals (FIPs) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
 
-## Deflation
+## Deflation forces
 
-$FLON as the native token to **FullOn** protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporarily deflation effect. 
+`$FLON` as the native token to **FullOn** protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporarily deflation effect. 
 
 To make $FLON to be more invaluable to hold, there will be actual deflation forces to be created to continously decrease the total supply of FLON tokens. Following are just two examples of the forces:
 
