@@ -313,5 +313,5 @@ After the mining reserve has been exhausted, gas fees will be charged for each t
 
 # 08. Disclaimer
 
-[Top](#table-of-contents)
+[Back To Top](#table-of-contents)
 </div>
