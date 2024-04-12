@@ -334,7 +334,7 @@ Following diagram shows the standing committees within the **FullOn** `DAO` and 
 
 Please be noted that each member of the standing committees do not hold permanent membership. Instead, they can be elected in or out on a constanct reviewing/voting process. Anyone within the whole community can propose to vote down or up a member to join **FullOn** DAO committees. As long as the proposals get sufficient amount of votes (> 2/3 of total votes), the proposals will be executed accordingly. 
 
-There can be many other DAOs existing within the ecosystem like social DAO, developer DAO, DeFi DAO, ...etc. that they conduct their own soverign governance within their own domain. Whenever there is a need for address issues crossing community or ecosystem DAOs, **FullOn** `DAO` would be thus involved for final resolution.
+There can be many other DAOs existing within the ecosystem like social DAO, developer DAO, DeFi DAO, ...etc. that they conduct their own sovereign governance within their own domain. Whenever there is a need for address issues crossing community or ecosystem DAOs, **FullOn** `DAO` would be thus involved for final resolution.
 
 # 08. Disclaimer
 
