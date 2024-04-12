@@ -263,7 +263,7 @@ The network at scale will be fully community-driven and that requires making sur
 
 ### Fundraising
 
-There are 18% of the total supply, i.e. 180,000,000 FLON tokens allocated in this category. **FullOn** raises from backers that can meet following conditions:
+There are `18% `of the total supply, i.e. `180,000,000 FLON` tokens allocated in this category. **FullOn** raises from backers that can meet following conditions:
 
 1. Long-term success oriented
 1. Able to add value to both the project (E.g. via actively supporting the team) and the network (eg via validating or delegating stake).
@@ -281,16 +281,17 @@ Every single member has the identical 4-year lockup with a 12-month cliff after 
 
 ### Foundation Endowment
 
-There are 30% of the total supply, i.e. 180,000,000 FLON tokens allocated in this category. 
+There are `30%` of the total supply, i.e. `180,000,000 FLON` tokens allocated in this category. 
+
 The **FullOn** Foundation stood up the initial network nodes and spun them down to focus on coordinating the governance of the ecosystem, funding projects and kicking off remaining distribution activities. The Endowment represents a pool of tokens which are meant to support the Foundation’s operations in the long term and which might be deployed in a wide range of ways.
 This endowment is split into 2 pieces. The first half, which is not locked up, will likely be deployed across multiple strategies to help ensure the network operates smoothly during its early phases. The second half is subject to a 24 month linear lockup since it is not expected to be accessed during the early days beyond delegation to support decentralization. Both tranches are meant to be deployed in ways which preserve principle wherever possible to ensure long-term availability rather than systematically sold for short-term capital.
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
 
 ### Mining Reserve
 
-There are 20% of the total supply, i.e. 200,000,000 FLON tokens allocated in this category. 
+There are `20%` of the total supply, i.e. `200,000,000 FLON` tokens allocated in this category. 
 
-The **FullOn** ecosystem must ensure incentives exist for all types of miners (E.g. execution miners, data availability miners, connectivity miners and including future unknown types of miners) to support a robust network and ecosystem. In order to ensure sufficient incentive for the layer-1 network, the execution miners are allocated in total 100,000,000 FLON tokens, to be mined within 10 years: each of the first 2 years will have 20% of the allocation, i.e. 20 million FLONs and each of the following 6 years will have 10% of the allocation, i.e. 10 million FLONs. The remaining 100,000,000 FLON tokens will be allocated to data availability miners, connectivity miners and future introduced miners. 
+The **FullOn** ecosystem must ensure incentives exist for all types of miners (E.g. `TEC` miners, `DAC` miners, connectivity miners and including future unknown types of miners) to support a robust network and ecosystem. In order to ensure sufficient incentive for the layer-1 network, the execution miners are allocated in total 100,000,000 FLON tokens, to be mined within 10 years: each of the first 2 years will have `20%` of the allocation, i.e. `20 million FLON` and each of the following 6 years will have `10%` of the allocation, i.e. `10 million FLON`. The remaining `100,000,000 FLON` tokens will be allocated to `DAC` miners, connectivity miners and future introduced miners. 
 
 It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through **FullOn** improvement proposals (FIPs) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
 
@@ -298,7 +299,7 @@ It will be up to the community DAO governance committee to determine in the futu
 
 `$FLON` as the native token to **FullOn** protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporarily deflation effect. 
 
-To make $FLON to be more invaluable to hold, there will be actual deflation forces to be created to continously decrease the total supply of FLON tokens. Following are just two examples of the forces:
+To make `$FLON` to be more valuable to hold, there will be actual deflation forces to be created to continously decrease the total supply of FLON tokens. Following are just two examples of the forces:
 
 **FullOn** as a web3 platform empowers mission-critical decentralized application and services. DAPPs especially those who received **FullOn**’s capital support are encouraged to allocate aside at least 20% their services fees to buyback and burn FLON tokens to create the deflation effect. That means more DAPPs to be deployed and used, more FLON tokens are to be burnt.
 After the mining reserve has been exhausted, gas fees will be charged for each transaction to be submitted on-chain and 50% of the gas fees in the form of $FLON tokens will be burnt and the rest 50% goes to the miners (the percentage for burning can be modified throught DAO governance) .
