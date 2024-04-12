@@ -248,8 +248,8 @@ Below gives the table of the allocation plan with corresponding lockup schedules
 | Foundation Endowment | `10%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
 | Core Contributors    | `12%`               | `120,000,000`       | `flon.coredev`          | 1-year cliff, 4-year lockup      |
 | Community Grants/Programs | `12%`          | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 5-year lockup      | 
-| TEC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
-| DAC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
+| TEC Chain Mining Reserve | `10%`           | `200,000,000`       | N/A                     | N/A                              |
+| DAC Chain Mining Reserve | `10%`           | `200,000,000`       | N/A                     | N/A                              |
 
 _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
@@ -265,7 +265,7 @@ Lockups for these efforts are typically 6- or 48-months, though a handful have b
 
 ### Community Pre-Sale
 
-There are `10%` of the total supply, i.e. `100,000,000 FLON` tokens allocated in this category. 
+There are `18%` of the total supply, i.e. `180,000,000 FLON` tokens allocated in this category. 
 
 The network at scale will be fully community-driven and that requires making sure the community has the tokens they need. The Community Pre-Sale is set to start in `May 2024` in multiple rounds with incentives for the early participants and rewards for the promoters. The proceeds of the sale will be solely used for funding the core team in development of the protocol as well as listing the tokens in some top exchanges in the world. All of the tokens sold to the community will be subject to 2-year linear lockups with 6-month cliff after the mainnet launch. 
 
@@ -289,10 +289,12 @@ Every single member has the identical 4-year lockup with a 12-month cliff after 
 
 ### Foundation Endowment
 
-There are `30%` of the total supply, i.e. `180,000,000 FLON` tokens allocated in this category. 
+There are `10%` of the total supply, i.e. `100,000,000 FLON` tokens allocated in this category. 
 
 The **FullOn** Foundation stood up the initial network nodes and spun them down to focus on coordinating the governance of the ecosystem, funding projects and kicking off remaining distribution activities. The Endowment represents a pool of tokens which are meant to support the Foundation’s operations in the long term and which might be deployed in a wide range of ways.
+
 This endowment is split into 2 pieces. The first half, which is not locked up, will likely be deployed across multiple strategies to help ensure the network operates smoothly during its early phases. The second half is subject to a 24 month linear lockup since it is not expected to be accessed during the early days beyond delegation to support decentralization. Both tranches are meant to be deployed in ways which preserve principle wherever possible to ensure long-term availability rather than systematically sold for short-term capital.
+
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
 
 ### Community Grants and Programs
