@@ -61,7 +61,7 @@ Compared with other blockchain protocols, **FullOn** has the single most importa
 
 As a decentralization application platform, **FullOn** can certainly support a wide range of DAPPs as experienced in any other blockchains today. Most of the DAPPs are in the category of low-to-middle frequency in invocation like once a minute or so and do not have a need for second or sub-second level latency for transactions to be effective on-chain. However, there are other types of applications that require high-frequency and low-latency in execution.
 
-**FullOn** has been long awaited for fulfilling the demand of high-frequency and low-latency order-book based decentralized exchange (DEX) applications in order to compete against the centralized exchanges in terms of usability, performance and the total number of trading markets. As of today, unfortunately for the blockchain world, there exists virtually none such decentralized platform that can offer the similar if not the same user experience as witnessed with centralized crypto exchanges. 
+**FullOn** has been long awaited for fulfilling the demand of **high-frequency and low-latency order-book based decentralized exchange (DEX)** applications in order to compete against the centralized exchanges in terms of usability, performance and the total number of trading markets. As of today, unfortunately for the blockchain world, there exists virtually none such decentralized platform that can offer the similar if not the same user experience as witnessed with centralized crypto exchanges. 
 </div>
 
 ## Scalability innovation
