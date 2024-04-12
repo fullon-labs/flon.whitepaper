@@ -105,7 +105,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
 
 
-**FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (DAC) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
+**FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
 
 **FullOn** `TEC` network has following unique set of characteristics:
 
@@ -138,8 +138,8 @@ Following table provides the key technological specifications of the protocol:
 | Block interval          | 1 sec           | A subtle choice made between low latency and high reliability |
 | Instant finality        | 1.5 sec         | desired by apps to counter double-spending etc attacks        |
 | TPS per Shard           | 5000            | Measured against token transfer transactions                  |
-| `TEC` Consensus algorithm | DPoS            | Invalid transactions get rejected by validator nodes          |
-| `DAC` Consensus algorithm | POS             | Every transactions recorded on the TEC network will be also kept in DAC network |
+| `TEC` Consensus         | `DPoS`          | Invalid transactions get rejected by validator nodes          |
+| `DAC` Consensus         | `POS`           | Every transactions recorded on the TEC network will be also kept in DAC network |
 | Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
 | Native token            | `FLON`          |  Maximum supply: 1 billion                                    |
 | Account abstraction     | Native support  | Accounts binding with key or account permissions              |
@@ -168,7 +168,7 @@ TEC chain serves as a decentralized application platform and must be scalable to
 
 In order to fully address this scalability issue, **FullOn** came up with an innovative 2D-sharding scheme by scaling up vertically and scaling out horizontally.
  
-  1. ** Scale-up : sharding by cores**
+1. **Scale-up : sharding by cores**
 
 Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding usually is a technique as immediately adopted by protocol designers. However, the current sharding happens at network level, i.e. segmenting the entire network into many sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
 
@@ -181,11 +181,12 @@ More details including cross-shard communication etc can be covered in the low-l
 The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
 > 40 * 5000 = 200 K TPS
 
-Scale-out: sharding by nodes
+2. **Scale-out: sharding by nodes**
+
 Since it is not possible to scale up infinitely, it is still possible to scale out by adding nodes to form a cluster for each block producer such that more TPS could be achieved. Say each block producer has 5 nodes an each node can support 200 K TPS, then the total TPS the entire network could achieve will be:
 > 200 K * 5 = 1 M TPS
 
-Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the TEC P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
+Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
 
 
 ## Key infrastructure
@@ -219,10 +220,8 @@ Last but not least, most mission-critical web2 applications that demand high thr
 
 Overall Allocation and Supply Schedule
 
-The total supply for **FullOn**’s native token FLON is 1 billion. However, there will be only 800,000,000 FLON tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining 200,000,000 FLON tokens will need to be mined by network validator and data availability miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
+The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by TEC and DAC network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
 
-
-Below gives the table of the allocation plan with corresponding lockup schedules.
 | Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
 | Early Ecosystem      | `10%`               | `100,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year max lockup  |
