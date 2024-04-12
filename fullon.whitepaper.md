@@ -197,7 +197,7 @@ Following diagram shows the setup for a validator cluster that can achieve a mil
 
 ## Key infrastructure
 
-In order to make a blockchain ecosystem a success, applications like blockchain explorer or scanner, crypto wallets and universal cross-chain bridge,...etc must be all available right upon the launch of the network. The **FullOn** core team will provide these infrastructural components and also open source them to let community developers evolve them to cater for future needs.
+In order to make a blockchain ecosystem a success, applications like blockchain explorer or scanner, self-custody wallets, faucet token claiming tool and universal cross-chain bridge,...etc must be all available right after the launch of the network. The **FullOn** core team will provide these infrastructural components and also open source them to let community developers evolve them to cater for future needs.
 
 ## Key applications
 
@@ -227,6 +227,7 @@ Last but not least, most mission-critical web2 applications that demand high thr
 ## Token allocation and distribution
 
 The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by TEC and DAC network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
+<img src="./assets/flon_token_allocation.png" width="600" />
 
 | Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
@@ -239,9 +240,9 @@ The maximum supply for **FullOn**’s native token FLON is `1 billion`. However,
 
 _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
-Allocation Category Detail
+## Allocation Detail
 
-Early Ecosystem
+### Early Ecosystem
 
 There are 10% of the total supply, i.e. 100,000,000 FLON tokens allocated in this category. 
 
@@ -249,7 +250,7 @@ Early Ecosystem includes all of the grants for those who have participated in th
 
 Lockups for these efforts are typically 6- or 48-months, though a handful have been shorter or longer. It also includes allocations for several programs that haven’t launched yet. Those who participate in the early community efforts by completing certain promotional tasks will be rewarded with airdrops of tokens up to 1% of the total supply and their tokens will be locked for 6 months.
 
-Community Sale
+### Community Pre-Sale
 
 There are 10% of the total supply, i.e. 100,000,000 FLON tokens allocated in this category. 
 
