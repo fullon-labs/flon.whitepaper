@@ -118,10 +118,10 @@ Last but not least, it is expected that regardless of the underlying technologic
 - **Instant finality:** with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
 
 **FullOn** DAC network has following unique set of characteristics:
-TEC P2P forwarding: for transactions submitted onto TEC network can be sent to a DAC node first which can forward it onto the TEC P2P network. This 
-Light & fast data sync: As there requires no execution but synchronization of transactions recorded from TEC network, each DAC node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this DAC network.
-Data availability proof verification: data recorded onto the DAC network can be verified for existence and validity to prevent cheating.
-POS consensus & mining: DAC network adopts POS consensus algorithm and validators are rewarded for their work in keeping synchronized with the TEC network.
+- **TEC P2P forwarding:** for transactions submitted onto TEC network can be sent to a DAC node first which can forward it onto the TEC P2P network. This 
+- **Light & fast data sync:** As there requires no execution but synchronization of transactions recorded from TEC network, each DAC node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this DAC network.
+- **Data availability proof verification:** data recorded onto the DAC network can be verified for existence and validity to prevent cheating.
+- **POS consensus & mining:** DAC network adopts POS consensus algorithm and validators are rewarded for their work in keeping synchronized with the TEC network.
 
 **FullOn** TEC network will be first launched and DAC network will be launched subsequently once the data availability proof verification technology matures.
 
