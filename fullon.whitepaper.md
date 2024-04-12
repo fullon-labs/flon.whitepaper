@@ -108,8 +108,9 @@ Last but not least, it is expected that regardless of the underlying technologic
 ## Overall architecture
 
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
-
+<p align="center">
 <img src="./assets/fullon_dual_chain_arch.png" width="800">
+</p>
 
 **FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from `TEC` chain and incentivizes deployment of as many `DAC` nodes as possible to form the whole `DAC` network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** `DAC` nodes provide access to the `TEC` P2P network.
 
@@ -181,8 +182,9 @@ Modern computers are by default multi-core based and can support many worker thr
 **FullOn** comes up with a different approach by maintaining a single chain but sharding the transactions by their pre-designated shards such that the execution will be conducted in different shards running in parallel and their states will be also maintained separately within each shard. 
 
 Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
-
+<p align="center">
 <img src="./assets/fullon_shard_by_core.png" width="600" />
+</p>
 
 More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
 
@@ -195,8 +197,9 @@ Since it is not possible to scale up infinitely, it is still possible to scale o
 > 5 * 200K = 1M TPS
 
 Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
-
+<p align="center">
 <img src="./assets/fullon_shard_by_node.png" />
+</p>
 
 ## Key infrastructure
 
@@ -231,7 +234,9 @@ Last but not least, most mission-critical web2 applications that demand high thr
 
 The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
 
-<img src="./assets/flon_token_allocation.png" width="800" align="center" />
+<p align="center">
+<img src="./assets/flon_token_allocation.png" width="800" />
+</p>
 
 Below gives the table of the allocation plan with corresponding lockup schedules:
 | Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
