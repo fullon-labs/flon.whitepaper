@@ -212,9 +212,9 @@ Following gives a quick comparison of DEXs run on FullOn and other blockchain pl
 
 | DEX function   | **FullOn** powered DEX | Other DEXes |
 |----------------|------------------------|-------------|
-| Order booking  | Fully on-chain         | Off-chain   |
-| Order matching | Fully on-chain         | Off-chain   | 
-| Order settlement| Fully on-chain        | On-chain    |
+| Order booking  | On-chain               | Off-chain   |
+| Order matching | On-chain               | Off-chain   | 
+| Order settlement| On-chain              | On-chain    |
 
 It is in the core team’s belief that only through offering the full decentralization can the following benefits be achieved:
    1. Low maintenance, reducing the total operational cost at least by 10x compared to CEXes.
