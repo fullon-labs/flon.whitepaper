@@ -120,7 +120,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 - **Sharding & clustering:** this is the most critical piece of this protocol by tackling the scalability problem through sharding and clustering techniques which will be covered in great detail in following sections.
 - **Dual-VM:** both WASM and EVM as the smart contract platforms will be supported in a single network in order to gain developers from both camps.
 - **DPoS consensus & mining:** through the continuous on-chain election process, network validators are elected to maintain the whole TEC network and also get rewarded with newly mined tokens for their work.
-- **Instant finality:** with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
+- **Instant finality:** with this feature can applications become aware in a timely fashion (`~1.5 sec`) that their transactions submitted onto the network have been finalized on-chain.
 
 **FullOn** `DAC` network has following unique set of characteristics:
 - **TEC P2P forwarding:** for transactions submitted onto `TEC` network can be sent to a `DAC` node first which can forward it onto the `TEC` P2P network. This 
@@ -141,13 +141,13 @@ However, as **FullOn** is a set of protocol specifications and means to be imple
 Following table provides the key technological specifications of the protocol:
 | Attribute               | Value           | Description                                                   |
 |-------------------------|-----------------|---------------------------------------------------------------|
-| Block interval          | 1 sec           | A subtle choice made between low latency and high reliability |
-| Instant finality        | 1.5 sec         | desired by apps to counter double-spending etc attacks        |
-| TPS per Shard           | 5000            | Measured against token transfer transactions                  |
+| Block interval          | `1 sec`         | A subtle choice made between low latency and high reliability |
+| Instant finality        | `1.5 sec`       | desired by apps to counter double-spending etc attacks        |
+| TPS per Shard           | `5000`          | Measured against token transfer transactions                  |
 | `TEC` Consensus         | `DPoS`          | Invalid transactions get rejected by validator nodes          |
 | `DAC` Consensus         | `POS`           | Every transactions recorded on the TEC network will be also kept in DAC network |
 | Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
-| Native token            | `FLON`          |  Maximum supply: 1 billion                                    |
+| Native token            | `$FLON`         |  Maximum supply: `1 billion`                                  |
 | Account abstraction     | Native support  | Accounts binding with key or account-based permissions        |
 | Gas fee                 | zero before FLON gets fully mined | Resource model based, to avoid front-running trading & MEV issues |
 | Anti-sybil attack       | CPU/Net/RAM resource usage control | Staking native token to get system resources required for on-chain activities |
