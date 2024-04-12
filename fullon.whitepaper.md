@@ -301,8 +301,8 @@ It will be up to the community DAO governance committee to determine in the futu
 
 To make `$FLON` to be more valuable to hold, there will be actual deflation forces to be created to continously decrease the total supply of FLON tokens. Following are just two examples of the forces:
 
-**FullOn** as a web3 platform empowers mission-critical decentralized application and services. DAPPs especially those who received **FullOn**’s capital support are encouraged to allocate aside at least 20% their services fees to buyback and burn FLON tokens to create the deflation effect. That means more DAPPs to be deployed and used, more FLON tokens are to be burnt.
-After the mining reserve has been exhausted, gas fees will be charged for each transaction to be submitted on-chain and 50% of the gas fees in the form of $FLON tokens will be burnt and the rest 50% goes to the miners (the percentage for burning can be modified throught DAO governance) .
+**FullOn** as a web3 platform empowers mission-critical decentralized application and services. DAPPs especially those who received **FullOn**’s capital support are encouraged to allocate aside at least 20% their services fees to buyback and burn `$FLON` tokens to create the deflation effect. That means more DAPPs to be deployed and used, more `$FLON` tokens are to be burnt.
+After the mining reserve has been exhausted, gas fees will be charged for each transaction to be submitted on-chain and 50% of the gas fees in the form of `$FLON` tokens will be burnt and the rest 50% goes to the miners (the percentage for burning can be modified throught DAO governance) .
 
 # 07. Governance
 
