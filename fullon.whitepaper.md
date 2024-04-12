@@ -7,17 +7,23 @@ _NOTE: This document (`v0.1`) is under development. Please check regularly for u
 
 ## Table of Contents
 
-- [01. Abstract](#01.-abstract)
-- [02. Introduction](#02.-introduction)
-- [03. Why FullOn](#03.-why-fullon)
+- [01. Abstract](#01-abstract)
+- [02. Introduction](#02-introduction)
+- [03. Why FullOn](#03-why-fullon)
    - [Focus use cases](#Focus-use-cases)
    - [Scalability innovation](#Scalability-innovation)
-- [04. Design Principles](#04.-design-principles)
-- [05. How FullOn Works](#05.-how-fullon-works)
+- [04. Design Principles](#04-design-principles)
+- [05. How FullOn Works](#05-how-fullon-works)
    - [Overall architecture](#overall-architecture)
-- [06. Tokenomics](#06.-tokenomics)
-- [07. Governance](#06.-governance)
-- [08. Disclaimer](#07.-disclaimer)
+   - [Implementation choice](#implementation-choice)
+   - [Key specification](#key-specification)
+   - [Key infrastructure](#key-infrastructure)
+   - [Key applications](#key-applications)
+- [06. Tokenomics](#06-tokenomics)
+   - [Overall allocation and supply schedule](#overall-allocation-and-supply-schedule)
+   - [Deflation](#deflation)
+- [07. Governance](#06-governance)
+- [08. Disclaimer](#07-disclaimer)
 
 
 # 01. Abstract
@@ -350,7 +356,7 @@ The FullOn ecosystem must ensure incentives exist for all types of miners (E.g. 
 
 It will be up to the community DAO governance committee to determine in the future how to distribute those tokens, through FullOn improvement proposals (FIPs) or similar decentralized decision making processes. As years pass and the network evolves, it will be up to the community to decide whether this reserve is enough, or whether to make adjustments with unmined tokens.
 
-Deflation
+## Deflation
 
 $FLON as the native token to FullOn protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporarily deflation effect. 
 
@@ -359,11 +365,8 @@ To make $FLON to be more invaluable to hold, there will be actual deflation forc
 FullOn as a web3 platform empowers mission-critical decentralized application and services. DAPPs especially those who received FullOn’s capital support are encouraged to allocate aside at least 20% their services fees to buyback and burn FLON tokens to create the deflation effect. That means more DAPPs to be deployed and used, more FLON tokens are to be burnt.
 After the mining reserve has been exhausted, gas fees will be charged for each transaction to be submitted on-chain and 50% of the gas fees in the form of $FLON tokens will be burnt and the rest 50% goes to the miners (the percentage for burning can be modified throught DAO governance) .
 
-Governance
+# 07. Governance
 
-Disclaimer
-
-Core team members
-
+# 08. Disclaimer
 
 
