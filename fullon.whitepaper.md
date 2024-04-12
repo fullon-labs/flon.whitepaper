@@ -2,7 +2,7 @@
 > Building a Ultra-scalable 2D-Sharding Modularized Layer-1 Blockchain Network
 
 
-_NOTE: This document (`v0.1`) is under development. Please check regularly for updates!_
+_NOTE: This `v0.1` document is under development. Please check regularly for updates!_
 
 
 ## Table of Contents
