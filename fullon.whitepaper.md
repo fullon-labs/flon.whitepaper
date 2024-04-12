@@ -243,13 +243,13 @@ Below gives the table of the allocation plan with corresponding lockup schedules
 | Allocation Category  | Allocation Ratio     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
 | Early Ecosystem      | `10%`               | `100,000,000`       | `flon.dao`              | 1-year cliff, 4-year max lockup  |
-| Community Presale    | `18%`               | `100,000,000`       | `flon.dao`              | 6-month cliff, 2-year lockup     |
+| Community Presale    | `18%`               | `180,000,000`       | `flon.dao`              | 6-month cliff, 2-year lockup     |
 | Fundraising          | `18%`               | `180,000,000`       | `flon.dao`              | 6-month cliff, 3-year lockup     |
-| Foundation Endowment | `10%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
+| Foundation Endowment | `10%`               | `100,000,000`       | `flon.fund`             | Governed by DAO                  |
 | Core Contributors    | `12%`               | `120,000,000`       | `flon.coredev`          | 1-year cliff, 4-year lockup      |
 | Community Grants/Programs | `12%`          | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 5-year lockup      | 
-| TEC Chain Mining Reserve | `10%`           | `200,000,000`       | N/A                     | N/A                              |
-| DAC Chain Mining Reserve | `10%`           | `200,000,000`       | N/A                     | N/A                              |
+| TEC Chain Mining Reserve | `10%`           | `100,000,000`       | N/A                     | N/A                              |
+| DAC Chain Mining Reserve | `10%`           | `100,000,000`       | N/A                     | N/A                              |
 
 _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
