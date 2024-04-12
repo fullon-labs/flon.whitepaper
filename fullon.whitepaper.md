@@ -213,7 +213,7 @@ In order to make a blockchain ecosystem a success, applications like blockchain 
 
 Following gives a quick comparison of DEXs run on FullOn and other blockchain platforms.
 
-| DEX function   | **FullOn** powered DEX | Other DEXes |
+| DEX function   | **FullOn** powered DEXes | Other DEXes |
 |----------------|------------------------|-------------|
 | Order booking  | On-chain               | Off-chain   |
 | Order matching | On-chain               | Off-chain   | 
