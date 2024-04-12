@@ -227,6 +227,7 @@ Last but not least, most mission-critical web2 applications that demand high thr
 ## Token allocation and distribution
 
 The maximum supply for **FullOn**’s native token FLON is `1 billion`. However, there will be only `800,000,000 FLON` tokens to be first issued at the Genesis launch of **FullOn**’s mainnet and the remaining `200,000,000 FLON` tokens will need to be mined by `TEC` and `DAC` network validators or miners. The newly issued tokens will be allocated in the following way, where each category is described in greater detail in the following sections:
+
 <img src="./assets/flon_token_allocation.png" width="800" align="center" />
 
 Below gives the table of the allocation plan with corresponding lockup schedules:
