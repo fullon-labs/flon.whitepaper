@@ -29,9 +29,9 @@ The **$FLON** token enables the economic coordination of all participants who op
 
 **$FLON** token would have the following features:
 
-pay within the ecosystem for various services, such as processing transactions, providing bandwidth, and storing data;
-run a validating node (providing computational resources to validate information / produce blocks) as part of the network by participating in the staking process; and
-help determine how network resources are allocated and where its future technical direction will go by participating in governance processes (for the avoidance of doubt, the right to vote is restricted solely to voting on features of the **FullOn** Platform; the right to vote does not entitle **$FLON** token holders to vote on the operation and management of the Foundation, the Distributor or their respective affiliates, or their assets, and does not constitute any equity interest in any of the aforementioned entities).
+  1. pay within the ecosystem for various services, such as processing transactions, providing bandwidth, and storing data;
+  1. run a validating node (providing computational resources to validate information / produce blocks) as part of the network by participating in the staking process; and
+  1. help determine how network resources are allocated and where its future technical direction will go by participating in governance processes (for the avoidance of doubt, the right to vote is restricted solely to voting on features of the **FullOn** Platform; the right to vote does not entitle **$FLON** token holders to vote on the operation and management of the Foundation, the Distributor or their respective affiliates, or their assets, and does not constitute any equity interest in any of the aforementioned entities).
 
 Disclaimers relating to the **$FLON** token: It is expressly highlighted that **$FLON** token:
 
