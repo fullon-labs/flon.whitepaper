@@ -108,7 +108,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 ## Overall architecture
 
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
-
+<img src="./assets/fullon_dual_chain_arch.png" width="800">
 
 **FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
 
