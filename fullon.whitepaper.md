@@ -182,7 +182,7 @@ Modern computers are by default multi-core based and can support many worker thr
 
 Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
 
-<img src="./assets/fullon_shard_by_core.png" />
+<img src="./assets/fullon_shard_by_core.png" width="600" />
 
 More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
 
