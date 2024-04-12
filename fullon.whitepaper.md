@@ -279,13 +279,6 @@ There are `18% `of the total supply, i.e. `180,000,000 FLON` tokens allocated in
 
 The backers have the 3-year lockup with a 6-month cliff after their investment.
 
-### Core Contributors
-
-There are `12%` of the total supply, i.e. `120,000,000 FLON` tokens allocated in this category. 
-
-**FullOn**'s core team is composed of not only top-notch blockchain developers but also seasoned crypto leaders that have gone through ups and downs of many crypto market cycles. Core team members have been important in the early success of the protocol and they are incentivized to remain active with its development for a long time afterwards. It is also open for new industry leaders to join the team to help with the long-term and strategic growth of the network and ecosystem.
-
-Every single member has the identical 4-year lockup with a 12-month cliff after the mainnet launch.
 
 ### Foundation Endowment
 
@@ -296,6 +289,14 @@ The **FullOn** Foundation stood up the initial network nodes and spun them down 
 This endowment is split into 2 pieces. The first half, which is not locked up, will likely be deployed across multiple strategies to help ensure the network operates smoothly during its early phases. The second half is subject to a 24 month linear lockup since it is not expected to be accessed during the early days beyond delegation to support decentralization. Both tranches are meant to be deployed in ways which preserve principle wherever possible to ensure long-term availability rather than systematically sold for short-term capital.
 
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
+
+### Core Contributors
+
+There are `12%` of the total supply, i.e. `120,000,000 FLON` tokens allocated in this category. 
+
+**FullOn**'s core team is composed of not only top-notch blockchain developers but also seasoned crypto leaders that have gone through ups and downs of many crypto market cycles. Core team members have been important in the early success of the protocol and they are incentivized to remain active with its development for a long time afterwards. It is also open for new industry leaders to join the team to help with the long-term and strategic growth of the network and ecosystem.
+
+Every single member has the identical 4-year lockup with a 12-month cliff after the mainnet launch.
 
 ### Community Grants and Programs
 
