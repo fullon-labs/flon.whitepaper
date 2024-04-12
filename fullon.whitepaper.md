@@ -179,12 +179,12 @@ Following is the diagram of how a network validator produces a new block by pick
 More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
 
 The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
-> 40 * 5000 = 200 K TPS
+> 40 * 5K = 200K TPS
 
 2. **Scale-out: sharding by nodes**
 
 Since it is not possible to scale up infinitely, it is still possible to scale out by adding nodes to form a cluster for each block producer such that more TPS could be achieved. Say each block producer has 5 nodes an each node can support 200 K TPS, then the total TPS the entire network could achieve will be:
-> 200 K * 5 = 1 M TPS
+> 5 * 200K = 1M TPS
 
 Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
 
@@ -231,7 +231,7 @@ The maximum supply for **FullOn**’s native token FLON is `1 billion`. However,
 | Foundation Endowment | `30%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
 | Mining Reserve       | `20%`               | `200,000,000`       | N/A                     | N/A                              |
 
-__Note: Unlocking for the lockup tokens happens in a linear, per-block fashion.__
+_NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
 Allocation Category Detail
 
