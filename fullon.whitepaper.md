@@ -47,7 +47,6 @@ Therefore, much needed and expected is for a layer-1 protocol that can break the
 
 # 03. Why FullOn
 
-
 Compared with other blockchain protocols, **FullOn** has the single most important goal to achieve, which is to solve the scalability problem in order to bring the whole world into the web3 era. Secondly **FullOn** will take on the data availability problem by encouraging/incentivizing vastly distributed lightweight nodes around the globe that synchronize with the main network nodes.
 
 ## Focus use cases
@@ -106,9 +105,9 @@ Last but not least, it is expected that regardless of the underlying technologic
 **FullOn** protocol adopts a unique dual-chain model as shown in the following architecture diagram.
 
 
-**FullOn** Transaction Execution Chain (TEC) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (DAC) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the TEC P2P network.
+**FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (DAC) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
 
-**FullOn** TEC network has following unique set of characteristics:
+**FullOn** `TEC` network has following unique set of characteristics:
 
 - **Zero gas fees:** thanks to the adoption of resource staking model, users do not need to pay gas fees during each transaction submission, which greatly reduces user’s operational cost while retaining the ability to counter dusting attacks. Once the TEC network mining has been exhausted, i.e. no further new coins to mine, gas fees will be charged for each on-chain submission but the price will be pegged with USD fiat currency through DAO governance voting processes such that relatively low gas fees will be charged for further flourishment of the ecosystem. 
 - **Abstract account:** a user’s account is no longer bound to a single set of private and public keys as usually seen in most contemporary blockchain networks. Instead, one can have a hierarchical set of permissions under each account and each permission can be bound with either another account or corresponding set of private and public keys. This new model also allows users to define their personal account names and opens doors to an infinite set of application usages.
@@ -117,13 +116,13 @@ Last but not least, it is expected that regardless of the underlying technologic
 - **DPoS consensus & mining:** through the continuous on-chain election process, network validators are elected to maintain the whole TEC network and also get rewarded with newly mined tokens for their work.
 - **Instant finality:** with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
 
-**FullOn** DAC network has following unique set of characteristics:
-- **TEC P2P forwarding:** for transactions submitted onto TEC network can be sent to a DAC node first which can forward it onto the TEC P2P network. This 
-- **Light & fast data sync:** As there requires no execution but synchronization of transactions recorded from TEC network, each DAC node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this DAC network.
+**FullOn** `DAC` network has following unique set of characteristics:
+- **TEC P2P forwarding:** for transactions submitted onto `TEC` network can be sent to a DAC node first which can forward it onto the `TEC` P2P network. This 
+- **Light & fast data sync:** As there requires no execution but synchronization of transactions recorded from `TEC` network, each `DAC` node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this DAC network.
 - **Data availability proof verification:** data recorded onto the DAC network can be verified for existence and validity to prevent cheating.
 - **POS consensus & mining:** DAC network adopts POS consensus algorithm and validators are rewarded for their work in keeping synchronized with the TEC network.
 
-**FullOn** TEC network will be first launched and DAC network will be launched subsequently once the data availability proof verification technology matures.
+**FullOn** `TEC` network will be first launched and `DAC` network will be launched subsequently once the data availability proof verification technology matures.
 
 ## Implementation choice
 
@@ -137,10 +136,10 @@ Following table provides the key technological specifications of the protocol:
 | Attribute               | Value           | Description                                                   |
 |-------------------------|-----------------|---------------------------------------------------------------|
 | Block interval          | 1 sec           | A subtle choice made between low latency and high reliability |
-| Instant finality        | 1.5 sec         |                                                               |
+| Instant finality        | 1.5 sec         | desired by apps to counter double-spending etc attacks        |
 | TPS per Shard           | 5000            | Measured against token transfer transactions                  |
-| TEC Consensus algorithm | DPoS            | Invalid transactions get rejected by validator nodes          |
-| DAC Consensus algorithm | POS             | Every transactions recorded on the TEC network will be also kept in DAC network |
+| `TEC` Consensus algorithm | DPoS            | Invalid transactions get rejected by validator nodes          |
+| `DAC` Consensus algorithm | POS             | Every transactions recorded on the TEC network will be also kept in DAC network |
 | Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
 | Native token            | `FLON`          |  Maximum supply: 1 billion                                    |
 | Account abstraction     | Native support  | Accounts binding with key or account permissions              |
@@ -156,7 +155,7 @@ Following table provides the key technological specifications of the protocol:
 
 This structure is made out of a modular blockchain design such that the blockchain trilemma (scalability, security and decentralization) can be finally tackled.
 
-**FullOn** TEC chain serves as the decentralized application platform to host all kinds of DAPPs and is operated and governed by up to 101 validators who are elected through a constant voting process (21 of them are the executing members while the rest 80 nodes operate in a standby mode to serve as backup or wait to be elected into the top 21 members list)
+**FullOn** `TEC` chain serves as the decentralized application platform to host all kinds of DAPPs and is operated and governed by up to 101 validators who are elected through a constant voting process (21 of them are the executing members while the rest 80 nodes operate in a standby mode to serve as backup or wait to be elected into the top 21 members list)
 
 **FullOn** DAC chain being light and fast is poised to provide the last-mile connectivity to up to 8 billion users worldwide. `DAC` nodes can run inside mobile devices or browser plugins as long as they satisfy the storage requirement for keeping the `TEC` data. As a result of adopting the POS consensus algorithm, there will be no hard limit for the total number of validators maintaining the `DAC` network. Furthermore, `DAC` validator nodes not only relay or forward transactions to the TEC network but also construct transactions for DAC block signing.
 
@@ -169,7 +168,7 @@ TEC chain serves as a decentralized application platform and must be scalable to
 
 In order to fully address this scalability issue, **FullOn** came up with an innovative 2D-sharding scheme by scaling up vertically and scaling out horizontally.
  
-Scale-up : sharding by cores
+  1. ** Scale-up : sharding by cores**
 
 Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding usually is a technique as immediately adopted by protocol designers. However, the current sharding happens at network level, i.e. segmenting the entire network into many sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
 
@@ -180,48 +179,43 @@ Following is the diagram of how a network validator produces a new block by pick
 More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
 
 The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
-40 * 5000 = 200 K TPS
+> 40 * 5000 = 200 K TPS
 
 Scale-out: sharding by nodes
 Since it is not possible to scale up infinitely, it is still possible to scale out by adding nodes to form a cluster for each block producer such that more TPS could be achieved. Say each block producer has 5 nodes an each node can support 200 K TPS, then the total TPS the entire network could achieve will be:
-
- 200 K * 5 = 1 M TPS
+> 200 K * 5 = 1 M TPS
 
 Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the TEC P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
 
 
-Key infrastructure
+## Key infrastructure
 
 In order to make a blockchain ecosystem a success, applications like blockchain explorer or scanner, crypto wallets and universal cross-chain bridge,...etc must be all available right upon the launch of the network. The **FullOn** core team will provide these infrastructural components and also open source them to let community developers evolve them to cater for future needs.
-Key applications
+
+## Key applications
 
 **FullOn**’s unique sharding technology allows it to host DAPPs that typify high-frequency on-chain activities like order-book based DEXes offering about maximum 5K trading pairs as usually supported in CEXs. If on average each trading pair requires 10 TPS, the total demand would be 50K TPS. This is not a small feat for most blockchains to achieve. Instead, many so-called DEXes  choose to provide a decentralized frontend but with a centralized backend to process the trades. Other DEXes are clones of UniSwap which offers an optimal user experience for newcomers or retail traders.
 
-**FullOn**’s goal is simple, which is to beat CEXes by catching up their level of user experience for all types of traders while offering the core technology stack in a completely decentralized manner. 
+**FullOn**’s topmost goal is simple, which is to become the decentralization platform of choice to host the world’s largest and fastest DEXes to rightfully compete against CEXes with a similar if not the same level of user experience while having all the beauty of being decentralized.
 
-DEX function
-**FullOn** DEX
-Other DEXes
-Order booking
-Fully on-chain
-Off-chain
-Order matching
-Fully on-chain
-Off-chain
-Order settlement
-Fully on-chain
-On-chain
+Following gives a quick comparison of DEXs run on FullOn and other blockchain platforms.
 
+| DEX function   | **FullOn** powered DEX | Other DEXes |
+|----------------|------------------------|-------------|
+| Order booking  | Fully on-chain         | Off-chain   |
+| Order matching | Fully on-chain         | Off-chain   | 
+| Order settlement| Fully on-chain        | On-chain    |
 
 It is in the core team’s belief that only through offering the full decentralization can the following benefits be achieved:
-Low maintenance, reducing the total operational cost at least by 10x compared to CEXes.
-Faster development pace by focusing on smart contract code mainly
-Protocol DAO members decide how it evolves
-Users have their sole control to their assets traded on-chain
-Truly 24x7 working hours
+   1. Low maintenance, reducing the total operational cost at least by 10x compared to CEXes.
+   1. Faster development pace by focusing on smart contract code mainly
+   1. Protocol DAO members decide how it evolves
+   1. Users have their sole control to their assets traded on-chain
+   1. Truly 24x7 working hours
 
-Last but not least, most mission-critical web2 applications that demand high throughput and fast response (low-latency) can be easily transformed into **FullOn** DAPPs.
-Tokenomics
+Last but not least, most mission-critical web2 applications that demand high throughput and fast response (low-latency) can also be easily transformed into FullOn DAPPs, which are usually not possible with other decentralization protocols.
+
+# 06. Tokenomics
 
 Overall Allocation and Supply Schedule
 
@@ -229,44 +223,17 @@ The total supply for **FullOn**’s native token FLON is 1 billion. However, the
 
 
 Below gives the table of the allocation plan with corresponding lockup schedules.
-Allocation Category
-Rate
-Amount
-Initial Holding Account
-Lockup Schedule
-Early Ecosystem
-10%
-100,000,000
-flon.ecodev
-1-year cliff, 4-year max lockup
-Community Sale
-10%
-100,000,000
-flon.dao
-6-month cliff, 2-year lockup
-Fundraising
-18%
-180,000,000
-flon.dao
-6-month cliff, 3-year lockup
-Core Contributors
-12%
-120,000,000
-flon.coredev
-1-year cliff, 4-year lockup
-Foundation Endowment
-30%
-300,000,000
-flon.fund
-Governed by DAO
-Mining Reserve
-20%
-200,000,000
-N/A
-N/A
+| Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
+|----------------------|---------------------|---------------------|-------------------------|----------------------------------|
+| Early Ecosystem      | `10%`               | `100,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year max lockup  |
+| Community Presale    | `10%`               | `100,000,000`       | `flon.dao`              | 6-month cliff, 2-year lockup     |
+| Fundraising          | `18%`               | `180,000,000`       | `flon.dao`              | 6-month cliff, 3-year lockup     |
+| Core Contributors    | `12%`               | `120,000,000`       | `flon.coredev`          | 1-year cliff, 4-year lockup      |
+| Foundation Endowment | `30%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
+| Mining Reserve       | `20%`               | `200,000,000`       | N/A                     | N/A                              |
 
+__Note: Unlocking for the lockup tokens happens in a linear, per-block fashion.__
 
-Note: Unlocking for the lockup tokens happens in a linear, per-block fashion.
 Allocation Category Detail
 
 Early Ecosystem
