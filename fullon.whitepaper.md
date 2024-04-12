@@ -241,14 +241,14 @@ The maximum supply for **FullOn**’s native token `$FLON` is `1 billion`. Howev
 Below gives the table of the allocation plan with corresponding lockup schedules:
 | Allocation Category  | Allocation Rate     | Amount              | Initial Holding Account | Lockup Schedule                  |
 |----------------------|---------------------|---------------------|-------------------------|----------------------------------|
-| Early Ecosystem      | `10%`               | `100,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year max lockup  |
+| Early Ecosystem      | `10%`               | `100,000,000`       | `flon.dao`              | 1-year cliff, 4-year max lockup  |
 | Community Presale    | `18%`               | `100,000,000`       | `flon.dao`              | 6-month cliff, 2-year lockup     |
 | Fundraising          | `18%`               | `180,000,000`       | `flon.dao`              | 6-month cliff, 3-year lockup     |
 | Core Contributors    | `12%`               | `120,000,000`       | `flon.coredev`          | 1-year cliff, 4-year lockup      |
 | Foundation Endowment | `10%`               | `300,000,000`       | `flon.fund`             | Governed by DAO                  |
 | TEC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
 | DAC Mining Reserve   | `10%`               | `200,000,000`       | N/A                     | N/A                              |
-| Community Grants/Programs | `12`           | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year lockup      | 
+| Community Grants/Programs | `12%`          | `120,000,000`       | `flon.ecodev`           | 1-year cliff, 4-year lockup      | 
 
 _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
@@ -306,7 +306,7 @@ It will be up to the community DAO governance committee to determine in the futu
 
 There are `12%` of the total supply, i.e. `120,000,000 FLON` tokens allocated in this category. 
 
-A large portion of tokens is devoted to grants and programs which fund community efforts, community projects and community-built technical components. This spans everything from education to events to direct deployment into venture-style funding for projects. A small provision exists for tokens that can be given away or sold in the future. Because these efforts are decidedly long-term in nature, the tokens are released over 60 months.
+A large portion of tokens is devoted to grants and programs which fund community efforts, community projects and community-built technical components. This spans everything from education to events to direct deployment into venture-style funding for projects. A small provision exists for tokens that can be given away or sold in the future. Because %these efforts are decidedly long-term in nature, the tokens are released over 60 months.
 
 ## Deflation forces
 
