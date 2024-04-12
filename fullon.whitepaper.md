@@ -48,9 +48,10 @@ However, in order for blockchain technology to be widely adopted, one well-known
 Therefore, much needed and expected is for a layer-1 protocol that can break the blockchain trilemma by ensuring decentralization and security aspects as well as achieving a scalability level that can support a wide range of applications including those requiring low-latency and high-throughput.
 </div>
 
-# 03. Why **FullOn**
+# 03. Why FullOn
 
 <div align="justify">
+
 Compared with other blockchain protocols, **FullOn** has the single most important goal to achieve, which is to solve the scalability problem in order to bring the whole world into the web3 era. Secondly **FullOn** will take on the data availability problem by encouraging/incentivizing vastly distributed lightweight nodes around the globe that synchronize with the main network nodes.
 </div>
 
