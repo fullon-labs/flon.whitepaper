@@ -249,7 +249,7 @@ _NOTE: Unlocking for the lockup tokens happens in a linear, per-block fashion._
 
 ### Early Ecosystem
 
-There are 10% of the total supply, i.e. 100,000,000 FLON tokens allocated in this category. 
+There are `10%` of the total supply, i.e. `100,000,000 FLON` tokens allocated in this category. 
 
 Early Ecosystem includes all of the grants for those who have participated in the ecosystem at the early stages. A large portion of tokens is devoted to grants and programs which fund community efforts, community projects and community-built technical components. This spans everything from education to events to direct deployment of the early network as well as some key applications that attract users and capital into this network. A small provision exists for community awareness and brand development through community airdrops to those crypto fans from various communities.
 
@@ -257,7 +257,7 @@ Lockups for these efforts are typically 6- or 48-months, though a handful have b
 
 ### Community Pre-Sale
 
-There are 10% of the total supply, i.e. 100,000,000 FLON tokens allocated in this category. 
+There are `10%` of the total supply, i.e. `100,000,000 FLON` tokens allocated in this category. 
 
 The network at scale will be fully community-driven and that requires making sure the community has the tokens they need. The Community Sale is set to occur in April 2024 in multiple rounds with incentives for the early participants and rewards for the promoters. The proceeds of the sale will be solely used for funding the core team in development of the protocol as well as listing the tokens in some top exchanges in the world. All of the tokens sold to the community will be subject to 2-year linear lockups with 6-month cliff after the mainnet launch. 
 
