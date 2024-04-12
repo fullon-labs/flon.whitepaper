@@ -111,7 +111,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 
 <img src="./assets/fullon_dual_chain_arch.png" width="800">
 
-**FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from TEC chain and incentivizes deployment of as many DAC nodes as possible to form the whole DAC network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** DAC nodes provide access to the `TEC` P2P network.
+**FullOn** Transaction Execution Chain (`TEC`) provides a highly scalable and performant application platform for the entire ecosystem whereas **FullOn** Data Availability Chain (`DAC`) synchronizes all transactions from `TEC` chain and incentivizes deployment of as many `DAC` nodes as possible to form the whole `DAC` network around the globe in order to achieve the maximum level of distribution and anti-censorship. In addition, the **FullOn** `DAC` nodes provide access to the `TEC` P2P network.
 
 **FullOn** `TEC` network has following unique set of characteristics:
 
@@ -123,16 +123,16 @@ Last but not least, it is expected that regardless of the underlying technologic
 - **Instant finality:** with this feature can applications become aware in a timely fashion (~1.5 sec) that their transactions submitted onto the network have been finalized on-chain.
 
 **FullOn** `DAC` network has following unique set of characteristics:
-- **TEC P2P forwarding:** for transactions submitted onto `TEC` network can be sent to a DAC node first which can forward it onto the `TEC` P2P network. This 
-- **Light & fast data sync:** As there requires no execution but synchronization of transactions recorded from `TEC` network, each `DAC` node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this DAC network.
-- **Data availability proof verification:** data recorded onto the DAC network can be verified for existence and validity to prevent cheating.
-- **POS consensus & mining:** DAC network adopts POS consensus algorithm and validators are rewarded for their work in keeping synchronized with the TEC network.
+- **TEC P2P forwarding:** for transactions submitted onto `TEC` network can be sent to a `DAC` node first which can forward it onto the `TEC` P2P network. This 
+- **Light & fast data sync:** As there requires no execution but synchronization of transactions recorded from `TEC` network, each `DAC` node can be light and fast in processing the data sync job  and it is expected even mobile phones or browser plugin with large storage can be used to accomplish this task such that virtually all users could participate in this `DAC` network.
+- **Data availability proof verification:** data recorded onto the `DAC` network can be verified for existence and validity to prevent cheating.
+- **POS consensus & mining:** `DAC` network adopts POS consensus algorithm and validators are rewarded for their work in keeping synchronized with the TEC network.
 
 **FullOn** `TEC` network will be first launched and `DAC` network will be launched subsequently once the data availability proof verification technology matures.
 
 ## Implementation choice
 
-As the whole blockchain industry has been maturing, it does not make sense to reinvent the wheel for most common building blocks like peer-to-peer distributed systems, consensus algorithms and virtual machines to host execution of smart contracts. After reviewing many existing open source blockchain software, the core development team made a decision to build the core unique features based on the latest version of Antelope Leap (formerly known as EOS) for its modular architecture design, superb performance and extensibility. **FullOn** embraces the open source software model and will collaboratively evolve the code with developers from around the world. 
+As the whole blockchain industry has been maturing, it does not make sense to reinvent the wheel for most common building blocks like peer-to-peer distributed systems, consensus algorithms and virtual machines to host execution of smart contracts. After reviewing many existing open source blockchain software, the core development team made a decision to build the core unique features based on the latest version of [Antelope Leap](https://github.com/AntelopeIO/leap) (formerly known as EOS) for its modular architecture design, superb performance and extensibility. **FullOn** embraces the open source software model and will collaboratively evolve the code with developers from around the world. 
 
 However, as **FullOn** is a set of protocol specifications and means to be implementation neutral if possible, it can leverage implementation of other existing blockchains or can be rewritten from scratch with different programming languages. 
 
