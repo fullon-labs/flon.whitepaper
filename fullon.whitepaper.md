@@ -134,71 +134,36 @@ However, as **FullOn** is a set of protocol specifications and means to be imple
 ## Key specification
 
 Following table provides the key technological specifications of the protocol:
-Attribute
-Value
-Description
-Block interval
-1 sec
-A subtle choice made between low latency and high reliability
-Instant finality
-1.5 sec
-
-
-TPS per Shard
-5000
-Measured against token transfer transactions
-Consensus algorithm for the core network
-DPoS
-Invalid transactions get rejected by validator nodes
-Consensus algorithm for the data availability network
-POS
-Every transactions recorded on the core network will be kept separately
-VM
-WASM & EVM
-Dual virtual machine support
-Native token
-FLON
-Maximum supply: 1 billion
-Account abstraction
-Native support
-Account model binding with permissions
-Gas fee
-zero
-Resource model based, to avoid front-running trading & MEV issues
-Anti-sybil attack
-CPU/Net/RAM Resource usage control
-Staking native token to get system resources required for on-chain activities
-
+| Attribute               | Value           | Description                                                   |
+|-------------------------|-----------------|---------------------------------------------------------------|
+| Block interval          | 1 sec           | A subtle choice made between low latency and high reliability |
+| Instant finality        | 1.5 sec         |                                                               |
+| TPS per Shard           | 5000            | Measured against token transfer transactions                  |
+| TEC Consensus algorithm | DPoS            | Invalid transactions get rejected by validator nodes          |
+| DAC Consensus algorithm | POS             | Every transactions recorded on the TEC network will be also kept in DAC network |
+| Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
+| Native token            | `FLON`          |  Maximum supply: 1 billion                                    |
+| Account abstraction     | Native support  | Accounts binding with key or account permissions              |
+| Gas fee                 | zero before FLON gets fully mined | Resource model based, to avoid front-running trading & MEV issues |
+| Anti-sybil attack       | CPU/Net/RAM resource usage control | Staking native token to get system resources required for on-chain activities |
 
 
 ## Key design
 
- Technology
-Multi-core node-level sharding
-For each block producer node, transactions can be splitted into preconfigured shards for parallel execution by a number of CPU cores available from a multi-core computer system. There will be exactly one CPU core for one shard as blockchain transactions are sequentially ordered and must be executed serially within each shard. Furthermore, each shard maintains its own state database and there is a shared-nothing architecture among the shards being executed in parallel.
+### Dual-chain design
 
-Multi-node cluster-level sharding
-When the degree of scalability achieved with node-level sharding is still not enough for a hectically active ecosystem wherein there might be say tens of thousands of users using the network simultaneously, **FullOn** is ready to support such a busy environment by allowing more shards to be created through employing a multi-node clustering architecture for each block producer to segregate the traffic into sufficient number of shards such that the overall demand for the throughput can be met.
-
-Let’s say, each node can support M shards and there can be a cluster of N such nodes for each network validator. Thus the total number of shards would be: ( N * M )
-
-Dual-chain design
-
-
-**FullOn** network is composed of two chains or subnetworks, one being the transaction execution chain (or TEC Chain) whereas the other being the data availability chain (or DAC Chain). The TEC chain is also responsible for arriving at consensus amongst all participants. Consensus for blockchain means ordering of transactions while execution handles the states of the underlying distributed ledgers. Data availability means the accessibility of the blockchain data such that more up-to-date copies of the same data are more robust in countering any potential attack to the entire network and ensure timely recovery and survival of the network even under certain extreme circumstances.
+**FullOn** network is composed of two chains or subnetworks, one being the transaction execution chain (or `TEC` Chain) whereas the other being the data availability chain (or `DAC` Chain). The TEC chain is also responsible for arriving at consensus amongst all participants. Consensus for blockchain means ordering of transactions while execution handles the states of the underlying distributed ledgers. Data availability means the accessibility of the blockchain data such that more up-to-date copies of the same data are more robust in countering any potential attack to the entire network and ensure timely recovery and survival of the network even under certain extreme circumstances.
 
 This structure is made out of a modular blockchain design such that the blockchain trilemma (scalability, security and decentralization) can be finally tackled.
 
 **FullOn** TEC chain serves as the decentralized application platform to host all kinds of DAPPs and is operated and governed by up to 101 validators who are elected through a constant voting process (21 of them are the executing members while the rest 80 nodes operate in a standby mode to serve as backup or wait to be elected into the top 21 members list)
 
-**FullOn** DAC chain being light and fast is poised to provide the last-mile connectivity to up to 8 billion users worldwide. DAC nodes can run inside mobile devices or browser plugins as long as they satisfy the storage requirement for keeping the CEC data. As a result of adopting the POS consensus algorithm, there will be no hard limit for the total number of validators maintaining the DAC network. Furthermore, DAC validator nodes not only relay or forward transactions to the TEC network but also construct transactions for DAC block signing.
+**FullOn** DAC chain being light and fast is poised to provide the last-mile connectivity to up to 8 billion users worldwide. `DAC` nodes can run inside mobile devices or browser plugins as long as they satisfy the storage requirement for keeping the `TEC` data. As a result of adopting the POS consensus algorithm, there will be no hard limit for the total number of validators maintaining the `DAC` network. Furthermore, `DAC` validator nodes not only relay or forward transactions to the TEC network but also construct transactions for DAC block signing.
 
 
-In terms of the network launch, the initial network would be TEC chain only and then DAC chain will be added into the network when the data availability proof technology has become mature and efficient for small footprint devices to power the DAC network.
+In terms of the network launch, the initial network would be TEC chain only and then DAC chain will be added into the network when the data availability proof technology has become mature and efficient for small footprint devices to power the `DAC` network.
 
-
-
-2D-sharding design
+### 2D-sharding design
 
 TEC chain serves as a decentralized application platform and must be scalable to support the increasing workload as more and more users are joining and playing on the platform. Many other chains including Ethereum choose to increase the gas fee price to limit users from accessing the network to alleviate the network congestion problem.
 
