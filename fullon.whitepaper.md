@@ -132,7 +132,7 @@ Last but not least, it is expected that regardless of the underlying technologic
 
 ## Implementation choice
 
-As the whole blockchain industry has been maturing, it does not make sense to reinvent the wheel for most common building blocks like peer-to-peer distributed systems, consensus algorithms and virtual machines to host execution of smart contracts. After reviewing many existing open source blockchain software, the core development team made a decision to build the core unique features based on the latest version of [Antelope Leap](https://github.com/AntelopeIO/leap) (formerly known as EOS) for its modular architecture design, superb performance and extensibility. **FullOn** embraces the open source software model and will collaboratively evolve the code with developers from around the world. 
+As the whole blockchain industry has been maturing, it does not make sense to reinvent the wheel for most common building blocks like peer-to-peer distributed systems, consensus algorithms and virtual machines to host execution of smart contracts. After reviewing many existing open source blockchain software, the core development team made a decision to build the core unique features based on the latest version of [Antelope Leap](https://github.com/AntelopeIO/leap) (formerly known as `EOSIO`) for its modular architecture design, superb performance and extensibility. **FullOn** embraces the open source software model and will collaboratively evolve the code with developers from around the world. 
 
 However, as **FullOn** is a set of protocol specifications and means to be implementation neutral if possible, it can leverage implementation of other existing blockchains or can be rewritten from scratch with different programming languages. 
 
