@@ -314,13 +314,13 @@ It will be up to the community DAO governance committee to determine in the futu
 
 ## Inflation
 
-By default there will be no plan of inflation of the total supply except mining for new tokens within the minng reserve allocation. However, when necessary, especially after exchausting the mining reserve, it may be decied by the FullOn DAO governance body to inflate the supply to meet the new enviornment demands.
+By default there will be no plan of inflation of the total supply except mining for new tokens within the mining reserve allocation. However, when necessary, especially after exhausting the mining reserve, it may be decided by the FullOn DAO governance body to inflate the supply to meet the new environment demands.
 
 ## Deflation
 
-`$FLON` as the native token to **FullOn** protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporarily deflation effect. 
+`$FLON` as the native token to **FullOn** protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting on-chain usage resources and voting power for validator election…etc. However, most of the activities only result in FLON tokens being locked for a while, which creates merely a temporary deflation effect. 
 
-To make `$FLON` to be more valuable to hold, there will be actual deflation forces to be created to continously decrease the total supply of FLON tokens. Following are just two examples of the forces:
+To make `$FLON` to be more valuable to hold, there will be actual deflation forces to be created to continuously decrease the total supply of FLON tokens. Following are just two examples of the forces:
 
   1. **FullOn** as a web3 platform empowers mission-critical decentralized application and services. DAPPs especially those who received **FullOn**’s capital support are encouraged to allocate aside at least 20% their services fees to buyback and burn `$FLON` tokens to create the deflation effect. That means more DAPPs to be deployed and used, more `$FLON` tokens are to be burnt.
 
