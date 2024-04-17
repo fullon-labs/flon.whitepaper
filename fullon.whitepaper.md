@@ -167,40 +167,49 @@ This structure is made out of a modular blockchain design such that the blockcha
 
 **FullOn** DAC chain being light and fast is poised to provide the last-mile connectivity to up to 8 billion users worldwide. `DAC` nodes can run inside mobile devices or browser plugins as long as they satisfy the storage requirement for keeping the `TEC` data. As a result of adopting the POS consensus algorithm, there will be no hard limit for the total number of validators maintaining the `DAC` network. Furthermore, `DAC` validator nodes not only relay or forward transactions to the TEC network but also construct transactions for DAC block signing.
 
-
 In terms of the network launch, the initial network would be TEC chain only and then DAC chain will be added into the network when the data availability proof technology has become mature and efficient for small footprint devices to power the `DAC` network.
 
-### 2D-sharding design
+### Multi-shard design
+
+The best way to achieve higher performance is typically done through parallelization in execution. However, due to the sequencial nature of incoming transactions and dependencies between them, most contemporary blockchains choose to process the transactions in a single process and sequential manner, which fails to fully utilize the computing power out of a multi-core hardware architecture. There are some protocols that attemept to achieve the parallelization by applying multi-threading in execution but have to address the transaction dependency issues first which can be rather costly by itself.
+
+Instead of letting the protocol choose which shard to be applied for a specific transaction, **FullOn** let the users or most likely the application providers pre-determine the shards for their transactions. This way, the [shared-nothing architecture](https://en.wikipedia.org/wiki/Shared-nothing_architectur) between the shards can be realized for parallel execution. By following the famous [Pub/Sub](https://ably.com/topic/pub-sub#pub-sub-architecture) model, **FullOn** comes up a unique sharding design for the decentralization protocol: unlike many other sharding protocols which segement the entire blockchain network into many subnetworks, there will be only a single/unified network to be maintained by all network validators. The netowrk validators that run multi-core processors or nodes can boot up as many pre-subscribed shard processes as possible to execute the corresponding transactions and maintaining their states separately among the shards. But of course, cross-shard communication/transaction is allowed for scenarios like moving funds of one account from one shard to another. 
+
+1. **2D-sharding architecture**
 
 TEC chain serves as a decentralized application platform and must be scalable to support the increasing workload as more and more users are joining and playing on the platform. Many other chains including Ethereum choose to increase the gas fee price to limit users from accessing the network to alleviate the network congestion problem.
 
 In order to fully address this scalability issue, **FullOn** came up with an innovative 2D-sharding scheme by scaling up vertically and scaling out horizontally.
  
-1. **Scale-up : sharding by cores**
+   - **Scale-up : sharding by cores**
 
-Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding is a common technique adopted by many protocol designers. However, most of the protocols choose to apply sharding at network level, i.e. segmenting the entire network into sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
-
-**FullOn** comes up with a different approach by maintaining a single chain while sharding the transactions by their pre-designated shards such that the execution will be conducted in different shards running in parallel and their states will be also maintained separately within each shard. That means each transaction will be tagged with a unique shard name which will be decided by the application providers. In addition, the shard names must be registered in advance with the very first shard or the base shard. All validators must execute all shards to ensure each shard is validated and executed appropriately. 
-
-Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
+   Modern computers are by default multi-core based and can support many worker threads running in parallel. However, blockchain transactions are ordered and usually executed in a sequential manner, failing to leverage the exuberant number of CPU cores. There have been some efforts in existing blockchain protocols trying to make the transaction execution parallel even though the transactions come in sequential order and may be dependent between themselves. Sharding is a common technique adopted by many protocol designers. However, most of the protocols choose to apply sharding at network level, i.e. segmenting the entire network into sharded subnetworks. This approach has side-effects like adding too much cross-shard communication overhead and weakening the consensus by splitting the single chain into multiple sub-chains.
+   
+   **FullOn** comes up with a different approach by maintaining a single chain while sharding the transactions by their pre-designated shards such that the execution will be conducted in different shards running in parallel and their states will be also maintained separately within each shard. That means each transaction will be tagged with a unique shard name which will be decided by the application providers. In addition, the shard names must be registered in advance with the very first shard or the base shard. All validators must execute all shards to ensure each shard is validated and executed appropriately. 
+   
+   Following is the diagram of how a network validator produces a new block by picking up transactions from the mempool and dispatching them into different shards for parallel execution and state updating.
 <p align="center">
 <img src="./assets/fullon_shard_by_core.png" width="600" />
 </p>
-
-More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
-
-The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
+   
+   More details including cross-shard communication etc can be covered in the low-level design of **FullOn** sharding technique.
+   
+   The design of scale-up sharding certainly would hit an upper limit which is the maximum number of CPU cores that a node can have. Usually with more CPU cores it becomes much more expensive. Hence, scaling up certainly has the potential technological and economic bottleneck. Furthermore, memory and disk I/O can not scale up accordingly as the total number of CPU cores grows. Let’s take 40 as the maximum number of CPU cores a node can have for scale-up sharding with 5000 TPS per shard, the total TPS would be: 
 > 40 * 5K = 200K TPS
 
-2. **Scale-out: sharding by nodes**
-
-Since it is not possible to scale up infinitely, it is still possible to scale out by adding nodes to form a cluster for each block producer such that more TPS could be achieved. Say each block producer has 5 nodes an each node can support 200 K TPS, then the total TPS the entire network could achieve will be:
+   - **Scale-out: sharding by nodes**
+   
+   Since it is not possible to scale up infinitely, it is still possible to scale out by adding nodes to form a cluster for each block producer such that more TPS could be achieved. Say each block producer has 5 nodes an each node can support 200 K TPS, then the total TPS the entire network could achieve will be:
 > 5 * 200K = 1M TPS
 
-Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
+   Following diagram shows the setup for a validator cluster that can achieve a million TPS. Each validator runs a node dispatcher that listens to the `TEC` P2P network as well as opens its RPC port to receive new transactions and dispatch them to each of the five nodes within the cluster in a round-robin fashion. Each node has a pre-configured unique number as the node ID and can receive only the transactions that are associated with the node ID. The mapping of transactions to the node ID can be done in a naive manner by converting Shard ID (ShID) into a hash value to derive the modulo of the total number of cluster nodes.
 <p align="center">
 <img src="./assets/fullon_shard_by_node.png" />
 </p>
+
+2. **Public & Private shards**
+
+With the multi-sharding design, a mirads of use cases can be developed including providing private shards in addition to the public ones. Public shards are by default supported by the network validators. Everyone can take a look into the transactions of the public shards and read the states as maintained within the shards. However, private shards are only managed by a small set of private validators that are not determined throught the public voting process. The transactions recorded on-chain are usually encrypted data that cannot be publicly revealed. The states updated by the private shards are only accessible by the private groups who own the shards. 
 
 ## Key infrastructure
 
