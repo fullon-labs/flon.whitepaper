@@ -146,13 +146,12 @@ However, as **FullOn** is a set of protocol specifications and means to be imple
 Following table provides the key technological specifications of the protocol:
 | Attribute               | Value           | Description                                                   |
 |-------------------------|-----------------|---------------------------------------------------------------|
-| Block interval          | `1 sec`         | A subtle choice made between low latency and high reliability |
-| Instant finality        | `1.5 sec`       | desired by apps to counter double-spending etc attacks        |
-| TPS per Shard           | `5000`          | Measured against token transfer transactions                  |
-| `TEC` Consensus         | `DPoS`          | Invalid transactions get rejected by validator nodes          |
-| `DAC` Consensus         | `POS`           | Every transactions recorded on the TEC network will be also kept in DAC network |
-| Dual-VM                 | WASM & EVM      | Dual virtual machine support out-of-the-box                   |
-| Native token            | `$FLON`         |  Maximum supply: `1 billion`                                  |
+| Block interval          | `0.5 sec`       | instant on-chain speed, suitable for low-latency DAPPs        |
+| Instant finality        | `1.5 sec`       | fast on-chain finality confirmation                           |
+| TPS per shard           | `5000`          | Measured against token transfer transactions                  |
+| Consensus algorithm     | `DPoS`          | Invalid transactions get rejected by validator nodes          |
+| Dual-VM                 | WASM & EVM      | wide developer & user community base                          |
+| Native token            | `$FLON`         | Maximum supply: `1 billion`                                   |
 | Account abstraction     | Native support  | Accounts binding with key or account-based permissions        |
 | Gas fee                 | zero before FLON gets fully mined | Resource model based, to avoid front-running trading & MEV issues |
 | Anti-sybil attack       | CPU/Net/RAM resource usage control | Staking native token to get system resources required for on-chain activities |
