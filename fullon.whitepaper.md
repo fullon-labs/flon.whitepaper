@@ -151,10 +151,7 @@ Following table provides the key technological specifications of the protocol:
 | TPS per shard           | `5000`          | Measured against token transfer transactions                  |
 | Consensus algorithm     | `DPoS`          | Invalid transactions get rejected by validator nodes          |
 | Dual-VM                 | WASM & EVM      | wide developer & user community base                          |
-| Native token            | `$FLON`         | Maximum supply: `1 billion`                                   |
-| Account abstraction     | Native support  | Accounts binding with key or account-based permissions        |
-| Gas fee                 | zero before FLON gets fully mined | Resource model based, to avoid front-running trading & MEV issues |
-| Anti-sybil attack       | CPU/Net/RAM resource usage control | Staking native token to get system resources required for on-chain activities |
+| Native token            | `$FLON`         | Maximum supply: `21 billion`                                  |
 
 
 ## Key design
