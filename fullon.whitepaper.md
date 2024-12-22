@@ -144,14 +144,14 @@ However, as **FullOn** is a set of protocol specifications and means to be imple
 ## Key specification
 
 Following table provides the key technological specifications of the protocol:
-| Attribute               | Value           | Description                                                   |
-|-------------------------|-----------------|---------------------------------------------------------------|
-| Block interval          | `0.5 sec`       | instant on-chain speed, suitable for low-latency DAPPs        |
-| Instant finality        | `1.5 sec`       | fast on-chain finality confirmation                           |
-| TPS per shard           | `5000`          | Measured against token transfer transactions                  |
-| Consensus algorithm     | `DPoS`          | Invalid transactions get rejected by validator nodes          |
-| Dual-VM                 | WASM & EVM      | wide developer & user community base                          |
-| Native token            | `$FLON`         | Maximum supply: `21 billion`                                  |
+| Attribute               | Value           | Description                                                     |
+|-------------------------|-----------------|-----------------------------------------------------------------|
+| Block interval          | `0.5 sec`       | instant on-chain speed, suitable for low-latency DAPPs          |
+| Instant finality        | `1.5 sec`       | fast on-chain finality confirmation                             |
+| TPS                     | `5K - 1M - ∞`   | Massively scalable thru multi-thread/multi-shard/multi-subchain |
+| Consensus algorithm     | `DPoS`          | Invalid transactions get rejected by validator nodes            |
+| Dual-VM                 | WASM & EVM      | wide developer & user community base                            |
+| Native token            | `$FLON`         | Maximum supply: `21 billion`                                    |
 
 
 ## Key design
