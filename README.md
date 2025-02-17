@@ -1,6 +1,6 @@
 # FullOn Network White Paper
 
-* [FullOn Network White Paper](https://docs.google.com/document/d/1afWJax2-A7xc3eDrv0ZVCyt6x-sPyTFA6N3xwXaBCXc/edit?usp=sharing)
+* [FullOn Network White Paper V0.4](https://docs.google.com/document/d/1afWJax2-A7xc3eDrv0ZVCyt6x-sPyTFA6N3xwXaBCXc/edit?usp=sharing)
 
 ## Revision
 
