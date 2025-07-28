@@ -23,18 +23,18 @@ The RWID system with decentralized oracles integrates off-chain social factor ve
 ### Architecture Diagram
 ```mermaid
 graph TD
-    A[User] -->|1. Binds Social Factors| B[RWID Smart Contract]
-    A -->|2. Initiates Recovery| B
-    B -->|3. Requests Verification| C[Decentralized Oracle Network]
-    C -->|4. Queries Social Factors| D[Oracle Node 1]
-    C -->|4. Queries Social Factors| E[Oracle Node 2]
-    C -->|4. Queries Social Factors| F[Oracle Node N]
-    D -->|5. Verifies| G[SMS Provider]
-    E -->|5. Verifies| H[Google 2FA]
-    F -->|5. Verifies| I[Other Providers]
-    C -->|6. Aggregates Proofs| B
-    B -->|7. Updates Private Key| J[FullOn Network Blockchain]
-    A -->|8. Accesses Account| J
+    A[User] -->|1.Binds Social Factors| B[RWID Smart Contract]
+    A -->|2.Initiates Recovery| B
+    B -->|3.Requests Verification| C[Decentralized Oracle Network]
+    C -->|4.Queries Social Factors| D[Oracle Node 1]
+    C -->|4.Queries Social Factors| E[Oracle Node 2]
+    C -->|4.Queries Social Factors| F[Oracle Node N]
+    D -->|5.Verifies| G[SMS Provider]
+    E -->|5.Verifies| H[Google 2FA]
+    F -->|5.Verifies| I[Other Providers]
+    C -->|6.Aggregates Proofs| B
+    B -->|7.Updates Private Key| J[FullOn Network Blockchain]
+    A -->|8.Accesses Account| J
 ```
 
 ### Component Breakdown
