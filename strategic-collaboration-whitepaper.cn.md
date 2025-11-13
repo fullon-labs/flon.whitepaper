@@ -137,10 +137,9 @@ graph TD
 
 ## 六、聯絡方式
 
-- **官網**：https://fullon.io
-- **信箱**：ecosystem@fullon.io
-- **Telegram**：@FullOn_Ecosystem
-- **申請入口**：https://fullon.io/apply
+- **官網**：https://fullon.network
+- **信箱**：ecosystem@fullon.network
+- **Telegram**：@flondao
 
 ---
 
