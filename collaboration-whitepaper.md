@@ -145,14 +145,14 @@ Ecosystem projects can obtain FLON incentives through the following **three meth
 
 ```mermaid
 graph TD
-	A[Submit Application] --> B[Foundation Initial Review (7 days)]
-	B --> C{Meets all 5 criteria?}
-	C -->|Yes| D[Technical Integration (RWID, cross-chain bridge, etc.)]
-	C -->|No| E[Rejection & Feedback]
-	D --> F[Sign Strategic Cooperation Agreement]
-	F --> G[Deploy Incentive Smart Contract]
-	G --> H[Import Users/Funds]
-	H --> I[FLON Incentive Linear Release]
+    A[Submit Application] --> B[Foundation Initial Review :7 days]
+    B --> C{Meets all 5 criteria?}
+    C -->|Yes| D[Technical Integration: RWID, cross-chain bridge, etc.]
+    C -->|No| E[Rejection & Feedback]
+    D --> F[Sign Strategic Cooperation Agreement]
+    F --> G[Deploy Incentive Smart Contract]
+    G --> H[Import Users/Funds]
+    H --> I[FLON Incentive Linear Release]
 ```
 
 ---
