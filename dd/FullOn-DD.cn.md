@@ -78,32 +78,59 @@ RWA 经济嵌入原生代币。
 ## 技术成熟度
 【回答】FullOn 公链（FLON 代币）作为一款超可扩展的 Layer 1 区块链，主网上线于 2025 年 5 月，其技术成熟度处于中高水平（Maturity Level: 7/10）。基于 DPoS + Savanna 混合共识，该项目从测试网阶段快速过渡到主网，展示了强劲的工程执行力，但作为新兴链，仍需积累更多生态数据和长期稳定性证明
 
-```
-● 代码库是否公开，并有可验证的 GitHub 提交和贡献？
-```
+### 代码库是否公开，并有可验证的 GitHub 提交和贡献？
+【回答】 https://github.com/fullon-labs/flon-core
+
 ### 主网运行时间及事件历史
 【回答】
 
+| 日期        | 版本   |  核心功能说明                                             |
+|------------|--------|---------------------------------------------------------|
+| 2025.05.20 | v0.5.0 | 主网上线, 基础功能 + 多链互操作 + 统一资源管理 + 100% Gas燃烧  |
+| 2025.06.21 | v0.6.3 | 主网升级, 解决观察节点容易奔溃问题                           |
+| 2025.06.23 | v0.6.4 | 主网升级，解决交易提交延迟执行问题                           |
+| 2025.10.10 | v0.6.5 | 主网升级，解决系统合约多签功能导致state-history插件执行奔溃问题 |
+
 ### 是否进行并披露多项安全审计
-【回答】
+【回答】暂无
 
 ### 网络是否有漏洞赏金或事件响应计划
-【回答】
+【回答】有: https://docs.flon.network/bug_bounty_program
 
 ### 评估节点操作的便捷性——文档、工具、社区支持。
 【回答】
+- 文档：https://docs.flon.network
+- 工具：https://flonscan.io | https://faucet.fullon.network 
+- 社区支持：https://t.me/flondao
 
 ## 生态系统与开发者准备度
 
 ### 评估开发者工具（SDK、API、浏览器、文档质量）
 【回答】
 
+- [FullOn Wallet Dart SDK](https://github.com/fullon-labs/flondart)
+- [FullOn Wallet JSSDK](https://www.npmjs.com/~fullonchaindev)
+- [FullOn Multi-chain Interop JSSDK](https://www.npmjs.com/package/multichain-interop-js)
+- [FullOn DevDocs](https://devdocs.flon.network)
+- [FullOn 浏览器](https://flonscan.io)
+
 ### 确认 EVM 包装器的稳定性和性能基准。
 【回答】
 
-```
-● 现有 dApp 清单——是否产生真实使用？
-```
+### 现有 dApp 清单——是否产生真实使用？
+【回答】
+
+- 基础工具：
+  - fuswap：AMM Swap DEX, 有真实用户
+  - fuvest: 锁仓+线性释放，有真实用户
+  - xChain：去中心化跨链系统，有真实用户
+
+- Cisumverse生态（目前有1000+真实用户）
+  - poh.cisum: 注册挖矿SING代币进入平台储备池，同时奖励新注册用户200 CISUM积分；
+  - poe.cisum: 粉丝行为赚取CISUM积分, 支持的行为包括但不限于：每日签到，关注艺人，发贴，分享，创作等；
+  - pos.cisum: 用户质押SING币获得积分奖励和投票权；
+  - pop.cisum: 用户支付行为奖励SING币
+
 ### 与主要生态系统的桥接或互操作层可用性
 【回答】
 
