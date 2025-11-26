@@ -9,4 +9,4 @@
 
 # FullOn DD
 
-- [FullOn公链背调](./FullOn-DD.cn.pdf)
+- [FullOn公链背调](./fullon-dd.cn.pdf)
