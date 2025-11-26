@@ -1,8 +1,13 @@
 # **FullOn** Protocol White Paper
-> Building a Ultra-scalable 2D-Sharding Modular Layer-1 Blockchain Network
+> Building a Ultra-scalable Interoperable Layer-1 Blockchain Network
 
+```
+Author: FullOn Labs
+Email: fullonlabs @ gmail dot com
+```
 
-_NOTE: This `v0.3` document is under development. Please check back regularly for updates!_
+> [!NOTE]
+> This `v1.1` document is under development. Please check back regularly for updates!_
 
 
 ## Table of Contents
