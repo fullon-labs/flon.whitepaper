@@ -7,10 +7,10 @@
 ## 治理与协议演进
 
 ### 描述治理模型（链上/链下、验证者投票、基金会监督）
-【回答】[FullOn公链治理模型描述](./fullon-governance.cn.md)
+【回答】[FullOn公链治理模型描述](./fullon-governance.cn.pdf)
 
 ### 协议升级如何发起和批准？是否可以在无硬分叉的情况下进行
-【回答】可以。[FullOn协议升级](./fullon-upgrade.cn.md)
+【回答】可以。[FullOn协议升级](./fullon-upgrade.cn.pdf)
 
 ### 验证者和代币持有者在治理提案中的参与率如何
 【回答】目前节点选举尚未启动，目标是链上用户达10万+后开启全网节点竞选。
