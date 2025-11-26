@@ -1,13 +1,11 @@
-# **FullOn** Protocol White Paper
-> Building a Ultra-scalable Interoperable Layer-1 Blockchain Network
+# **FullOn Network** Protocol White Paper
+***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
+Version: v1.1
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
-
-> [!NOTE]
-> This `v1.1` document is under development. Please check back regularly for updates!_
 
 
 ## Table of Contents
@@ -38,20 +36,39 @@ Email: fullonlabs @ gmail dot com
 
 # 01. Abstract
 
-**FullOn** is a decentralized application platform that endeavors to not only attack the scalability problem but also provide the best user experience, decentralization and security such that users from around the world can safely and freely participate, collaborate and prospect together within this ever-growing ecosystem. 
-
-As a matter of fact, Bitcoin as the pioneer blockchain can only process `7` transactions per second while Ethereum can support `12 TPS`. With the [EIP-4844](https://www.eip4844.com/) upgrade, the layer-2 solutions to Ethereum could support up to `1500 TPS`, which is still far from optimal. While many other blockchain are claimed to have achieved about `10K TPS` or even million-level TPS, they are primarily centralized and require rather powerful hardware to meet the scalability requirement. 
-
-By applying an innovative two-dimension (2D) sharding technique, **FullOn** is set to break the performance and scalability bottleneck that has been plaguing the contemporary blockchain industry for a long time. As the name suggests, **FullOn** is able to fully utilize computing resources from network validators with modern computer hardware and scale both vertically and horizontally without sacrificing decentralization and security.
+**FullOn** is a layer-1 decentralization protocol, destined to become the platform of choice to host
+real-world applications for Web3, A.I. and Metaverse ecosystems targeting global users. In order
+to meet this ambitious goal, FullOn protocol focuses on providing scalability, usability and
+interoperability in addition to ensuring security and decentralization.
+FullOn achieves scalability by first ensuring the layer one by itself is highly performant and
+scalable and introducing side-chains or layer two protocols only when the layer one is not best
+suited to support certain requirements like super low-latency, large data storage consumption or
+different on-chain consensus algorithms.
+FullOn also takes usability and interoperability very seriously through introducing new features
+like sovereign and proxy accounts for fast user onboarding process and universal on-chain
+interoperability virtually with all other blockchains and crypto wallets to achieve the
+deploy-once-run-anywhere effect for all DAPPs.
 
 
 # 02. Introduction
 
-The world is now standing at the brink of the web3 era in which major economic and financial activities could entirely happen within a blockchain-powered technology environment. Apart from launching blockchain networks and issuing cryptocurrencies that can be invested or speculated by crypto fans amongst themselves, it has been rigorously sought by many industry pioneers to tokenize and issue real-world assets on-chain, which would certainly open up an infinite amount of opportunities to rejuvenate the world economy. It has been projected by some large financial firms like Citi bank that by 2035 the real-world assets to be issued on-chain would amount to `$4 trillion` in value. By contrast, the global crypto market capital has surpassed `$2.64 trillion` as of written and will certainly grow much larger and faster. Blockchain technology and cryptocurrencies have been not only embraced by many early brave individuals but also recent financial institutions from around the globe.
+The world is now standing at the brink of the Web3 and A.I. era in which major economic and
+financial activities could entirely happen atop a blockchain-powered technological foundation.
+Apart from launching blockchain networks and issuing cryptocurrencies that can be invested or
+speculated by crypto fans amongst themselves, it has been rigorously sought by many industry
+pioneers to tokenize and issue real-world assets on-chain, which would certainly open up an
+infinite amount of opportunities to rejuvenate the world economy. It has been projected by some
+large financial firms like Citi bank that by 2035 the real-world assets to be issued on-chain would
+amount to $4 trillion in value. By contrast, the global crypto market capital has surpassed $3.6
+trillion as of written and will certainly grow much larger and faster. Blockchain technology and
+cryptocurrencies have been not only embraced by many early brave individuals but also recent
+financial institutions from around the globe.
+However, as of today, there are at least hundreds of blockchain networks existing but most of
+them still lack real-world use cases or applications, not to mention propelling the realization of
 
-However, in order for blockchain technology to be widely adopted, one well-known problem called blockchain trilemma has yet to be overcome, i.e. only 2 out of the 3 critical aspects of blockchain technology can be simultaneously met: security, scalability, and decentralization. As a result,  most blockchain networks are left with no choice but to prioritize security and decentralization over scalability at the cost of achieving very limited throughput in terms of transaction per second (TPS) and rather large latency for each block to be produced and finalized on-chain, not to mention paying gas fees for submitting each transaction as adopted by most blockchain in fighting against junk messages. Therefore it can be rather daunting for users coming from the web2 technology world to fully embrace blockchain. Furthermore certain applications like high-frequency trading are simply not viable with most layer-1 blockchains. Thus, people resort to layer-2 solutions that however lack the critical decentralization property and require rather lengthy duration (E.g. usually one week) for users' assets to be eventually settled back into the layer-1 network, which can be a showstopper for many applications to adopt. Other solutions try to modularize the blockchain into data, settlement and execution layers in order to tackle the trilemma problem but still cannot meet the scalability requirement due to the execution layer itself not being sufficiently optimized.
-
-Therefore, much needed and expected is for a layer-1 protocol that can break the blockchain trilemma by ensuring decentralization and security aspects as well as achieving a scalability level that can support a wide range of applications including those requiring low-latency and high-throughput.
+Web3. There are many technical or non-technical reasons that lead to this phenomenon. FullOn
+protocol is hailed to overcome the challenges and become the decentralization platform of
+choice to power the Web3, A.I. and Metaverse ecosystems.
 
 
 # 03. Why FullOn
