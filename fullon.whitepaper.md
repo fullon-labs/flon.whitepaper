@@ -49,6 +49,10 @@ like sovereign and proxy accounts for fast user onboarding process and universal
 interoperability virtually with all other blockchains and crypto wallets to achieve the
 deploy-once-run-anywhere effect for all DAPPs.
 
+<div align="center">
+<img src=./assets/fullon-ecosystem-building-blocks.png width=80% /><br/>
+Figure-1: FullOn Ecosystem Bulding Blocks Overview
+</div>
 
 # 02. Introduction
 
