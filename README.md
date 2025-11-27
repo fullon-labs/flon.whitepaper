@@ -1,6 +1,6 @@
 # FullOn Network White Paper
 
-* [FullOn Network White Paper V1.0](FullOnWhitePaper_V1.0.pdf)
+* [FullOn Network White Paper](https://hub.flon.network/fullon.whitepaper.pdf)
 
 ## Revision
 
