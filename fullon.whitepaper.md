@@ -369,6 +369,7 @@ Each category is explained in more detail below.
 There are 20% of the total supply, i.e. 2,000,000,000 FLON tokens allocated in this category. 
 
 FullOn's core team is composed of not only top-notch blockchain developers but also seasoned crypto leaders that have gone through ups and downs of many crypto market cycles. Core team members have been important in the early success of the protocol and they are incentivized to remain active with its development for a long time afterwards. It is also open for new industry leaders to join the team to help with the long-term and strategic growth of the network and ecosystem.
+
 This endowment is not expected to be accessed during the early days and will be deployed in ways which preserve principle wherever possible to ensure long-term availability rather than systematically sold for short-term capital.
 Every single member has the identical 5-year linear vesting schedule with a 18-month cliff after the TGE date.
 
@@ -376,6 +377,7 @@ Every single member has the identical 5-year linear vesting schedule with a 18-m
 There are 12% of the total supply, i.e. 1,200,000,000 FLON tokens allocated in this category.
 
 A large portion of tokens is devoted to fund marketing efforts for acquiring or onboarding more new users, more on-chain activities and more influx of funds from third chains. This spans from completing on-chain account registration for either canonical, proxy or DID types of accounts, to completing marketing promotional tasks like social media posting about FullOn network, to bridging major assets from other chains, to trading actively on DEX or Swap pools that run directly atop FullOn network.
+
 The total amount of tokens will be gradually granted to the market programs to spend within 10 consecutive years. The tokens received by participants during the airdrop events or schemes will be first locked until the user has finished getting DID for the account and then undergo a 1 year linear vesting period. It is however subject to FullOn topmost DAO governance body to make appropriate adjustments to the release schedule under the guidance of FullOn Network Foundation.
 
 ### Seed investors
@@ -385,11 +387,13 @@ There are 10% of the total supply, i.e.1,000,000,000 FLON tokens allocated in th
 ### Private sale
 
 There are 8% of the total supply, i.e. 800,000,000 FLON tokens allocated in this category. FullOn raises from backers that can meet following conditions:
-Long-term success oriented
-Able to add value to both the project (E.g. via actively supporting the team, helping listing the tokens in top exchanges) and the network (E.g. via validating or delegating stake).
-No single player should control an undue amount of stake
+1. Long-term success oriented
+1. Able to add value to both the project (E.g. via actively supporting the team, helping listing the tokens in top exchanges) and the network (E.g. via validating or delegating stake).
+1. No single player should control an undue amount of stake
+
 The backers have the 4-year linear vesting schedule with an 18-month cliff after their investment date.
-Public sale
+
+## Public sale
 There are 7% of the total supply, i.e. 700,000,000 FLON tokens allocated in this category. Top exchanges, be it centralized ones or decentralized ones built on top of FullOn network itself can list FLON  to let traders publicly trade for the first time to get the initial tranche of FLON tokens.
 
 ### Validators rewards
@@ -422,7 +426,7 @@ There will be no extra inflation of FLON tokens except the mining reserve for va
 
 FLON has following deflationary forces:
 - In order to submit transactions on-chain, FLON must be one-way traded to get sufficient GAS resources for consumption of CPU, NET and RAM storage, which makes FLON deflational;
-- The same goes for the proxy accounts or EVM-based address accounts, each transaction requires burning aways proxy miners fees converted from FLON tokens on top of the intrinsic gas fees charged in each transaction.
+- The same goes for the proxy accounts or EVM-based address accounts, each transaction requires burning away proxy miners fees converted from FLON tokens on top of the intrinsic gas fees charged in each transaction.
 
 FLON as the native token to FullOn protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting voting power for validator election or DAO governance…etc. These types of activities result in FLON tokens getting locked for a while and thus creates a temporary deflationary effect but can be also helpful to the growth and stability of the FLON market capital.
 
