@@ -209,3 +209,68 @@ FullOn takes a rather different approach to this by achieving the deploy-once-ru
 <img src=./assets/fullon-interop-proxy-account.png width=50% /><br/>
 Figure-2: FullOn Interoperability Achieved through Proxy aAcounts
 </div>
+
+### Scalability
+
+In order to support meet the growth demand and real-world experience, the net throughput of a blockchain protocol must be scalable. FullOn addresses scalability through different levels:
+
+- ***Single threading***: FullOn achieves 10,000 TPS on a single thread to execute all verified transactions;
+- ***Multi-threading***: FullOn applies multi-threading by segregating resource-independent transactions to different execution threads to achieve parallelization. Allocation of 10 such threads can yield 100 K TPS for a commodity level FullOn node to achieve;
+- ***Multi-sharding***: Through applying sharding, i.e. same blockchain but multiple state shards, FullOn can further increase the scalability at least 10x times, i.e. achieve 1 million TPS;
+- ***Layer-2 or sidechains***: as introduced in early sections, layer-2 chains or even side-chains can be introduced in the future to run on top of or side-to-side with FullOn layer-1 network. These chains can be created for specific DAPPs or some vertical ecosystems.
+FullOn protocol will be implemented to scale up the network by applying the above techniques to meet the overall application demands at the right pace.
+
+### Resource model
+
+Most blockchains employ a single transaction fee charging model which is applying varying gas fees each transaction to prevent anyone from spamming/congesting the network. This approach however can be rather unfriendly to certain applications due to issues like front-running, which creates unfairness in trading and can be against the basic trading principle as rigorously exercised in traditional financial environments.
+
+There are in general three types of resources in the FullOn network that cost a certain amount of $FLON for each transaction to be logged on-chain successfully:
+- ***CPU***: measured by the time spent in executing the transaction
+- ***NET***: measured by the size of each transaction
+- ***RAM***: measured by the overall state storage allocation during execution of each transaction
+
+FullOn requires a certain amount of GAS that are converted from $FLON to cover the consumed resources for each transaction. The smallest unit of GAS is called ELON, which is also the smallest unit of FLON, i.e. ```1 FLON = 100,000,000 ELON, or 1 ELON = 0.00000001 FLON```
+
+GAS for both CPU and NET will be burnt rightway while RAM resources can be still returned or recycled in the form of GAS kept to the user account upon users returning the state database allocation to the FullOn network. Users do not have to buy GAS in advance for their transactions but the FullOn system will spend the available GAS from their accounts first and automatically convert the available $FLON balance of an account to GAS in order to sufficiently cover the GAS expenses for the entire transaction resource usage. Transactions would fail and do not get recorded on-chain at
+all upon either logic failure or GAS insufficiency issues.
+
+This unique design creates a friendly and transparent user experience in interacting with the FullOn network. In addition, there will be no competition in transaction GAS payment as the GAS expenditure for each transaction is solely determined by the system and users have no
+chance to give any extra FLON tokens to incentivize the block producers so that their transactions can be prioritized over others.
+
+For transactions submitted by canonical account holders, only the intrinsic system resource costs are compensated by the GAS payment. However, for transactions related to other types of accounts, there are other factors to be considered like paying extra service charges as following:
+
+- ***Proxy accounts***: only the proxy miners are responsible for signing their transactions and submitting them onto the network. Hence, each proxy account owner must deposit in advance a certain amount of `$FLON` tokens to cover both GAS cost and miner fees as predetermined within the system. A user won’t be able to submit further such transactions if an insufficient amount of `$FLON` tokens are left with the proxy account to cover GAS and miner fees. In order to make it easier for new users to experience the proxy account feature, each proxy account users are provisioned 1000 times without any charge for submitting transactions on-chain.
+
+- ***EVM-address accounts***: must pay EVM type of varying GAS fees to the proxy miners.
+
+Last but not least, FullOn is determined to be application friendly by being super low-cost in the fee mode and stay competitive among the most popular blockchains.
+
+## Governance
+
+1. Governance process
+FullOn embraces a community-driven decentralized governance (DeGov) process for all issues that matter to the advancement and prosperity of FullOn’s protocol and entire ecosystem. Any user within the community can make proposals to improve the protocol or network system and
+even get rewarded for successful implementation of their proposals. FullOn foundation oversees the governance process and makes sure all proposals can be timely and appropriately processed till full completion or closure.
+
+Following are a few examples of the proposals:
+- Making adjustment of certain protocol parameters like network validator staking threshold, CPU, NET and RAM unit cost in GAS amount, proxy miner charging fees in $FLON amount..., etc.
+- Increasing the total number of network validators
+- Inflating $FLON tokens once mining allocation has been exhausted
+- Introducing new feature or enhancement of existing features to the protocol
+
+Each proposal shall have the following governing parameters determined only by the network validators:
+- Deposit a certain amount of $FLON tokens in order to be able to propose
+- Proposal topic and details, issued in the form of a NFT
+- The quorum of voters to approve a proposal
+- The amount of votes to approve a proposal
+- The expiry time before votes are counted and the voting result determined
+- Status update to the proposal after implementation
+- Amount of rewards in $FLON tokens for successful implementation of the proposal
+
+2. Governance structure
+In general, there will be three topmost decentralized autonomous organizations (DAOs) under the constant supervision of FullOn Network Foundation:
+- ***TechDAO***: represented by the core development team of FullOn network protocol, holds 40% voting power, mainly responsible for technology advancement of the protocol as well as support developers for building their applications on top of FullOn network;
+- ***OpsDAO***: represented by the leading marketing and operation team members that directly interact with the global FullOn users, holds 30% voting power, mainly responsible for introducing and/or establishing new ecosystems, onboarding new users and supporting all existing users of FullOn technologies and applications;
+- ***InvestDAO***: represented by all investors, holds 30% voting power, focusing on ensuring appropriate usage of investment funds and a healthy development/evolution of the overall tokenomics. Investors must stake their `$FLON` tokens in order to get VOTE tokens in order to vote. Once voting is finished, users can keep their VOTE tokens for future voting or return to the stake pool to redeem their `$FLON` tokens back.
+
+More specifically, TechDAO will be run by FullOn Labs, which focuses on delivering software and hardware solutions for FullOn blockchain platform, infrastructure and its ecosystems. OpsDAO will be run by another subsidiary of FullON Network Foundation, which takes care of the
+day-to-day operations that contribute to decentralization, security and growth of the FullOn network.
