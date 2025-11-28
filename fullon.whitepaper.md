@@ -180,7 +180,7 @@ and ultra-low-latency transactional applications. Moreover, FullOn itself can pl
 layer-2 blockchain or side chain to other popular protocols like Bitcoin, Ethereum, Solana,
 Binance Chain and BASE Chain etc.
 <div align="center">
-<img src=./assets/fullon-ecosystem-arch.png width=50% /><br/>
+<img src=./assets/fullon-ecosystem-arch.png width=80% /><br/>
 Figure-2: FullOn Ecosystem High-level Architecture
 </div>
 
@@ -215,7 +215,7 @@ By looking at all existing DAPPs one can easily find out that DAPPs built for on
 
 FullOn takes a rather different approach to this by achieving the deploy-once-run-anywhere effect through the built-in proxy account interaction mechanism as shown in the following diagram:
 <div align="center">
-<img src=./assets/fullon-interop-proxy-account.png width=50% /><br/>
+<img src=./assets/fullon-interop-proxy-account.png width=80% /><br/>
 Figure-3: FullOn Interoperability Achieved through Proxy aAcounts
 </div>
 
@@ -297,7 +297,7 @@ More specifically, TechDAO will be run by FullOn Labs, which focuses on deliveri
 day-to-day operations that contribute to decentralization, security and growth of the FullOn network.
 
 <div align="center">
-<img src=./assets/fullon-gov-daos.png width=50% /><br/>
+<img src=./assets/fullon-gov-daos.png width=80% /><br/>
 Figure-4: FullOn Network Foundation and Three DAOs
 </div>
 
@@ -334,7 +334,7 @@ However, as the FullOn protocol governs the major design specifications and mean
 ## Token distribution
 The total supply for FullOn’s native asset `$FLON` is set at `10 billion` and the overall distribution of the total supply is shown in the following chart:
 <div align="center">
-<img src=./assets/flon-token-distribution.png width=50% /><br/>
+<img src=./assets/flon-token-distribution.png width=80% /><br/>
 Figure-5: FLON token distribution chart
 </div>
 
@@ -363,7 +363,7 @@ However, not all FLON tokens are available yet. There will be FLON token release
 Following gives the FLON circulating supply according to the above FLON cliff and unlock schedules. Tentatively the cliff and unlock schedule for strategic partnership has been simplified in a pure linear unlock fashion.
 
 <div align="center">
-<img src=./assets/flon-token-circulation.png width=50% /><br/>
+<img src=./assets/flon-token-circulation.png width=80% /><br/>
 Figure-6: FLON Circulating Supply chart
 </div>
 
