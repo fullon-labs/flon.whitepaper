@@ -2,7 +2,8 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Version: v1.1
+Whitepaper version: v1.1.1
+FullOn Node version: v0.6.6
 Date: Nov. 28, 2025
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
@@ -190,7 +191,7 @@ Figure-2: FullOn Ecosystem High-level Architecture
 
 | **Key aspect**           | **Value**   | **Description**                                                                                  |
 |--------------------------|-------------|--------------------------------------------------------------------------------------------------|
-| **Block Interval**       | 0.5 sec     | A subtle balance between ultra-low latency and high reliability                                  |
+| **Block Interval**       | 0.5-12 sec  | The network utilizes a dynamic block interval that targets `0.5` seconds during active transaction periods, extending to a maximum of `12` seconds during idle periods to conserve resources. |
 | **Block Finality**       | 1–1.5 sec   | Optimized for applications to resist double-spending and other attacks                           |
 | **TPS**                  | 10,000+     | Single-threaded execution, scalable via multi-threading, multi-sharding, Layer-2, and sidechains |
 | **Consensus Algorithm**  | DPoS+Savanna | High throughput and instant finality                                                            |
