@@ -4,7 +4,7 @@
 ```
 Whitepaper version: v1.1.1
 FullOn Node version: v0.6.6
-Date: Nov. 28, 2025
+Date: Jan. 12, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -207,8 +207,7 @@ In order to meet various application needs, FullOn protocol support following ve
 types:
 | **Account type** | **Description**                                               |
 |------------------|---------------------------------------------------------------|
-| Canonical account | Native on-chain 12-alphanumeric personalized account names, a.k.a. abstract account or sovereign account, which can only be created through an existing account owner who pays a certain amount of account resources in $FLON tokens. One abstract account can be
-single-signed by a corresponding private key or multi-signed by multiple keys. |
+| Canonical account | The protocol features native, 12-character alphanumeric names—referred to as abstract or 'sovereign' accounts. These accounts must be initialized by an existing account holder who funds the necessary resources using $FLON. Once created, a sovereign account can be governed by a single private key or configured for multi-signature authorization.|
 | EVM-address account | EVM type of addresses can be derived from public keys and all FullOn EVM accounts are just addresses and meaningful only within EVM code. Hence there requires a bridging of assets between EVM address accounts and FullOn accounts |
 | Proxy account | Users holding a private key to a third-chain like Ethereum can get a proxy account from FullOn through a binding process. Once it gets created, the proxy account holder can bridge assets onto the FullOn network or bridge them back securely |
 
