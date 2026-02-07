@@ -2,7 +2,7 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Whitepaper version: v1.1.1
+Whitepaper version: v2.0.0
 FullOn Node version: v0.6.6
 Date: Jan. 12, 2026
 Author: FullOn Labs
@@ -47,24 +47,21 @@ Email: fullonlabs @ gmail dot com
 
 # 01. Abstract
 
-**FullOn** is a layer-1 decentralization protocol, destined to become the platform of choice to host
-real-world applications for Web3, A.I. and Metaverse ecosystems targeting global users. In order
-to meet this ambitious goal, FullOn protocol focuses on providing scalability, usability and
-interoperability in addition to ensuring security and decentralization.
-FullOn achieves scalability by first ensuring the layer one by itself is highly performant and
-scalable and introducing side-chains or layer two protocols only when the layer one is not best
-suited to support certain requirements like super low-latency, large data storage consumption or
-different on-chain consensus algorithms.
-FullOn also takes usability and interoperability very seriously through introducing new features
-like sovereign and proxy accounts for fast user onboarding process and universal on-chain
-interoperability virtually with all other blockchains and crypto wallets to achieve the
-deploy-once-run-anywhere effect for all DAPPs.
+**FullOn** is a layer-1 decentralization protocol, positioned to become the leading platform for real-world applications in the Web3, A.I., and Metaverse ecosystems — with a special focus on revolutionizing the music industry as a dedicated public chain for global creators, fans, and participants.
+
+Designed to serve mass adoption, FullOn prioritizes scalability, usability, interoperability, security, and true decentralization, empowering the next generation of music experiences where artists, listeners, and the entire music economy can thrive on-chain.
+
+FullOn delivers exceptional scalability by building an ultra-performant layer-1 foundation using innovations like 2D-sharding and modular design. Side-chains or layer-2 solutions are introduced only when specialized needs arise — such as ultra-low latency for live music events, high-volume data for streaming and NFTs, or custom consensus for music-specific applications — ensuring the core chain remains efficient and capable of handling global-scale music interactions.
+
+Usability and interoperability are core pillars, especially for onboarding the broader music community into Web3. Features like sovereign and proxy accounts enable seamless, fast onboarding for artists and fans without deep crypto knowledge. FullOn also provides universal on-chain interoperability with virtually all major blockchains and crypto wallets, delivering a true deploy-once, run-anywhere experience for decentralized music applications (dApps) — whether NFT marketplaces, streaming platforms, royalty distribution systems, fan engagement tools, tokenized music rights, or listen-to-earn models.
+
+By combining massive scalability with music-centric innovation, FullOn aims to become the go-to public chain that transforms the music industry — empowering creators with fair, transparent ownership and monetization, connecting fans directly to artists, and building a vibrant, decentralized music economy for the global Web3 era
 
 
 # 02. Introduction
 
-The world is now standing at the brink of the Web3 and A.I. era in which major economic and
-financial activities could entirely happen atop a blockchain-powered technological foundation.
+The world is now standing at the threshold of the Web3 and A.I. era where major economic and
+financial activities could increasingly occur on a blockchain-powered technological foundation.
 Apart from launching blockchain networks and issuing cryptocurrencies that can be invested or
 speculated by crypto fans amongst themselves, it has been rigorously sought by many industry
 pioneers to tokenize and issue real-world assets on-chain, which would certainly open up an
@@ -74,12 +71,10 @@ amount to $4 trillion in value. By contrast, the global crypto market capital ha
 trillion as of written and will certainly grow much larger and faster. Blockchain technology and
 cryptocurrencies have been not only embraced by many early brave individuals but also recent
 financial institutions from around the globe.
-However, as of today, there are at least hundreds of blockchain networks existing but most of
-them still lack real-world use cases or applications, not to mention propelling the realization of
 
-Web3. There are many technical or non-technical reasons that lead to this phenomenon. FullOn
-protocol is hailed to overcome the challenges and become the decentralization platform of
-choice to power the Web3, A.I. and Metaverse ecosystems.
+Yet, despite hundreds of existing blockchain networks, most still struggle with genuine real-world adoption and scalable applications capable of driving true Web3 realization. Technical hurdles—like limited throughput, high latency, poor usability—and non-technical barriers—such as complex onboarding and fragmented interoperability—have contributed to this gap.
+
+FullOn protocol emerges as a purpose-built solution to these challenges, designed to become the premier decentralized platform powering the Web3, A.I., Metaverse, and especially the music industry ecosystems. As a high-performance layer-1 public chain, FullOn targets mass adoption by addressing core limitations head-on, with a strong emphasis on enabling tokenized music assets, fair royalty distribution, direct artist-fan economies, NFT-based ownership, streaming dApps, and listen-to-earn models.
 
 <div align="center">
 <img src=./assets/fullon-ecosystem-building-blocks.png width=80% /><br/>
