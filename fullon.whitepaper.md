@@ -47,7 +47,7 @@ Email: fullonlabs @ gmail dot com
 
 # 01. Abstract
 
-**FullOn** is a layer-1 decentralization protocol, positioned to become the leading platform for real-world applications in the Web3, A.I., and Metaverse ecosystems — with a special focus on revolutionizing the music industry as a dedicated public chain for global creators, fans, and participants.
+**FullOn** is a layer-1 decentralization protocol, positioned to become the leading platform for real-world applications in the Web3, A.I., and Metaverse ecosystems — with a special focus on revolutionizing the **music** industry as a dedicated public chain for global creators, fans, and participants.
 
 Designed to serve mass adoption, FullOn prioritizes scalability, usability, interoperability, security, and true decentralization, empowering the next generation of music experiences where artists, listeners, and the entire music economy can thrive on-chain.
 
@@ -356,8 +356,7 @@ However, not all FLON tokens are available yet. There will be FLON token release
 | Team and contributors   | 20%   | 0%         | 1.5-year cliff, 5-year linear vesting after TGE               |
 | Community airdrop       | 12%   | 0%         | 1.2% × 10 years, 1-year linear vesting (DID required)         |
 | Seed investors          | 10%   | 0%         | 1.5-year cliff, 5-year linear vesting after TGE               |
-| Private sale            | 8%    | 0%         | 1.5-year cliff, 4-year linear vesting after investment       |
-| Public sale             | 7%    | 0%         | N/A                                                           |
+| Private sale            | 15%    | 0%         | 1.5-year cliff, 4-year linear vesting after investment       |
 | Validator rewards       | 5%    | 0%         | N/A                                                           |
 | Strategic partnership   | 18%   | 0%         | Conditional release                                           |
 | Foundation              | 20%   | 10%        | 10%: 10-year linear vesting after TGE                         |
@@ -406,15 +405,12 @@ There are 10% of the total supply, i.e.1,000,000,000 FLON tokens allocated in th
 
 ### Private sale
 
-There are 8% of the total supply, i.e. 800,000,000 FLON tokens allocated in this category. FullOn raises from backers that can meet following conditions:
+There are 15% of the total supply, i.e. 1,500,000,000 FLON tokens allocated in this category. FullOn raises from backers that can meet following conditions:
 1. Long-term success oriented
 1. Able to add value to both the project (E.g. via actively supporting the team, helping listing the tokens in top exchanges) and the network (E.g. via validating or delegating stake).
 1. No single player should control an undue amount of stake
 
 The backers have the 4-year linear vesting schedule with an 18-month cliff after their investment date.
-
-## Public sale
-There are 7% of the total supply, i.e. 700,000,000 FLON tokens allocated in this category. Top exchanges, be it centralized ones or decentralized ones built on top of FullOn network itself can list FLON  to let traders publicly trade for the first time to get the initial tranche of FLON tokens.
 
 ### Validators rewards
 
