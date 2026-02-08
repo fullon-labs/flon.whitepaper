@@ -4,7 +4,7 @@
 ```
 Whitepaper version: v2.0.0
 FullOn Node version: v0.6.6
-Date: Jan. 12, 2026
+Date: Feb. 08, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -326,12 +326,27 @@ As the whole blockchain industry has been maturing for most of the technical com
 
 However, as the FullOn protocol governs the major design specifications and means to be implementation neutral. It is also welcomed that the FullOn node software can be developed from scratch or based out of the software implementation of other blockchains while retraining the integrity of the protocol design.
 
+## FullOn Bridging Web2 to Web3 
+
+FullOn is destined to onboard the next billion users, starting with music fans and creators.
+
+Unlike other public blockchains that primarily target existing Web3 users worldwide, the core team behind the FullOn network has made a deliberate strategic choice: to focus on attracting Web2 users and seamlessly guiding them toward becoming active Web3 citizens.
+
+The following diagram illustrates how FullOn is uniquely positioned to onboard a vibrant, massive user base—particularly from the music industry and beyond—by delivering efficient, intuitive, and frictionless experiences tailored to mainstream Web2 audiences.
+
+<div align="center">
+<img src="./assets/fullon-vs-other-public-chains.png" width=80% /><br />
+Figure-5: FullOn vs Other Public Chains
+</div>
+
+This user-centric approach prioritizes simplicity and familiarity, leveraging features such as sovereign and proxy accounts to enable rapid onboarding without requiring prior crypto knowledge or complex wallet setups. By bridging the gap between Web2 convenience and Web3 empowerment, FullOn aims to drive true mass adoption, transforming everyday music fans, artists, and industry participants into participants in a decentralized, transparent, and equitable on-chain economy.
+
 # 06. Tokenomics
 ## Token distribution
 The total supply for FullOn’s native asset `$FLON` is set at `10 billion` and the overall distribution of the total supply is shown in the following chart:
 <div align="center">
 <img src=./assets/flon-token-distribution.png width=80% /><br/>
-Figure-5: FLON token distribution chart
+Figure-6: FLON token distribution chart
 </div>
 
 However, not all FLON tokens are available yet. There will be FLON token releases occurring periodically or conditionally in the future. The release schedule is determined by the needs of the network. Below gives the token distribution plan and corresponding cliff & unlock schedules:
@@ -360,7 +375,7 @@ Following gives the FLON circulating supply according to the above FLON cliff an
 
 <div align="center">
 <img src=./assets/flon-token-circulation.png width=80% /><br/>
-Figure-6: FLON Circulating Supply chart
+Figure-7: FLON Circulating Supply chart
 </div>
 
 > [!Note] 
