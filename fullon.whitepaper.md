@@ -412,6 +412,8 @@ There are 15% of the total supply, i.e. 1,500,000,000 FLON tokens allocated in t
 
 The backers have the 4-year linear vesting schedule with an 18-month cliff after their investment date.
 
+The private sale is expected to be completed within two years since the FullOn mainnet launch, exceeding which up to 1% of the total supply, i.e. 100,000,000 FLON tokens from within this tranch must be allocated for IDO. 
+
 ### Validators rewards
 
 There are 5% of the total supply, i.e. 500,000,000 FLON tokens allocated in this category. The FullOn network validators are rewarded with newly issued FLON tokens per block for their work in keeping the network in operation. It is expected the overall amount is to be totally mined in a course of 10 years, after which 0.1% of the total supply, i.e. 10,000,000 FLON can be further inflated to reward the validators each year. The inflation rate can be appropriately adjusted through the topmost FullOn DAO governance body to ensure each validator has a reliable and reasonable amount of profit by operating FullOn validator nodes.
