@@ -66,7 +66,7 @@ FullOn 透過創新技術（如二維分片與模組化設計）建構超高效�
 FullOn 協議正是針對這些挑戰而生的解決方案，旨在成為驅動 Web3、人工智慧、元宇宙，特別是音樂產業生態系統的首選去中心化平台。作為一個高效能的第一層公鏈，FullOn 以推動大規模普及為目標，正面應對核心限制，並特別強調代幣化音樂資產、公平版稅分配、直接的藝術家與粉絲經濟、基於 NFT 的所有權、串流 dApps 以及邊聽邊賺模式。
 
 <div align="center">
-<img src=./assets/fullon-ecosystem-building-blocks.png width=80% /><br/>
+<img src="./assets/fullon-ecosystem-building-blocks.png" width=80% /><br/>
 圖-1：FullOn 生態系統建構模塊概覽
 </div>
 
@@ -110,7 +110,7 @@ FullOn 的使命是承載幾乎無限數量的 DAPPs，並支援來自全球數�
 如下圖所示，FullOn 作為第一層協議可直接承載所有可以想像與創建的 DAPPs。然而，也可以建構相容於 FullOn 協議的第二層區塊鏈來支援一組獨特的 DAPPs，例如高頻與超低延遲的交易應用。此外，FullOn 本身可以充當比特幣、以太坊、Solana、幣安鏈與 BASE 鏈等其他流行協議的通用第二層區塊鏈或側鏈。
 
 <div align="center">
-<img src=./assets/fullon-ecosystem-arch.png width=80% /><br/>
+<img src="./assets/fullon-ecosystem-arch.png" width=80% /><br/>
 圖-2：FullOn 生態系統高層架構
 </div>
 
@@ -144,7 +144,7 @@ FullOn 的使命是承載幾乎無限數量的 DAPPs，並支援來自全球數�
 FullOn 採取了截然不同的方法，透過內建的代理帳戶互動機制實現「一次部署、隨處運行」的效果，如下圖所示：
 
 <div align="center">
-<img src=./assets/fullon-interop-proxy-account.png width=80% /><br/>
+<img src="./assets/fullon-interop-proxy-account.png" width=80% /><br/>
 圖-3：FullOn 透過代理帳戶實現互操作性
 </div>
 
@@ -223,7 +223,7 @@ FullOn 擁抱社群驅動的去中心化治理（DeGov）流程，處理所有�
 更具體地說，TechDAO 將由 FullOn Labs 運營，該機構專注於為 FullOn 區塊鏈平台、基礎設施及其生態系統提供軟硬體解決方案。OpsDAO 將由 FullOn 網路基金會的另一家子公司運營，負責日常營運，為 FullOn 網路的去中心化、安全性與成長做出貢獻。
 
 <div align="center">
-<img src=./assets/fullon-gov-daos.png width=80% /><br/>
+<img src="./assets/fullon-gov-daos.png" width=80% /><br/>
 圖-4：FullOn 網路基金會與三個 DAO
 </div>
 
@@ -245,7 +245,7 @@ Web3 生態系統：
 下圖展示了自主人工智慧代理與 FullOn 區塊鏈如何整合在一起以實現代理代幣經濟學的範例：
 
 <div align="center">
-<img src=./assets/fullon-ai-integration.png width=50% /><br/>
+<img src="./assets/fullon-ai-integration.png" width=50% /><br/>
 圖-5：人工智慧代理與 FullOn 區塊鏈整合
 </div>
 
@@ -277,7 +277,7 @@ FullOn 注定要引導下一個十億用戶，從音樂粉絲與創作者開始�
 FullOn 原生資產 `$FLON` 的總供應量設定為 `100 億`，總供應量的整體分配如下圖所示：
 
 <div align="center">
-<img src=./assets/flon-token-distribution.png width=80% /><br/>
+<img src="./assets/flon-token-distribution.png" width=80% /><br/>
 圖-7：FLON 代幣分配圖表
 </div>
 
@@ -305,7 +305,7 @@ FullOn 原生資產 `$FLON` 的總供應量設定為 `100 億`，總供應量的
 以下是根據上述 FLON 鎖倉與解鎖時間表的 FLON 流通供應量。戰略合作夥伴的鎖倉與解鎖時間表暫以純線性解鎖方式簡化處理。
 
 <div align="center">
-<img src=./assets/flon-token-circulation.png width=80% /><br/>
+<img src="./assets/flon-token-circulation.png" width=80% /><br/>
 圖-8：FLON 流通供應量圖表
 </div>
 
