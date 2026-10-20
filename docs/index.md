@@ -1,6 +1,7 @@
 # FullOn Network Protocol
 
 - [FullOn Network White Paper (English)](./fullon.whitepaper.pdf)
+- [FullOn Network White Paper (中文)](./fullon.whitepaper.cn.pdf)
 
 # FullOn Ecosystem Collaboration
 

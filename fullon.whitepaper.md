@@ -2,9 +2,10 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Whitepaper version: v2.0.0
-FullOn Node version: v0.6.6
-Date: Feb. 08, 2026
+Whitepaper version: v2.1.0
+FLON Core version: v0.8.5
+FLON CDT version: v0.8.5
+Date: Oct. 20, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -35,7 +36,7 @@ Email: fullonlabs @ gmail dot com
      - [Seed investors](#seed-investors)
      - [Private sale](#private-sale)
      - [Public sale](#public-sale)
-     - [Validators reward](#validators-rewards)
+     - [Block Producer rewards](#block-producer-rewards)
      - [Strategic partnership](#strategic-partnership)
      - [Foundation endowment](#foundation-endowment)
    - [Inflation](#inflation)
@@ -262,45 +263,56 @@ Last but not least, FullOn is determined to be application friendly by being sup
 
 ## Governance
 
-1. Governance process
+FullOn uses community governance with deterministic on-chain state, explicit
+proposal lifecycles, vote snapshots, quorum and approval thresholds, and a
+timelock before executable proposals take effect. The lifecycle is:
 
-FullOn embraces a community-driven decentralized governance (DeGov) process for all issues that matter to the advancement and prosperity of FullOn’s protocol and entire ecosystem. Any user within the community can make proposals to improve the protocol or network system and
-even get rewarded for successful implementation of their proposals. FullOn foundation oversees the governance process and makes sure all proposals can be timely and appropriately processed till full completion or closure.
+`draft -> endorsement -> voting -> finalized -> timelock -> execution`.
 
-Following are a few examples of the proposals:
-- Making adjustment of certain protocol parameters like network validator staking threshold, CPU, NET and RAM unit cost in GAS amount, proxy miner charging fees in $FLON amount..., etc.
-- Increasing the total number of network validators
-- Inflating $FLON tokens once mining allocation has been exhausted
-- Introducing new feature or enhancement of existing features to the protocol
+Protocol parameters, treasury allocations and contract-controlled actions must
+be represented by auditable proposals. High-risk actions are restricted to an
+approved execution allowlist and longer timelocks. Emergency controls are
+limited in scope and cannot silently rewrite votes, balances or completed
+proposal results.
 
-Each proposal shall have the following governing parameters determined only by the network validators:
-- Deposit a certain amount of $FLON tokens in order to be able to propose
-- Proposal topic and details, issued in the form of a NFT
-- The quorum of voters to approve a proposal
-- The amount of votes to approve a proposal
-- The expiry time before votes are counted and the voting result determined
-- Status update to the proposal after implementation
-- Amount of rewards in $FLON tokens for successful implementation of the proposal
+FLON locked for Block Producer (BP) voting generates an equal amount of
+non-transferable GLON governance power. GLON is an accounting credential, not a
+tradable asset and not a claim on fixed returns. It cannot be transferred
+between users. When FLON is removed from BP voting, the corresponding GLON is
+retired and becomes unavailable for new governance proposals. Proposal voting
+uses snapshot balances so transfers, new deposits or withdrawals after the
+snapshot cannot change the recorded voting power.
 
-2. Governance structure
+Node election and DAO governance share the same locked-FLON foundation but use
+separate actions, thresholds and execution paths. A voter may select up to 30 BP
+candidates; the account's voting power is divided equally across the selected
+candidates, preserving the one-FLON-one-base-vote principle without multiplying
+power by the number of selections.
 
-In general, there will be three topmost decentralized autonomous organizations (DAOs) under the constant supervision of FullOn Network Foundation:
-- ***TechDAO***: represented by the core development team of FullOn network protocol, holds 40% voting power, mainly responsible for technology advancement of the protocol as well as support developers for building their applications on top of FullOn network;
-- ***OpsDAO***: represented by the leading marketing and operation team members that directly interact with the global FullOn users, holds 30% voting power, mainly responsible for introducing and/or establishing new ecosystems, onboarding new users and supporting all existing users of FullOn technologies and applications;
-- ***InvestDAO***: represented by all investors, holds 30% voting power, focusing on ensuring appropriate usage of investment funds and a healthy development/evolution of the overall tokenomics. Investors must stake their `$FLON` tokens in order to get VOTE tokens in order to vote. Once voting is finished, users can keep their VOTE tokens for future voting or return to the stake pool to redeem their `$FLON` tokens back.
+The target producer set is 21 active BPs with 30 standby BPs. During network
+bootstrapping, the active quorum may be configured below 21 and expanded over
+time; the standby target remains 30. Candidate eligibility requires self-stake,
+public registration metadata, valid keys and minimum operational performance.
+The protocol can remove an ineligible or underperforming BP at an epoch
+boundary and promote the next qualified standby BP deterministically.
 
-More specifically, TechDAO will be run by FullOn Labs, which focuses on delivering software and hardware solutions for FullOn blockchain platform, infrastructure and its ecosystems. OpsDAO will be run by another subsidiary of FullON Network Foundation, which takes care of the
-day-to-day operations that contribute to decentralization, security and growth of the FullOn network.
+Voting, candidate ranking and voter reward accounting use epoch snapshots.
+Votes cast during an epoch become effective for the following ranking epoch,
+which limits last-minute borrowed-vote and reward-sniping strategies. Rewards
+are attributed using historical epoch voting power rather than balances at the
+time a user or BP claims them, so delayed claims accumulate without changing
+who earned the rewards.
 
-<div align="center">
-<img src=./assets/fullon-gov-daos.png width=80% /><br/>
-Figure-4: FullOn Network Foundation and Three DAOs
-</div>
+Ordinary downtime first results in reduced rewards, suspension and a cooldown;
+principal slashing is reserved for objectively verifiable safety violations,
+such as conflicting signatures. Governance parameters define the precise
+performance thresholds, epoch duration, deposits, quorum, timelocks and reward
+allocation within protocol-enforced safety bounds.
 
-In order to pass any protocol or foundational level proposals, at least 60% of voting power must be gained out of the abovementioned three DAOs. In addition, within each DAO, there must be more than 50% of voting power to be gained in order to reach consensus and later participate in the voting process among the three DAOs. If no consensus can be made within a DAO, it will be deemed as a NO vote for that DAO.
-
-Last but not least, it is the FullOn Network Foundation that initiates the network and guides the development of the protocol as well as oversees the governance process. Even after the full quorum of network validators have been elected and in full operation, the FullOn Network Foundation continues to exist and operate as a non-profitable organization to propel the evolution of the protocol and advancement of the entire ecosystem. The members of three DAOs or the FullOn Network Foundation can be elected or replaced through foundation organized governance processes.
-Notwithstanding the foregoing, the holders of $FLON or $VOTE tokens shall not be entitled to make any proposal or vote on matters related to distribution of profits or dividends of FullOn, the distribution of surplus assets in the event of a winding up, or any other matters that could potentially result in $FLON tokens or $VOTE tokens being deemed as “securities” or similar under applicable laws.
+The FullOn Network Foundation supports network bootstrapping, protocol research
+and ecosystem coordination, but does not receive an irrevocable fixed voting
+weight. Holding FLON or GLON does not create equity, profit, dividend or
+liquidation rights in FullOn Labs, the Foundation or any ecosystem participant.
 
 ## Vertical ecosystems
 
@@ -357,7 +369,7 @@ However, not all FLON tokens are available yet. There will be FLON token release
 | Community airdrop       | 12%   | 0%         | 1.2% × 10 years, 1-year linear vesting (DID required)         |
 | Seed investors          | 10%   | 0%         | 1.5-year cliff, 5-year linear vesting after TGE               |
 | Private sale            | 15%    | 0%         | 1.5-year cliff, 4-year linear vesting after investment       |
-| Validator rewards       | 5%    | 0%         | N/A                                                           |
+| Block Producer rewards  | 5%    | 0%         | N/A                                                           |
 | Strategic partnership   | 18%   | 0%         | Conditional release                                           |
 | Foundation              | 20%   | 10%        | 10%: 10-year linear vesting after TGE                         |
 
@@ -414,9 +426,9 @@ The backers have the 4-year linear vesting schedule with an 18-month cliff after
 
 The private sale is expected to be completed within two years since the FullOn mainnet launch, exceeding which up to 1% of the total supply, i.e. 100,000,000 FLON tokens from within this tranch must be allocated for IDO. 
 
-### Validators rewards
+### Block Producer rewards
 
-There are 5% of the total supply, i.e. 500,000,000 FLON tokens allocated in this category. The FullOn network validators are rewarded with newly issued FLON tokens per block for their work in keeping the network in operation. It is expected the overall amount is to be totally mined in a course of 10 years, after which 0.1% of the total supply, i.e. 10,000,000 FLON can be further inflated to reward the validators each year. The inflation rate can be appropriately adjusted through the topmost FullOn DAO governance body to ensure each validator has a reliable and reasonable amount of profit by operating FullOn validator nodes.
+There are 5% of the total supply, i.e. 500,000,000 FLON tokens, allocated to network incentives. Eligible active and standby Block Producers and their voters may receive epoch-based rewards according to service availability, production performance and historical voting power. Reward parameters and any issuance after the reserve is exhausted are subject to DAO governance and protocol-enforced caps. Rewards are not guaranteed returns and can be reduced to zero when eligibility or performance requirements are not met.
 
 
 ### Strategic partnership
@@ -438,7 +450,7 @@ This endowment is split into 2 pieces. The first half, which is not locked up, w
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
 
 ## Inflation
-There will be no extra inflation of FLON tokens except the mining reserve for validator rewards. After exhausting the mining reserve, which is 5% of the total supply, 0.1% of the total supply will be newly issued or inflated each year in order to keep incentivizing the network validators.
+There will be no extra inflation of FLON tokens outside protocol-authorized network incentives. After the 5% incentive reserve is exhausted, any continued issuance must be approved through DAO governance and remain within an on-chain annual cap.
 
 ## Deflation
 
@@ -446,7 +458,7 @@ FLON has following deflationary forces:
 - In order to submit transactions on-chain, FLON must be one-way traded to get sufficient GAS resources for consumption of CPU, NET and RAM storage, which makes FLON deflational;
 - The same goes for the proxy accounts or EVM-based address accounts, each transaction requires burning away proxy miners fees converted from FLON tokens on top of the intrinsic gas fees charged in each transaction.
 
-FLON as the native token to FullOn protocol will be continuously used/consumed in unlimited ways, including activities like staking FLON tokens for getting voting power for validator election or DAO governance…etc. These types of activities result in FLON tokens getting locked for a while and thus creates a temporary deflationary effect but can be also helpful to the growth and stability of the FLON market capital.
+FLON is the native token of the FullOn protocol. Locking FLON for BP voting generates non-transferable GLON governance power. Unstaking retires the corresponding GLON before the underlying FLON completes its withdrawal delay. Locked balances temporarily reduce liquid supply but do not guarantee price appreciation or yield.
 
 # 07. The Future
 FullOn has already baked a lot of wonderful elements into the platform with the mainnet launch. But to meet the growing demand from various ecosystem communities or challenges from the new environment,  FullOn will continuously evolve through seeking relentless research and innovation by being open with new ideas, suggestions as well as critics.
@@ -455,7 +467,7 @@ Following are some of the protocol-level features FullOn team plans to work on i
 - Synchronous WASM inline calls: Currently WASM inline calls are all asynchronous, which adds to the implementation inflexibility in smart contract composability. 
 - Parallel transaction executions: With say 10 threads concurrently running transactions that are independent from account states perspective, at least 10x of 10 K TPS, i.e. 100 K TPS can be easily achieved
 - Multi-sharding: This is another-level of scalability to hit say 1 million TPS through state-level multi-sharding on a single-chain network. This feature shall be readily implemented and get upgraded into the protocol upon the network becoming congested on a daily basis.
-- Validator node clustering: This is to provide reliability and availability to each validator node to ensure the highest availability to ensure the smooth network operation.
+- BP node clustering: this improves availability and operational resilience for Block Producer infrastructure.
 
 There are also some infrastructure level ideas that are worth pursuing in order to benefit the entire ecosystems running atop the FullOn network. They include but are not limited to the following:
 - Decentralized Social Identity and Credit store: The social network composed of real human or virtual A.I. agents with their credibility scores accumulated and computed in a decentralized manner through social network binding and feedback factors. Once developed, it can become the cornerstone to the entire society to conduct a safe collaborative environment;
