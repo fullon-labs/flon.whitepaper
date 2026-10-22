@@ -2,10 +2,10 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Whitepaper version: v2.1.0
-FLON Core version: v0.8.5
-FLON CDT version: v0.8.5
-Date: Oct. 20, 2026
+Whitepaper version: v2.4.0
+FLON Core version: v0.8.7
+FLON CDT version: v0.8.7
+Date: Oct. 22, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -247,8 +247,16 @@ There are in general three types of resources in the FullOn network that cost a 
 
 FullOn requires a certain amount of GAS that are converted from $FLON to cover the consumed resources for each transaction. The smallest unit of GAS is called ELON, which is also the smallest unit of FLON, i.e. ```1 FLON = 100,000,000 ELON```, or ```1 ELON = 0.00000001 FLON```.
 
-GAS for both CPU and NET will be burnt rightway while RAM resources can be still returned or recycled in the form of GAS kept to the user account upon users returning the state database allocation to the FullOn network. Users do not have to buy GAS in advance for their transactions but the FullOn system will spend the available GAS from their accounts first and automatically convert the available $FLON balance of an account to GAS in order to sufficiently cover the GAS expenses for the entire transaction resource usage. Transactions would fail and do not get recorded on-chain at
-all upon either logic failure or GAS insufficiency issues.
+CPU and NET consumption retires the corresponding ELON GAS claim. RAM-related GAS may be returned or recycled under protocol rules when a user releases the associated state allocation. Users do not need to purchase GAS in advance: the system first uses available GAS and may convert available `$FLON` into GAS to cover the full resource cost. A transaction that fails logically or lacks sufficient GAS is not recorded on-chain.
+
+ELON is not an independently unbacked token. For every newly accounted ELON unit, the protocol deposits one smallest FLON unit into `flon.gas` as 1:1 backing. That FLON cannot be burned, reused, or moved into an ordinary liquid account while the corresponding ELON remains redeemable. ELON may be consumed directly as GAS or redeemed one-for-one for FLON from `flon.gas`. GAS consumption retires the ELON redemption liability, while the backing FLON remains in `flon.gas` by default and may receive a future use only through DAO approval. Resource consumption therefore consumes ELON liabilities and protocol-locks FLON reserves; it does not default to burning reserve FLON.
+
+`flon.gas` maintains two non-overlapping, publicly auditable balances for new emission:
+
+- **`bp_reward_balance`** funds rewards for up to 21 Active BPs, 30 qualified Standby BPs, and their voters;
+- **`dao_locked_balance`** remains locked by default and can receive a future use only through a DAO proposal that passes quorum, timelock, and an execution allowlist.
+
+These balances, consumed ELON, outstanding redeemable ELON, and the FLON reserve are reconciled every epoch. The system must always satisfy `FLON reserve units >= outstanding redeemable ELON`. The proposed initial split credits 10% of per-block ELON emission to the BP reward balance and 90% to the DAO locked balance. Governance may change the split only for future emission and cannot retroactively rewrite settled rewards or use FLON still required to back redeemable ELON.
 
 This unique design creates a friendly and transparent user experience in interacting with the FullOn network. In addition, there will be no competition in transaction GAS payment as the GAS expenditure for each transaction is solely determined by the system and users have no
 chance to give any extra FLON tokens to incentivize the block producers so that their transactions can be prioritized over others.
@@ -289,12 +297,14 @@ candidates; the account's voting power is divided equally across the selected
 candidates, preserving the one-FLON-one-base-vote principle without multiplying
 power by the number of selections.
 
-The target producer set is 21 active BPs with 30 standby BPs. During network
-bootstrapping, the active quorum may be configured below 21 and expanded over
-time; the standby target remains 30. Candidate eligibility requires self-stake,
-public registration metadata, valid keys and minimum operational performance.
-The protocol can remove an ineligible or underperforming BP at an epoch
-boundary and promote the next qualified standby BP deterministically.
+The target producer set is 21 Active BPs with 30 Standby BPs. During network
+bootstrapping, the Active BP quorum may be configured within the safe range of
+3 to 21 and expanded over time; the Standby BP target remains 30. Candidate
+eligibility requires self-stake, a public website and social account, valid keys,
+and minimum operational performance. Ranking expresses community preference,
+while deterministic performance establishes service eligibility. A highly
+ranked but ineligible candidate cannot permanently occupy a production seat;
+the next qualified Standby BP is promoted deterministically.
 
 Voting, candidate ranking and voter reward accounting use epoch snapshots.
 Votes cast during an epoch become effective for the following ranking epoch,
@@ -303,11 +313,22 @@ are attributed using historical epoch voting power rather than balances at the
 time a user or BP claims them, so delayed claims accumulate without changing
 who earned the rewards.
 
+The proposed reward epoch is six hours, or 43,200 half-second slots. The
+`get_producer_slot_stats` intrinsic deterministically accounts for expected,
+produced, missed, and consecutively missed slots for each BP, with network-wide
+incident protection evaluated before individual penalties. Availability below
+90% produces no reward and causes suspension and deterministic Standby
+replacement. Cooldown expiry does not restore eligibility automatically: the BP
+must authenticate `resumeprod` and enter probation. Missing 12 consecutive
+assigned slots during probation causes immediate re-suspension. Repeated
+suspensions escalate through 1, 2, 4, and 8 epochs, or 6, 12, 24, and 48 hours.
+
 Ordinary downtime first results in reduced rewards, suspension and a cooldown;
-principal slashing is reserved for objectively verifiable safety violations,
-such as conflicting signatures. Governance parameters define the precise
-performance thresholds, epoch duration, deposits, quorum, timelocks and reward
-allocation within protocol-enforced safety bounds.
+downtime alone does not slash principal. Principal slashing is reserved for
+objectively verifiable safety violations, such as conflicting signatures for
+the same height or round. Governance parameters define the precise performance
+thresholds, epoch duration, deposits, quorum, timelocks and reward allocation
+within protocol-enforced safety bounds.
 
 The FullOn Network Foundation supports network bootstrapping, protocol research
 and ecosystem coordination, but does not receive an irrevocable fixed voting
@@ -428,7 +449,22 @@ The private sale is expected to be completed within two years since the FullOn m
 
 ### Block Producer rewards
 
-There are 5% of the total supply, i.e. 500,000,000 FLON tokens, allocated to network incentives. Eligible active and standby Block Producers and their voters may receive epoch-based rewards according to service availability, production performance and historical voting power. Reward parameters and any issuance after the reserve is exhausted are subject to DAO governance and protocol-enforced caps. Rewards are not guaranteed returns and can be reduced to zero when eligibility or performance requirements are not met.
+There are 5% of the total supply, i.e. 500,000,000 FLON tokens, allocated as a hard-capped mining budget. At the node-role level, 100% of this mining budget belongs to eligible Active BPs that actually produce blocks; it is divided by qualifying production and performance. Standby BPs receive no fixed mining allocation. An Active BP may share part of its earned mining reward with its voters through its published `reward_shared_ratio`, but this internal voter share does not create a Standby mining entitlement. This cap and its halving curve are protocol constants: DAO governance cannot raise the mining budget, reset the halving counter, or authorize mining issuance after the reserve is exhausted. Rewards are not guaranteed returns and can be reduced to zero when eligibility or performance requirements are not met.
+
+The mining curve is measured in reward-eligible produced blocks, not wall-clock time. Each era contains `315,360,000` eligible blocks and receives half the previous era's budget: 250,000,000 FLON in era 0, 125,000,000 FLON in era 1, 62,500,000 FLON in era 2, and so on. The implied first-era theoretical rate is approximately `0.7927447996 FLON` per eligible block. Chain downtime does not advance the counter or consume the mining schedule.
+
+`initial_block_reward` is not a governance parameter. The contract derives each block's amount from the fixed 500,000,000 FLON cap, era number, and eligible-block offset. Because FLON amounts use integer smallest units, the contract distributes each era's division remainder deterministically across its blocks instead of truncating a decimal rate. Every accrual is also bounded by `500,000,000 FLON - mining_issued`, ensuring that rounding can never exceed the cap.
+
+Separately from the fixed mining curve, GAS activity may fund a supplemental FLON reward pool through `flon.gas`. The proposed initial policy makes 10% of newly accounted GAS-linked FLON available to qualified Active and Standby BPs; the remaining 90% enters the DAO locked balance. This GAS-funded pool does not increase, reset, or replace the 500,000,000 FLON mining budget. The disposition of the rewardable 10% is:
+
+| Recipient | Share of BP GAS reward pool | Share of total GAS-linked FLON | Basis |
+| --- | ---: | ---: | --- |
+| Active BP performance pool | 80% | 8% | Actual production share among the configured Active BP quorum; no equal base-service component |
+| Qualified Standby BP pool | 20% | 2% | Recent observation epoch, availability proof, and standby qualification |
+
+Active BPs that actually produce blocks participate in the Active GAS pool, including during a smaller bootstrap quorum, and divide it strictly in proportion to actual block production. There is no equal base-service share. A Standby BP receives only its separately defined GAS availability reward after satisfying the online-proof requirement; its principal value is production readiness and deterministic promotion when ranking or Active eligibility changes. Unallocated shares, ineligibility, and integer remainders move from `bp_reward_balance` into `dao_locked_balance`; they are not redistributed as a later windfall.
+
+A BP may publish a voter-reward share or commission within governance-defined bounds, with changes delayed until an epoch boundary. Voter entitlement is calculated from the immutable voting-power snapshot and selected-BP performance in the epoch when the reward was produced, using cumulative reward indices. The timing of a BP's or voter's `claimrewards` action affects withdrawal only, not ownership. Missing an epoch claim does not forfeit a settled reward; unclaimed balances continue to accumulate.
 
 
 ### Strategic partnership
