@@ -283,13 +283,13 @@ approved execution allowlist and longer timelocks. Emergency controls are
 limited in scope and cannot silently rewrite votes, balances or completed
 proposal results.
 
-FLON locked for Block Producer (BP) voting generates an equal amount of
-non-transferable GLON governance power. GLON is an accounting credential, not a
-tradable asset and not a claim on fixed returns. It cannot be transferred
-between users. When FLON is removed from BP voting, the corresponding GLON is
-retired and becomes unavailable for new governance proposals. Proposal voting
-uses snapshot balances so transfers, new deposits or withdrawals after the
-snapshot cannot change the recorded voting power.
+FLON locked for Block Producer (BP) voting is recorded as an equal amount of
+governance power in the account's internal contract ledger. Governance power is
+not a separately issued token: it cannot be transferred, spent or traded and
+does not confer fixed returns. Reducing or withdrawing BP voting principal
+updates the corresponding available governance power without issuing or burning
+another token. Activated proposals use governance-power snapshots, so later
+locks or withdrawals do not change their recorded voting weight.
 
 Node election and DAO governance share the same locked-FLON foundation but use
 separate actions, thresholds and execution paths. A voter may select up to 30 BP
@@ -332,7 +332,7 @@ within protocol-enforced safety bounds.
 
 The FullOn Network Foundation supports network bootstrapping, protocol research
 and ecosystem coordination, but does not receive an irrevocable fixed voting
-weight. Holding FLON or GLON does not create equity, profit, dividend or
+weight. Holding FLON or possessing governance power does not create equity, profit, dividend or
 liquidation rights in FullOn Labs, the Foundation or any ecosystem participant.
 
 ## Vertical ecosystems
@@ -494,7 +494,7 @@ FLON has following deflationary forces:
 - In order to submit transactions on-chain, FLON must be one-way traded to get sufficient GAS resources for consumption of CPU, NET and RAM storage, which makes FLON deflational;
 - The same goes for the proxy accounts or EVM-based address accounts, each transaction requires burning away proxy miners fees converted from FLON tokens on top of the intrinsic gas fees charged in each transaction.
 
-FLON is the native token of the FullOn protocol. Locking FLON for BP voting generates non-transferable GLON governance power. Unstaking retires the corresponding GLON before the underlying FLON completes its withdrawal delay. Locked balances temporarily reduce liquid supply but do not guarantee price appreciation or yield.
+FLON is the native token of the FullOn protocol. Locking FLON for BP voting records non-transferable governance power in the internal ledger rather than issuing another governance token. Unstaking adjusts that governance power; the underlying FLON remains subject to the applicable withdrawal delay. Locked balances temporarily reduce liquid supply but do not guarantee price appreciation or yield.
 
 # 07. The Future
 FullOn has already baked a lot of wonderful elements into the platform with the mainnet launch. But to meet the growing demand from various ecosystem communities or challenges from the new environment,  FullOn will continuously evolve through seeking relentless research and innovation by being open with new ideas, suggestions as well as critics.
