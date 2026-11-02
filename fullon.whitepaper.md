@@ -2,10 +2,10 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Whitepaper version: v2.4.0
-FLON Core version: v0.8.7
-FLON CDT version: v0.8.7
-Date: Oct. 22, 2026
+Whitepaper version: v2.6.0
+FLON Core implementation baseline: v0.9.2
+FLON CDT API reference: v0.9.0 (independently versioned)
+Date: Nov. 2, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -20,6 +20,7 @@ Email: fullonlabs @ gmail dot com
 - [05. How FullOn Works](#05-how-fullon-works)
    - [Overall architecture](#overall-architecture)
    - [Technical specifications](#technical-specifications)
+   - [Core v0.9.2 implementation baseline](#core-v092-implementation-baseline)
    - [Core designs](#core-designs)
      - [Account types](#account-types)
      - [Interoperability](#interoperability)
@@ -52,7 +53,7 @@ Email: fullonlabs @ gmail dot com
 
 Designed to serve mass adoption, FullOn prioritizes scalability, usability, interoperability, security, and true decentralization, empowering the next generation of music experiences where artists, listeners, and the entire music economy can thrive on-chain.
 
-FullOn delivers exceptional scalability by building an ultra-performant layer-1 foundation using innovations like 2D-sharding and modular design. Side-chains or layer-2 solutions are introduced only when specialized needs arise — such as ultra-low latency for live music events, high-volume data for streaming and NFTs, or custom consensus for music-specific applications — ensuring the core chain remains efficient and capable of handling global-scale music interactions.
+FullOn pursues scalable layer-1 execution through modular design, with two-dimensional sharding on its future scalability roadmap. Side-chains or layer-2 solutions are introduced only when specialized needs arise — such as ultra-low latency for live music events, high-volume data for streaming and NFTs, or custom consensus for music-specific applications — ensuring the core chain remains efficient and capable of handling global-scale music interactions.
 
 Usability and interoperability are core pillars, especially for onboarding the broader music community into Web3. Features like sovereign and proxy accounts enable seamless, fast onboarding for artists and fans without deep crypto knowledge. FullOn also provides universal on-chain interoperability with virtually all major blockchains and crypto wallets, delivering a true deploy-once, run-anywhere experience for decentralized music applications (dApps) — whether NFT marketplaces, streaming platforms, royalty distribution systems, fan engagement tools, tokenized music rights, or listen-to-earn models.
 
@@ -187,13 +188,46 @@ Figure-2: FullOn Ecosystem High-level Architecture
 
 | **Key aspect**           | **Value**   | **Description**                                                                                  |
 |--------------------------|-------------|--------------------------------------------------------------------------------------------------|
-| **Block Interval**       | 0.5-12 sec  | The network utilizes a dynamic block interval that targets `0.5` seconds during active transaction periods, extending to a maximum of `12` seconds during idle periods to conserve resources. |
-| **Block Finality**       | 1–1.5 sec   | Optimized for applications to resist double-spending and other attacks                           |
-| **TPS**                  | 10,000+     | Single-threaded execution, scalable via multi-threading, multi-sharding, Layer-2, and sidechains |
+| **Block Interval**       | 0.5 sec slots  | The base slot is `0.5` seconds. Elastic production can skip idle slots until the on-chain heartbeat interval; `12` seconds is the reference configuration, not a hard maximum or a guarantee during failures. |
+| **Block Finality**       | 1–1.5 sec   | Active-production design target under Savanna quorum; not an unconditional bound during idle periods or network faults                           |
+| **TPS**                  | 10,000+     | Throughput design target, not a benchmark established by this release review; depends on workload and hardware |
 | **Consensus Algorithm**  | DPoS+Savanna | High throughput and instant finality                                                            |
-| **Virtual Machines**     | Dual-VM     | WASM (native) + EVM (100% compatible)                                                            |
+| **Virtual Machines**     | WASM + integrations     | Native WASM; EVM compatibility is a separate integration, not a second VM verified in the v0.9.2 Core package                                                            |
 | **Native token**         | `$FLON`     | Total supply: `10 billion`                                                                   |   
 
+
+## Core v0.9.2 implementation baseline
+
+This revision reviews the released [FullOn Core v0.9.2](https://github.com/fullon-labs/flon-core/releases/tag/v0.9.2), commit `2188e4f94a1e9fe564a31c33e497b464556f3650`. The whitepaper version is independent of the software version. The [CDT v0.9.0](https://github.com/fullon-labs/flon-cdt/releases/tag/v0.9.0) headers provide the referenced contract APIs; there is no implied CDT v0.9.2 release. Source availability does not establish activation, contract deployment, parameter values, or network-wide adoption on mainnet or testnet.
+
+### Elastic production and deterministic BP statistics
+
+The base scheduling slot remains 500 ms. Elastic production reduces empty blocks by using an on-chain idle heartbeat interval. `get_producer_slot_stats_v2(previous_produced_slot, from_slot, to_slot)` separates `produced`, `missed`, and `idle_skipped`: `expected = produced + missed`. Authorized idle skips neither reduce availability nor count as misses. With a 12-second heartbeat and exactly 12 seconds between committed blocks, the interval contains 23 idle skips, one produced slot, and no missed slots. Once the heartbeat is due, an unproduced mandatory slot is a real miss.
+
+The calculation uses committed chain state, the validated producer, timestamp, and schedule rather than an external monitoring service. The v0.9.1 correction, included in v0.9.2, credits the consensus-validated block to its actual producer across proposer-policy transitions. The V2 interface uses a separate `PRODUCER_SLOT_STATS_V2` feature, depends on the original `PRODUCER_SLOT_STATS` feature, and retains the original 32-byte API alongside the 40-byte V2 record. Each Core call is bounded to 100,000 slots. Contract work must also be bounded; a missed-data interval must not be silently presented as complete performance evidence.
+
+### GAS metering and reward settlement
+
+The `GAS_FEE_TOTALS` feature exposes `get_gas_fee_totals`, returning deterministic cumulative GAS consumption and its corresponding FLON value. A system contract can use differences between checkpoints for epoch metering instead of an off-chain estimate. These counters do not transfer rewards, authorize issuance, or prove the solvency of reserves. Contract rules still control reward eligibility, immutable epoch accounting, claims, and the protection of FLON backing outstanding redeemable ELON.
+
+The reward design separates bounded epoch sealing from individual BP settlement and withdrawal. A late or absent claim must not block other BPs or the next epoch, and rounding or unallocated amounts remain accounted for. Those are system-contract responsibilities, not actions performed automatically by the Core intrinsic; the deployed contract and effective governance parameters require separate verification.
+
+### Node roles, history, and recovery
+
+- **Role-based distribution.** `flon-node` supplies the core node for common, BP, RPC, and seed roles; `flon-node-history` adds Transaction History, Trace API, and State History. `flon-tools` supplies `fucli`, `fuwal`, `flon-util`, `funod-state-inspect`, and `funod-state-checkpoint`. A role preset cannot enable a plugin omitted from the build, and all roles retain the same consensus rules.
+- **Transaction history.** The optional RocksDB index uses a bounded writer queue with backpressure and reversible-block checkpoints for fork rollback. APIs expose coverage and health, including `history_status`, `account_index_complete`, and persisted gap information. Filters, retention, query budgets, and missing past blocks can limit results; a missing result is not proof that a transaction never occurred. Local history is distinct from consensus state and from State History streams.
+- **Management isolation.** Management API registration rejects non-loopback/non-Unix listeners by default unless explicitly overridden for a protected deployment. Signing remains Unix-socket-only. Public chain/history RPC should be separated from wallet, producer, and recovery administration.
+- **Durable state handling.** Shutdown saves state before clearing dirty status and reports persistence failures. Snapshot publication checks writes and durable promotion. Offline physical checkpoints and validated interrupted-restore continuation provide explicit recovery paths, with state/block operation locks and `restore.pending` preventing overlapping use. These facilities are not automatic crash recovery or automatic BP failover; block history after a checkpoint and current signing/finalizer safety records remain necessary.
+
+### Release compatibility and activation
+
+The v0.9.2-specific consensus compatibility fix preserves the legacy `ACTION_DATA_TO_JSON` feature digest so chains that already activated it can replay with the same identity. It does not introduce a replacement feature that operators should activate. The v0.9.0 V2 statistics and v0.9.1 producer-attribution fixes are cumulative in this baseline.
+
+New consensus intrinsics require compatible validating binaries, the relevant activated protocol features, matching CDT interfaces, and a compatible deployed system contract. Upgrading a binary alone does not activate them or change DAO policy. Operators should retain a consistent backup, follow network-specific snapshot/replay requirements, and verify the running version, chain ID, head/LIB progress, active features, and required plugins. Later commits on `main`, including additional Savanna failover tests, are outside this release baseline.
+
+Two-dimensional sharding, the DSR roadmap, universal cross-chain deployment, and quantum-safe authorization must not be inferred from the release number. The QSA-V1 document in this tag is explicitly a design draft; it is not an implemented or activated v0.9.2 feature. Performance targets and integrations elsewhere in this paper retain their stated design or product scope.
+
+Reviewed file revisions and hashes are recorded in the repository's [v0.9.2 source manifest](https://github.com/fullon-labs/flon.whitepaper/blob/main/v0.9.2-source-manifest.json).
 
 ## Core designs
 
@@ -228,11 +262,13 @@ FullOn protocol ensures the security of the above process through verifying the 
 
 ### Scalability
 
+The following figures describe architectural targets and future scaling paths, not capabilities or benchmarks established by the v0.9.2 release. Parallel execution, sharding, and Layer-2 integrations require their own implementation and validation.
+
 In order to support meet the growth demand and real-world experience, the net throughput of a blockchain protocol must be scalable. FullOn addresses scalability through different levels:
 
-- ***Single threading***: FullOn achieves 10,000 TPS on a single thread to execute all verified transactions;
-- ***Multi-threading***: FullOn applies multi-threading by segregating resource-independent transactions to different execution threads to achieve parallelization. Allocation of 10 such threads can yield 100 K TPS for a commodity level FullOn node to achieve;
-- ***Multi-sharding***: Through applying sharding, i.e. same blockchain but multiple state shards, FullOn can further increase the scalability at least 10x times, i.e. achieve 1 million TPS;
+- ***Single threading***: FullOn targets 10,000 TPS on a single execution thread; the target is not a measured v0.9.2 release result;
+- ***Multi-threading***: The roadmap proposes multi-threading by segregating resource-independent transactions to different execution threads to achieve parallelization. A 100 K TPS target assumes effective parallelism across ten threads and remains workload-dependent;
+- ***Multi-sharding***: Through applying sharding, i.e. same blockchain but multiple state shards, the roadmap targets a further order of magnitude of throughput, up to 1 million TPS; this is not a release benchmark;
 - ***Layer-2 or sidechains***: as introduced in early sections, layer-2 chains or even side-chains can be introduced in the future to run on top of or side-to-side with FullOn layer-1 network. These chains can be created for specific DAPPs or some vertical ecosystems.
 FullOn protocol will be implemented to scale up the network by applying the above techniques to meet the overall application demands at the right pace.
 
@@ -313,15 +349,7 @@ are attributed using historical epoch voting power rather than balances at the
 time a user or BP claims them, so delayed claims accumulate without changing
 who earned the rewards.
 
-The proposed reward epoch is six hours, or 43,200 half-second slots. The
-`get_producer_slot_stats` intrinsic deterministically accounts for expected,
-produced, missed, and consecutively missed slots for each BP, with network-wide
-incident protection evaluated before individual penalties. Availability below
-90% produces no reward and causes suspension and deterministic Standby
-replacement. Cooldown expiry does not restore eligibility automatically: the BP
-must authenticate `resumeprod` and enter probation. Missing 12 consecutive
-assigned slots during probation causes immediate re-suspension. Repeated
-suspensions escalate through 1, 2, 4, and 8 epochs, or 6, 12, 24, and 48 hours.
+The proposed reward epoch is six hours, or 43,200 half-second slots, rather than 43,200 actually produced blocks. The `get_producer_slot_stats_v2` intrinsic supplies expected, produced, missed, idle-skipped, and consecutive-miss statistics. Availability is `produced / expected`; authorized idle skips are excluded, and insufficient samples or network-wide incidents require protection before individual penalties. The design suspends ineligible BPs and promotes qualified Standby BPs. Cooldown expiry alone does not restore eligibility: the proposed `resumeprod` flow requires authentication and probation, with repeated failure escalating the cooldown. Exact thresholds, reward-pool treatment, and cooldown lengths belong to the effective system-contract version and governance configuration, not to the Core release number.
 
 Ordinary downtime first results in reduced rewards, suspension and a cooldown;
 downtime alone does not slash principal. Principal slashing is reserved for

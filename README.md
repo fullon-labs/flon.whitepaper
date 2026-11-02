@@ -5,6 +5,8 @@
 
 ## Revision
 
+* Version 2.6, 2026/11/02: rebase the implementation discussion on Core v0.9.2; cover elastic-aware BP statistics, GAS counters, node/history roles, recovery and feature-activation boundaries; reference CDT v0.9.0 independently
+
 * Governance terminology clarification, 2026/11/02: governance power is an internal account ledger, not a separately issued token
 
 * Version 2.4, 2026/10/22, clarified that mining rewards belong only to producing Active BPs while Standby BPs receive only GAS availability rewards
@@ -16,3 +18,7 @@
 * Version 0.4, 2025/02/06, major upgrade
 * Version 0.3, 2024/04/12, major content publish
 * Version 0.1, 2024/04/11, initial publish
+
+## Implementation evidence
+
+Core v0.9.2 is the reviewed implementation baseline, not a claim that every network has upgraded. Both language editions and PDF exports identify their own whitepaper version. See the [pinned source manifest](v0.9.2-source-manifest.json) for release commits and reviewed-file hashes. The separate future issuance/GAS policy clarification remains in its draft pull request until merged.
