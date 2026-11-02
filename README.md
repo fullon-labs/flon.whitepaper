@@ -22,3 +22,14 @@
 ## Implementation evidence
 
 Core v0.9.2 is the reviewed implementation baseline, not a claim that every network has upgraded. Both language editions and PDF exports identify their own whitepaper version. See the [pinned source manifest](v0.9.2-source-manifest.json) for release commits and reviewed-file hashes. The separate future issuance/GAS policy clarification remains in its draft pull request until merged.
+
+## Regenerate PDF exports
+
+Install Node.js, Google Chrome, and the `marked` and `playwright` packages in your authoring environment, then run from the repository root:
+
+```sh
+node scripts/render-whitepaper.mjs fullon.whitepaper.md docs/fullon.whitepaper.pdf "FullOn Network Protocol White Paper" en
+node scripts/render-whitepaper.mjs fullon.whitepaper.cn.md docs/fullon.whitepaper.cn.pdf "FullOn Network Protocol White Paper" zh
+```
+
+Set `CHROME_BIN` when Chrome uses a nonstandard path. Chinese exports require an installed CJK font. Review rendered pages before publishing.
