@@ -1,0 +1,85 @@
+{
+  "reviewed": "2026-11-02",
+  "scope": "Released implementation; activation and live deployment not asserted",
+  "repositories": [
+    {
+      "repository": "https://github.com/fullon-labs/flon-core",
+      "tag": "v0.9.2",
+      "revision": "2188e4f94a1e9fe564a31c33e497b464556f3650",
+      "files": [
+        {
+          "path": "libraries/chain/protocol_feature_manager.cpp",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/protocol_feature_manager.cpp",
+          "sha256": "d3a7b60f145e4770eb6264485e8f4278d153d2f580f00b1b386af2e70ae4a5dc"
+        },
+        {
+          "path": "libraries/chain/webassembly/producer.cpp",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/webassembly/producer.cpp",
+          "sha256": "0d1bd3e5a34250e9363a9779e48e3e311d972c9dab63eb8032a7687fcd84a06e"
+        },
+        {
+          "path": "libraries/chain/include/eosio/chain/producer_slot_stats.hpp",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/include/eosio/chain/producer_slot_stats.hpp",
+          "sha256": "9da003f6a91e185c0e3598d721cb740028108ae70951cd56095553c820eca733"
+        },
+        {
+          "path": "docs/node-build-profiles.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md",
+          "sha256": "afc7d99ece4ccda5d88b8d9e5df226878e915342f1d6726d7757edf6b1aad200"
+        },
+        {
+          "path": "docs/state-restart-recovery.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/state-restart-recovery.md",
+          "sha256": "47e38133bf9e0018afd9e43cf0909a0729e6bc630387330e52565b4b98ef457e"
+        },
+        {
+          "path": "plugins/http_plugin/http_plugin.cpp",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/plugins/http_plugin/http_plugin.cpp",
+          "sha256": "707e10a0001db12005fc0e85d7989fed2c4f7d545147f008f2f7a496f8869381"
+        },
+        {
+          "path": "docs/01_node/03_plugins/transaction_history_plugin/index.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/01_node/03_plugins/transaction_history_plugin/index.md",
+          "sha256": "51e4020a1efa1c1ded456c845987b1f1ec96e3edce18e0e0c641057a6c304d3c"
+        },
+        {
+          "path": "docs/01_node/03_plugins/transaction_history_api_plugin/index.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/01_node/03_plugins/transaction_history_api_plugin/index.md",
+          "sha256": "4e289f307415a7581fc9cbe1a1785946557e77dfc1eaa5191db9497002610204"
+        },
+        {
+          "path": "docs/supernode-governance-implementation.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/supernode-governance-implementation.md",
+          "sha256": "d24584a41c07b90d2f23b668665dfaf95b00b4d850376f13cc14ec557968d472"
+        },
+        {
+          "path": "docs/gas-node-reward-design.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/gas-node-reward-design.md",
+          "sha256": "009b696ca8945fa9b95fdb74da8047c478d487517b9c6d3143878cc673ae1980"
+        },
+        {
+          "path": "docs/01_node/07_concepts/15_quantum-safe-authorization-v1.md",
+          "url": "https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/01_node/07_concepts/15_quantum-safe-authorization-v1.md",
+          "sha256": "344c0427c258c7c1821277fba9dc48d917bb82d82cc21257b20151690f5a9918"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/fullon-labs/flon-cdt",
+      "tag": "v0.9.0",
+      "revision": "2c99c6ea523c084864fa709a47199bedf26db5eb",
+      "files": [
+        {
+          "path": "libraries/eosiolib/capi/eosio/chain.h",
+          "url": "https://github.com/fullon-labs/flon-cdt/blob/2c99c6ea523c084864fa709a47199bedf26db5eb/libraries/eosiolib/capi/eosio/chain.h",
+          "sha256": "aeb62320edfb58048076facfd067a1ea823277336160e6cfb617bcd3c66f1330"
+        },
+        {
+          "path": "libraries/eosiolib/contracts/eosio/producer_schedule.hpp",
+          "url": "https://github.com/fullon-labs/flon-cdt/blob/2c99c6ea523c084864fa709a47199bedf26db5eb/libraries/eosiolib/contracts/eosio/producer_schedule.hpp",
+          "sha256": "de93dfb97ec9d845c935ea6a4bbe9f036968e04783fd4a75a9c13af0a0e155d3"
+        }
+      ]
+    }
+  ]
+}
