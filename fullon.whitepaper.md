@@ -2,10 +2,10 @@
 ***Building a Highly Scalable, Interoperable Layer-1 Blockchain***
 
 ```
-Whitepaper version: v2.4.0
+Whitepaper version: v2.5.0
 FLON Core version: v0.8.7
 FLON CDT version: v0.8.7
-Date: Oct. 22, 2026
+Date: Nov. 2, 2026
 Author: FullOn Labs
 Email: fullonlabs @ gmail dot com
 ```
@@ -249,12 +249,12 @@ FullOn requires a certain amount of GAS that are converted from $FLON to cover t
 
 CPU and NET consumption retires the corresponding ELON GAS claim. RAM-related GAS may be returned or recycled under protocol rules when a user releases the associated state allocation. Users do not need to purchase GAS in advance: the system first uses available GAS and may convert available `$FLON` into GAS to cover the full resource cost. A transaction that fails logically or lacks sufficient GAS is not recorded on-chain.
 
-ELON is not an independently unbacked token. For every newly accounted ELON unit, the protocol deposits one smallest FLON unit into `flon.gas` as 1:1 backing. That FLON cannot be burned, reused, or moved into an ordinary liquid account while the corresponding ELON remains redeemable. ELON may be consumed directly as GAS or redeemed one-for-one for FLON from `flon.gas`. GAS consumption retires the ELON redemption liability, while the backing FLON remains in `flon.gas` by default and may receive a future use only through DAO approval. Resource consumption therefore consumes ELON liabilities and protocol-locks FLON reserves; it does not default to burning reserve FLON.
+ELON is not an independently unbacked token. For every newly accounted ELON unit, the protocol deposits one smallest FLON unit into `flon.gas` as 1:1 backing. That FLON cannot be burned, reused, or moved into an ordinary liquid account while the corresponding ELON remains redeemable. ELON may be consumed directly as GAS or redeemed one-for-one for FLON from `flon.gas`. GAS consumption retires the ELON redemption liability, while the backing FLON remains in `flon.gas` by default. A portion is allocated under effective rules to BP rewards, covering eligible Active and Standby BPs rather than only producing BPs; the remainder enters the DAO locked balance. Whether the remaining disposable balance is burned, kept locked, or assigned another use is a future FullOn DAO Gov decision, not an automatic burn. Neither reward payments nor burns may use reserves still required to back outstanding redeemable ELON. Resource consumption therefore consumes ELON liabilities and protocol-locks FLON reserves; it does not default to burning reserve FLON.
 
 `flon.gas` maintains two non-overlapping, publicly auditable balances for new emission:
 
 - **`bp_reward_balance`** funds rewards for up to 21 Active BPs, 30 qualified Standby BPs, and their voters;
-- **`dao_locked_balance`** remains locked by default and can receive a future use only through a DAO proposal that passes quorum, timelock, and an execution allowlist.
+- **`dao_locked_balance`** remains locked by default. FullOn DAO Gov decides whether its disposable balance is burned or assigned another use, subject to quorum, timelock, and execution-allowlist requirements. Reserves still required to back outstanding redeemable ELON may not be burned or diverted.
 
 These balances, consumed ELON, outstanding redeemable ELON, and the FLON reserve are reconciled every epoch. The system must always satisfy `FLON reserve units >= outstanding redeemable ELON`. The proposed initial split credits 10% of per-block ELON emission to the BP reward balance and 90% to the DAO locked balance. Governance may change the split only for future emission and cannot retroactively rewrite settled rewards or use FLON still required to back redeemable ELON.
 
@@ -376,7 +376,7 @@ This user-centric approach prioritizes simplicity and familiarity, leveraging fe
 
 # 06. Tokenomics
 ## Token distribution
-The total supply for FullOn’s native asset `$FLON` is set at `10 billion` and the overall distribution of the total supply is shown in the following chart:
+The current supply and allocation plan for FullOn’s native asset `$FLON` is set at `10 billion`. All percentages and amounts in this chapter use that plan as their baseline. If FullOn DAO Gov approves future issuance, the proposal must explicitly address its relationship to existing allocations, total supply and enforced issuance limits; this chapter is not advance authorization for unlimited issuance. The overall distribution is shown in the following chart:
 <div align="center">
 <img src=./assets/flon-token-distribution.png width=80% /><br/>
 Figure-6: FLON token distribution chart
@@ -449,11 +449,11 @@ The private sale is expected to be completed within two years since the FullOn m
 
 ### Block Producer rewards
 
-There are 5% of the total supply, i.e. 500,000,000 FLON tokens, allocated as a hard-capped mining budget. At the node-role level, 100% of this mining budget belongs to eligible Active BPs that actually produce blocks; it is divided by qualifying production and performance. Standby BPs receive no fixed mining allocation. An Active BP may share part of its earned mining reward with its voters through its published `reward_shared_ratio`, but this internal voter share does not create a Standby mining entitlement. This cap and its halving curve are protocol constants: DAO governance cannot raise the mining budget, reset the halving counter, or authorize mining issuance after the reserve is exhausted. Rewards are not guaranteed returns and can be reduced to zero when eligibility or performance requirements are not met.
+There are 5% of the total supply, i.e. 500,000,000 FLON tokens, allocated as the hard-capped budget for the current mining program. At the node-role level, 100% of this mining budget belongs to eligible Active BPs that actually produce blocks; it is divided by qualifying production and performance. Standby BPs receive no fixed mining allocation. An Active BP may share part of its earned mining reward with its voters through its published `reward_shared_ratio`, but this internal voter share does not create a Standby mining entitlement. The 500,000,000 FLON cap and halving curve constrain the current mining program. When this budget is exhausted, that program does not automatically continue issuance or reset its counters. Whether to authorize further issuance, establish a new mining or other incentive program, and define its amount, limits, beneficiaries and schedule is decided by FullOn DAO Gov through a new governance proposal. Such decisions may not retroactively rewrite settled rewards. Changes to existing contract or protocol limits require governance authorization and the corresponding upgrades; a proposal alone cannot bypass enforced limits. Rewards are not guaranteed returns and can be reduced to zero when eligibility or performance requirements are not met.
 
 The mining curve is measured in reward-eligible produced blocks, not wall-clock time. Each era contains `315,360,000` eligible blocks and receives half the previous era's budget: 250,000,000 FLON in era 0, 125,000,000 FLON in era 1, 62,500,000 FLON in era 2, and so on. The implied first-era theoretical rate is approximately `0.7927447996 FLON` per eligible block. Chain downtime does not advance the counter or consume the mining schedule.
 
-`initial_block_reward` is not a governance parameter. The contract derives each block's amount from the fixed 500,000,000 FLON cap, era number, and eligible-block offset. Because FLON amounts use integer smallest units, the contract distributes each era's division remainder deterministically across its blocks instead of truncating a decimal rate. Every accrual is also bounded by `500,000,000 FLON - mining_issued`, ensuring that rounding can never exceed the cap.
+For the current mining program, `initial_block_reward` is not a governance parameter. The contract derives each block's amount from the fixed 500,000,000 FLON cap, era number, and eligible-block offset. Because FLON amounts use integer smallest units, the contract distributes each era's division remainder deterministically across its blocks instead of truncating a decimal rate. Every accrual is also bounded by `500,000,000 FLON - mining_issued`, ensuring that rounding can never exceed the cap.
 
 Separately from the fixed mining curve, GAS activity may fund a supplemental FLON reward pool through `flon.gas`. The proposed initial policy makes 10% of newly accounted GAS-linked FLON available to qualified Active and Standby BPs; the remaining 90% enters the DAO locked balance. This GAS-funded pool does not increase, reset, or replace the 500,000,000 FLON mining budget. The disposition of the rewardable 10% is:
 
@@ -486,13 +486,15 @@ This endowment is split into 2 pieces. The first half, which is not locked up, w
 As part of the initial rollout, the Foundation accounts will be setting up the lockups and accounts for the rest of holders. Some tokens may still be in these accounts during rollout if recipients are delayed in setting up their respective custody solutions.
 
 ## Inflation
-There will be no extra inflation of FLON tokens outside protocol-authorized network incentives. After the 5% incentive reserve is exhausted, any continued issuance must be approved through DAO governance and remain within an on-chain annual cap.
+Once the current 5% (500,000,000 FLON) mining budget is exhausted, issuance does not continue automatically. FullOn DAO Gov decides whether to authorize subsequent issuance; it is not authorized without a new valid governance decision. The proposal must define any new mining or other incentive program, issuance amount and annual cap, beneficiaries, schedule, and effects on the existing supply and allocation plan. Execution remains subject to effective on-chain limits, timelocks and permissions; changing contract or protocol constraints requires the corresponding upgrades.
 
 ## Deflation
 
-FLON has following deflationary forces:
-- In order to submit transactions on-chain, FLON must be one-way traded to get sufficient GAS resources for consumption of CPU, NET and RAM storage, which makes FLON deflational;
-- The same goes for the proxy accounts or EVM-based address accounts, each transaction requires burning away proxy miners fees converted from FLON tokens on top of the intrinsic gas fees charged in each transaction.
+GAS consumption, reserve locking and FLON burning are distinct events. Consuming GAS for CPU, NET or RAM does not automatically burn reserve FLON. After ELON usage rights are consumed, the backing remains governed by the resource model and reserve-coverage requirements.
+
+A portion of GAS-linked value rewards eligible Active and Standby BPs under effective rules; the remainder is DAO-locked by default. Whether the remaining disposable balance is burned, when and how much to burn, or whether it stays locked or receives another use, is determined by future FullOn DAO Gov proposals. Until a burn proposal is approved and executed, those balances must not be counted as burned supply.
+
+Any distribution or burn must first preserve full backing for outstanding redeemable ELON liabilities. Proxy-account and EVM-address service fees follow the relevant product and contract rules; payments to service providers must not automatically be described as token burns.
 
 FLON is the native token of the FullOn protocol. Locking FLON for BP voting generates non-transferable GLON governance power. Unstaking retires the corresponding GLON before the underlying FLON completes its withdrawal delay. Locked balances temporarily reduce liquid supply but do not guarantee price appreciation or yield.
 
