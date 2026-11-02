@@ -7,6 +7,8 @@
 
 * Version 2.6, 2026/11/02: rebase the implementation discussion on Core v0.9.2; cover elastic-aware BP statistics, GAS counters, node/history roles, recovery and feature-activation boundaries; reference CDT v0.9.0 independently
 
+* Pending policy clarification (original v2.5 draft, now rebased on v2.6): future issuance and disposable GAS-linked reserve use require new DAO decisions; redeemable ELON backing stays protected
+
 * Governance terminology clarification, 2026/11/02: governance power is an internal account ledger, not a separately issued token
 
 * Version 2.4, 2026/10/22, clarified that mining rewards belong only to producing Active BPs while Standby BPs receive only GAS availability rewards
