@@ -5,6 +5,9 @@
 
 ## Revision
 
+* 2026/11/04: record the effective 1,000,000-FLON mainnet BP minimum and add 21-BP / 12-second reward calculations, distinguishing block-count halving from calendar-year policy
+
+
 * Version 2.6, 2026/11/02: rebase the implementation discussion on Core v0.9.2; cover elastic-aware BP statistics, GAS counters, node/history roles, recovery and feature-activation boundaries; reference CDT v0.9.0 independently
 
 * Governance terminology clarification, 2026/11/02: governance power is an internal account ledger, not a separately issued token
